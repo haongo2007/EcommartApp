@@ -1,0 +1,1 @@
+export const initShopProductCategories = [    {"product_id":6,"category_id":4,"assignedBy":'HaoNgo'},    {"product_id":18,"category_id":4,"assignedBy":'HaoNgo'},    {"product_id":27,"category_id":22,"assignedBy":'HaoNgo'},    {"product_id":28,"category_id":4,"assignedBy":'HaoNgo'},    {"product_id":28,"category_id":22,"assignedBy":'HaoNgo'}];

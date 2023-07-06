@@ -1,0 +1,1 @@
+import {ShopCategories} from "@prisma/client";export type CategoryGroupType = Record<string, ShopCategories[]>;

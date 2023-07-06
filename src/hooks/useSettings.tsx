@@ -1,0 +1,1 @@
+"use client";import { SettingsContext } from "../providers/SettingProvider";import { useContext } from "react";const useSettings = () => useContext(SettingsContext);export default useSettings;

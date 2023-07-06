@@ -1,0 +1,1 @@
+import { ShopConfig } from "@prisma/client";export const responseConfig = (config: ShopConfig) => ({    ...config,});export const responseConfigList = (configList: ShopConfig[]) => { configList.map((config) => responseConfig(config)) };

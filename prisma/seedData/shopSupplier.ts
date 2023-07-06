@@ -1,0 +1,1 @@
+export const initShopSupplier = [    {        "slug":"/tuy-hoa-young",        "name":"Tuy Hoa Young",        "email":"haongodev@gmail.com",        "phone":"0928123212",        "address":"130b/Lê Trung Kiên/P.2/TP.Tuy Hòa/Tỉnh.Phú Yên",        "image":null,        "store_id":1,        "status":1,    },];

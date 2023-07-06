@@ -1,0 +1,1595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e19c08f-b3f1-4a6d-9543-f8d7d108cedc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Ecommart13.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/AlarmClock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Apple.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/AppleStore.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/BabyBoy.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/BabyFeeder.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/BabyGirl.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/BasketBall.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/BazaarIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/BeautyProducts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Beer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Bottle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Breakfast.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Camera.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Car.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Carrot.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Cart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/CartCheck.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/CartX.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Category.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/CategoryOutline.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/CreditCardVerified.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/CustomerService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Delivery.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/DeliveryBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/DottedStar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Dress.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/DrillMachine.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Eye.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Facebook.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/FacebookFilled.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/FeedbackThumbsUp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Figma.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Food.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Gift.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/GiftBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Globe.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/GoldPackageIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Google.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Heart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Honey.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Instagram.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/InstagramFilled.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Laptop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Light.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Lightning.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/MakeUp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Man.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Microphone.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Milk.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/MoneyGurantee.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/MotorBike.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/NewArrival.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/OnlineService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/OnlineSupport.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/PackageBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Payment.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Pen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Pets.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/PickUpBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Picture.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/PlantPot.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/PlayStore.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/PremiumPackageIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Preview.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Quote.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/RankBadge.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Reload.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Shield.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/ShoppingBagOutlined.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/SilverPackageIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Snack.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Sofa.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/TeddyBear.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Telegram.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Toggle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Truck.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/TruckFast.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/TruckFilled.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Tshirt.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Twitter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/TwitterFilled.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/UpDown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/User2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Verify.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Vest.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Watch.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Wheel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Woman.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/WomenDress.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Yogurt.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/Youtube.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/YoutubeFilled.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/AccountSetting.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Accounts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/AdminEcommerce.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Apps.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Calender.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Chat.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Customers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Dashboard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/DataTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Ecommerce.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/ElementHub.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Invoice.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Logout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Order.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Pages.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Pricing.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Products.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/ProjectChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Refund.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Review.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Seller.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Session.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Settings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Shirt.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Shoe.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/SiteSetting.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/TodoList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/UserProfile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/UserTie.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/Vest.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/duotone/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Chair.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Decoration.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Dining.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Furniture.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Interior.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Living.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Popular.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Products.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/RoomSet.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/RoundTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Sofa.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Stool.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Trending.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/furniture-shop/Wardrobe.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/BabyToys.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/BirthdayCake.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/Children.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/Christmas.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/Flower.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/Football.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/NewYearGift.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/Robot.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/TeddyBear.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/Toys.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/ValentineGift.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/gift-shop/WeddingGift.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/Automotive.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/FaceMask.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/HealthBeauty.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/LenseCase.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/Lipstick.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/Lotion.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/Mascara.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/OxygenPump.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/Powder.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/health-and-beauty/Thermometer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_cpn/icons/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/categoriesDesc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopCategories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopConfig.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopCurrency.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopDesc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopLanguage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopProductAttribute.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopProductCategories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopProducts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopProductsDesc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopProductsPromo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopSupplier.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shops.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopsAddress.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopsAttributeGroup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopsBanner.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seedData/shopsBrand.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture Shop Header.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Furniture Shop/Furniture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/7-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Gift Box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Gift box 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Offer 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Offer Card 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Offer Card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Product 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Product 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Product 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Product 4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Product 5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Product 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/Product 7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/flat-lay-composition-wrapped-presents-with-copy-space.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/gift-box-white-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/pngwing.com (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/pngwing.com (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/pngwing.com (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Gift Shop/pngwing.com (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/Header Image 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/Lemon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/MiniPeppers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/Offer Card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/Red apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/banner-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/heart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/lime.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/shopping-cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/strawberry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Groceries Shop/vagitable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Doctor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Header 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Product (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Health Shop/Vector (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/SVG/Asset 1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/android-icon-192x192.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/001-man.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/002-girl.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/002-woman.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/003-boy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/003-man-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/004-bald.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/004-woman.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/005-man-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/005-man-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/006-woman-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/007-boy-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/007-woman-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/008-clown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/009-firefighter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/010-girl-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/011-man-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/012-woman-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/013-woman-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/014-man-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/015-woman-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/016-boy-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/017-girl-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/018-boy-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/019-woman-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/020-man-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/021-girl-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/022-man-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-7.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-8.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/badge-9.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/badges/hot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-15-trashed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner-x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/category-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/category-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/category-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/cycle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/long-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/men's-fashion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/men.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/shop-cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banners/womens-fashion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/bazaar-black-sm.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/bazaar-white-sm.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/post-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/post-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/post-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/post-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/post-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/blogs/post-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/acer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/alibaba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/amazon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/apple-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/apple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/asus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/bmw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/brokshire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/dell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/ebay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/ferrari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/ford.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/hp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/levis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/lotto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/mini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/occular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/ray-ban.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/raymond.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/samsung.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/sony.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/tesla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/titan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/toyota.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/xiaomi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/zeiss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/android.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/apple.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/chrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/explorer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/license/license.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/linux.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/mozilla.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/netscape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/opera.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/safari.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/browsers/windows.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/cat-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/cat-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/cat-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/cat-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/cat-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/categories/cat-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/face-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(7).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(8).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic(9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/propic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/faces/ralph.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/file-types/001-pdf.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/file-types/002-psd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/file-types/003-xls.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/file-types/004-xlsx.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/file-types/005-documents.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/file-types/006-png.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/file-types/007-jpg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/flags/bd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/flags/in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/flags/uk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/flags/usa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/headers/Header BG1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/headers/Header BG2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/Celebration.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/Giftbox.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/Group.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/Review.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/admin-dashboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/alarm-clock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/app-store.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/apple.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/arrow-down-filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/arrow-long-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/baby-boy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/baby-feeder.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/baby-girl.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/bag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/bag_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/bangladesh.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/basket-ball.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/basketball-ball.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/beauty-products.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/beer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/board.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/bottle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/box.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/brand.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/breakfast.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/camera.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/car.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/carrot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/categories.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/category.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/checkbox.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/chevron-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/chevron-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/chevron-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/chevron-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/clock-circular-outline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/cloud-data.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/comment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/credit-card-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/credit-card-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/credit-card.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/credit-card_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/credit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/customer-service.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/delivery-box.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/delivery-truck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/delivery.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/dollar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/done.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/dress-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/dress.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/drill-machine.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/eye-alt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/facebook-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/facebook-filled-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/facebook_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/feature.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/feedback-thumbs-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/feeding-bottle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/figma.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/fish.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/food.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/gear-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/gift-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/gift.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/google-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/google.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/grid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/healthy-food.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/heart-filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/heart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/heart_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/honey.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/hot-deal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/india.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/instagram-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/instagram_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/laptop.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/layout-list.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/light.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/lighting.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/mail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/make-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/man.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/map-pin (2).svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/map-pin-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/map-pin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/map-pin_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/math-equal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/milk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/more-horizontal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/motorbike.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/multivendor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/new-product-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/new-product.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/optimization.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/options.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/package-box.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/phone-call.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/phone_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/pick-up-box.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/picture.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/piggy-bank.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/pin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/pin_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/plant-pot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/play-store.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/quote-close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/quote-open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/ranking-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/ranking.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/right-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/rotate-ccw.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/service-customer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/settings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/settings_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/shield.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/shop.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/shopping-cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/skincare.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/smartphone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/snack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/sofa.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/support.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/t-shirt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/teddy-bear.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/telegram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/top-categories.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/track.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/triple-dot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/truck-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/truck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/twitter-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/twitter_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/united-kingdom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/united-states.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/upload.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/user-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/user-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/user_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/verify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/voice-recorder.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/watch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/wheat-flour.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/wheel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/woman.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/women-dress.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/yogurt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/youtube-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/youtube.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icons/youtube_filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/announcement.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/baby.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/business_deal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/dashboard/welcome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/designer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/dreamer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/lighthouse.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/mobile-message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/party-popper.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/posting_photo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/illustrations/upgrade.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/admin-dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/bonik.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/add-address.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/add-new-addresses.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/edit-payment.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/edit-profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/my-addresses.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/order-details.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/order-list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/page-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/payment.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/support-ticket-detials.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/support-ticket.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/customer/wish-list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/fashion-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/fashion-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/furniture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/gift-shop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/grocery1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/grocery3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/healthbeauty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/fashion-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/fashion-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/furniture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/gadget-electronics.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/gift-shop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/grocery1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/grocery2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/grocery3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/healthbeauty.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/market-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/home/super-store.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/inner-pages.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/landing-bg-1-old.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/landing-bg-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/landing-bg-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/niche-demos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-group-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-group-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-group-old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/page-group.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/cart.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/checkout-alternative.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/checkout.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/product-details.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/sale-page-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/sale-page-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/search-product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/shop-list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/shop/vendor-store.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/user-dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/account-setting.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/brands.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/categories.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/create-product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/customers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/dashboard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/earning-history.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/order-details.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/order-list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/package-payment.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/payout-list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/payout-request.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/payout-settings.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/product-list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/refund-request.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/refund-setting.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/reviews.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/seller-list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/seller-package.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/shop-settings.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/site-settings.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/support-tickets.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/vendor-earning.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/vendor-payout-requests.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/vendor-payouts.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/vendor-product-reviews.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/landing/vendor/vendor-refund-requests.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo-old.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo2 (1).svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo2-old.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/carousel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/chart-js.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/figma.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/formik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/google.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/mui.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/next-js.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/react-dropzone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/react.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/sass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/shopping-bag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/styled-component.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/styled-system.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/typescript.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/u.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/v.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logos/webpack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/models/model-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/models/model-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/models/model-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/models/mohammad-faruque-SpIKPT8zeAs-unsplash-removebg-preview 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/order-confirm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/001-paypal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/002-mastercard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/003-american express.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/004-visa.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/005-discover.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/006-western union.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/007-cirrus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/008-ideal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/009-jcb.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/010-eway.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/011-wirecard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/012-solo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/013-hsbc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/014-ebay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/015-citi.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/016-direct debit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/017-symbols.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/018-dinners club.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/019-postepay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/020-sage.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/021-switch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/022-maestro.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/023-paypoint.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/024-pick n pay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/025-worldpay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/026-union pay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/027-better business bureau.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/028-2co.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/029-authorize.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/030-bluepay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/031-clickbank.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/032-wepay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/maestro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/master-card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/paypal-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/visa-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-card/visa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/Amex.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/Mastercard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/PayPal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/Visa.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/amazon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/amex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/cirrus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/maestro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/master-card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/shopify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/skrill.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/visa-electron.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/visa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/payment-methods/western-union.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/2 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/3 50092.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/1.Ford2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/10.MercedesBenz2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/11.Ford2015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/12.MercedesBenz2018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/13.MercedesBenz2017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/14.ACURA2015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/15.Maclaren2010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/16.CHERY2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/17.AstonMartin2015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/18.Audi2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/19.Nissan2017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/2.Audi2017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/20.Hyundai2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/21.TATA2015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/22.Ford2011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/23.Ferrari2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/24.BMW2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/25.Mazda2014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/26.KIA2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/27.Chevrolet2013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/28.Porsche2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/3.Tesla2015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/4.Porsche2018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/5.Ford2018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/6.Ford2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/7.Mitsubishi2018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/8.BMW2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Automotive/9.Toyota2018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/1.CampagnoldWX-R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/10.MintanKRT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/11.Kawasaki2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/12.Spec2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/13.RoyalEnfield2010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/14.RoaylEnfield2011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/15.PrimeXTZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/16.RoyalEnfield2012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/17.SpecAlpha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/18.NinjaKawasaki2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/19.FujiTRX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/2.Hero2017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/20.CBR2022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/21.TarzT3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/22.YamahaR15Black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/23.YamahaR15Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/24.Revel2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/25.JacksonTB1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/3.Spec2015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/4.Kawasaki2018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/5.MustangWTZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/6.Honda2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/7.NinjaKawasaki 2016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/8.CozimaLOOK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Bikes/9.HeroHonda2017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/1.Siri2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/10.SonyPS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/11.Netgear2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/12.SonyBGB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/13.LGProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/14.Panasonic2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/15.DuneHD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/16.SonyCCTV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/17.VisionBlender.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/18.VisionMicrowaveOven.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/19.LGWashingMachine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/2.COSOR1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/20.TascuigoAriadryLight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/21.AmazonPackage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/22.VisionProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/23.LGOffers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/24.TelloDrone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/25.VivoMobiles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/26.TelloSuperDrones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/27.PinkWirelessEarphones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/28.RangsMobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/29.AppleEarphones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/3.PanasonicCharge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/30.Nokiaandroidone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/31.Symphonlights.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/32.iphone7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/33.beatswirelessearphones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/34.HTC2018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/35.beatsbluetoothearpohones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/36.sbsWirelessEarphones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/4.LumixDSLR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/5.AtechCam1080p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/6.Sonya9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/7.beatsw3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/8.BenQ2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Electronics/9.SonyTV1080p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/1.SilverCap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/10.RayBanOcean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/11.SunglassesCollection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/12.Xiaomimiband2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/13.FossilWatchBrown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/14.MVMTMWatchBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/15.BarihoWatchBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/16.SkmeiWatchBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/17.DigitalWristWatch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/18.DragonRedWristWatch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/2.FunkySilverCap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/3.BrownCap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/4.OrangeCap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/5.VegasBlueCap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/6.RayBanGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/7.PoliceGrayEyeglasses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/8.RayBanMattBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Accessories/9.RayBanBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/1.SilverHighNeckSweater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/10.LandsJacket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/11.StripedCasual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/12.PinkKidsWear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/13.HighWaistedGabardine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/14.BlueTrousers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/15.GreenSkiJacket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/16.DoubleWoolOvercoat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/17.StrechCargoPants.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/18.WoolOvercoatWomen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/19.BlackWhiteSweater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/2.BlueBlossomFrock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/20.GrayOvercoatWomen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/21.YellowCasualSweater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/22.CasualGrayPants.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/23.AdidasWinterJacket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/24.OliveCasualSweater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/25.KidsRainbowSweater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/3.NBLHoopHoodie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/4.DenimBlueJeans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/5.BrownCheckFrock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/6.FashionCollectionforKids.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/7.DenimClassicBlueJeans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/8.RoyalBlackSuitPant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Clothes/9.DenimGabardineCollection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/1.Heavy22ktGoldNecklaceSet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/10.Indian 8kt Gold Bracelet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/10.Indian8ktGoldBracelet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/11.Heavy 5kt Indian Earrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/11.Heavy5ktIndianEarrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/12.Blue Stone Locket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/12.BlueStoneLocket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/13.Black Stone Modern Locket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/13.BlackStoneModernLocket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/14.Diamond Wedding Rings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/14.DiamondWeddingRings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/15.Indian 6kt Gold Earrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/15.Indian6ktGoldEarrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/16.Custom Made Threads Beads Necklace Set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/16.CustomMadeThreadsBeadsNecklaceSet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/17.Heavy Stone Colorful Necklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/17.HeavyStoneColorfulNecklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/18.Beads and Threads Simple Earrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/18.BeadsandThreadsSimpleEarrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/19.Tamil Wedding Necklace Set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/19.TamilWeddingNecklaceSet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/2.Black Metal Ring.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/2.BlackMetalRing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/20.Shahi 21kt Gold Necklace Set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/20.Shahi21ktGoldNecklaceSet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/21.Feathers and Beads Bohemian Necklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/21.FeathersandBeadsBohemianNecklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/22.Red Peacock Tail Earrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/22.RedPeacockTailEarrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/23.Heavy 13kt Gold Wedding Necklace Set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/23.Heavy13ktGoldWeddingNecklaceSet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/3.Diamond Silver Ring.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/3.DiamondSilverRing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/4.Black Stones Necklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/4.BlackStonesNecklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/5.Indian Pearl Earrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/5.IndianPearlEarrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/6.Indian Copper Earrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/6.IndianCopperEarrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/7.Indian Pearl Square Stone Necklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/7.IndianPearlSquareStoneNecklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/8.Indian Pearl Thread Earrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/8.IndianPearlThreadEarrings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/9.Heavy 20kt Gold Necklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Jewellery/9.Heavy20ktGoldNecklace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/1.Nike Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/1.NikeRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/10.Adidas White.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/10.AdidasWhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/11.Flow white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/11.Flowwhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/12.NikeAirWhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/12._Nike Air White.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/13.Puma Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/13.PumaRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/14.Nike Pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/14.NikePink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/15.Nike Mint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/15.NikeMint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/16.Nike Silver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/16.NikeSilver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/17.North Star Olive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/17.NorthStarOlive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/18.Adidas Rainbow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/18.AdidasRainbow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/19.Nike Yellow Black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/19.NikeYellowBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/2.North Star Cream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/2.NorthStarCream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/20.Merrell Woods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/20.MerrellWoods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/21.North Star Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/21.NorthStarBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/22.Nike Black Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/22.NikeBlackRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/23.Nike Silver Race.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/23.NikeSilverRace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/3.Puma Black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/3.PumaBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/4.Nike Fluffy Yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/4.NikeFluffyYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/5.Nike Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/5.NikeBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/6.North Star Black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/6.NorthStarBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/7.Nike Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/7.NikeGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/8.Nike Skill.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/8.NikeSkill.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/9.Adidas Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Fashion/Shoes/9.AdidasGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/1.Sakti Sambar Powder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/1.SaktiSambarPowder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/10.Catch Italian Seasoning Grinder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/10.CatchItalianSeasoningGrinder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/11.Tadka Garam Masala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/11.TadkaGaramMasala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/12.Thanks a Latte Coffee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/12.ThanksaLatteCoffee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/13.Grocery Package Offer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/13.GroceryPackageOffer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/14.ACI Products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/14.ACIProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/15.Lightskin Soap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/15.LightskinSoap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/16.Artidoro Rodriguez Coffee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/16.ArtidoroRodriguezCoffee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/17.Dove Sensitive Skin Soap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/17.DoveSensitiveSkinSoap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/18.Aniket Garam Masala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/18.AniketGaramMasala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/19.Portsmouth Soaps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/19.PortsmouthSoaps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/2.Premium Grocery Collection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/2.PremiumGroceryCollection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/20.Premium Kitchen Pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/20.PremiumKitchenPack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/21.Mega Sardines.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/21.MegaSardines.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/22.Organic Company Products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/22.OrganicCompanyProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/23.Earnest Sardines.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/23.EarnestSardines.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/24.Parachute Coconut Oil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/24.ParachuteCoconutOil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/25.Cafe Torrefaction Fraiche.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/25.CafeTorrefactionFraiche.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/26.Madina Soaps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/26.MadinaSoaps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/27.Sardines Pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/27.SardinesPack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/28.Turmeric Powder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/28.TurmericPowder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/3.Premium Grocery Pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/3.PremiumGroceryPack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/4.Freash Real Chole Masala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/4.FreashRealCholeMasala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/5.Gum Pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/5.GumPack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/6.Indian Grocery Products Pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/6.IndianGroceryProductsPack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/7.Saffola Gold Oil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/7.SaffolaGoldOil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/8.Colgate Advance Protection Toothpaste.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/8.ColgateAdvanceProtectionToothpaste.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/9.Catch Sprinklers Chat Masala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Groceries/9.CatchSprinklersChatMasala.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/1.Biossance Oil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/10.Mykirei hand Wash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/11.Rahua Classic Conditioner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/12.Beauty Society anti acne mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/13.Mistral Lipstick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/14.Kylieskin Face Wash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/15.Amala Products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/16.Caudalie Hand and Nail Cream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/17.Alkemie Glow Up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/18.Shiseido Products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/19.Premium Lipstick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/2.Amorpacific Products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/20.Blemish Elixir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/21.Red Serum and Cream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/22.Detol Liquid Hand Wash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/23.Dove Face Wash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/24.Loreal Kids Extra Gentle Shampoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/25.Mario Badescu Skin Care Shampoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/3.Covergirl Vitalist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/4.Dr.Alka's Hair Shine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/5.Huda Beauty Nailpolish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/6.SKin Glow Oil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/7.Venus Makeup Product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/8.Volition Products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health &amp; Beauty/9.Aniise Cream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/1.BiossanceOil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/10.MykireihandWash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/11.RahuaClassicConditioner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/12.BeautySocietyantiacnemask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/13.MistralLipstick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/14.KylieskinFaceWash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/15.AmalaProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/16.CaudalieHandandNailCream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/17.AlkemieGlowUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/18.ShiseidoProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/19.PremiumLipstick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/2.AmorpacificProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/20.BlemishElixir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/21.RedSerumandCream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/22.DetolLiquidHandWash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/23.DoveFaceWash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/24.LorealKidsExtraGentleShampoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/25.MarioBadescuSkinCareShampoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/3.CovergirlVitalist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/4.Dr.Alka'sHairShine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/5.HudaBeautyNailpolish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/6.SKinGlowOil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/7.VenusMakeupProduct.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/8.VolitionProducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Health&amp;Beauty/9.AniiseCream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/1.The Poinsettia Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/10.Fiddle-leaf Plant in Bamboo Basket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/11.Beautiful Cactus in Ceramic Cup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/12.Cactus in Japanese Ceramic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/13.Garden Roses in Blue Vase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/14.Hanging Planters with Green Plants.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/15.Tilandsia Flexuosa in Wood Frame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/16.Copper Planter with Mixed Plants.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/17.Molded wax agave in Japanese Planter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/18.Green Vase Doilies.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/19.Mammillaria Elongata Cactus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/2.Devil's Ivy Indoor Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/20.Setgreen Plastic Pot 25CMS (Blue).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/21.Grass Pot 15.5 inch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/22.Euphorbia Leuconeura with Orange Pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/23.Euphorbia Lactea in Round Clay Pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/24.Mixed Succulent in Glass Jar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/25.Painted Leaf Begonia Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/26.Areca Palm in Clay Pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/27.Black Coral Sansevieria Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/3.Aloe Vera Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/4.Satin Pothos Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/5.Japanese Maple Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/6.Green Leaf Plant in Glass Jar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/7.Spider Plant in Round Glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/8.Chamaedorea Elegans Plants with Ceramic Pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home &amp; Garden/9.Houseplant in Japanese Pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/1.ThePoinsettiaPlant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/10.FiddleleafPlantinBambooBasket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/11.BeautifulCactusinCeramicCup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/12.CactusinJapaneseCeramic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/13.GardenRosesinBlueVase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/14.HangingPlanterswithGreenPlants.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/15.TilandsiaFlexuosainWoodFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/16.CopperPlanterwithMixedPlants.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/17.MoldedwaxagaveinJapanesePlanter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/18.GreenVaseDoilies.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/19.MammillariaElongataCactus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/2.Devil'sIvyIndoorPlant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/20.SetgreenPlasticPot25CMSBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/21.GrassPot15.5inch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/22.EuphorbiaLeuconeurawithOrangePot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/23.EuphorbiaLacteainRoundClayPot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/24.MixedSucculentinGlassJar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/25.PaintedLeafBegoniaPlant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/26.ArecaPalminClayPot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/27.BlackCoralSansevieriaPlant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/3.AloeVeraPlant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/4.SatinPothosPlant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/5.JapaneseMaplePlant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/6.GreenLeafPlantinGlassJar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/7.SpiderPlantinRoundGlass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/8.ChamaedoreaElegansPlantswithCeramicPot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Home&amp;Garden/9.HouseplantinJapanesePot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/1.6String Cheap Electric Guitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/1.6StringCheapElectricGuitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/10.Buffet 400 Saxophone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/10.Buffet400Saxophone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/11.Yamaha Electric Violin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/11.YamahaElectricViolin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/12.Cheap Ukulele Offers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/12.CheapUkuleleOffers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/13.Cordoba Classical Guitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/13.CordobaClassicalGuitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/14.Little Percussion Instruments.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/14.LittlePercussionInstruments.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/15.Pearl Snare Drum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/15.PearlSnareDrum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/16.Yamaha Piano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/16.YamahaPiano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/17.Roland Piano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/17.RolandPiano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/18.Fender 4string Bass Guitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/18.Fender4stringBassGuitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/19.Changer Harmonium.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/19.ChangerHarmonium.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/2.Affordable 4 String Tenor Banjo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/2.Affordable4StringTenorBanjo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/20.Roland V Drums.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/20.RolandVDrums.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/21.Ibanez GIO 6string Guitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/21.IbanezGIO6stringGuitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/22.TurkishMandolin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/23.AfforableTurkishOud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/24.YamahaAcousticGuitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/25.RolandFullSetVDrums.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/25.Turkish Mandolin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/26.Afforable Turkish Oud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/26.RolandJupiterXSynthesizer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/27.AffordableCordobaClassicalGuitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/27.Yamaha Acoustic Guitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/28.Roland Full Set V Drums.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/28.TurkishLongNeckBaglama.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/29.MahaloSopranoUkuleles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/29.Roland Jupiter-X Synthesizer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/3.Affordable Indian Sitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/3.AffordableIndianSitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/30.Affordable Cordoba Classical Guitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/30.YamahaYAS280Saxophone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/31.EastmanWestburryCello.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/31.Turkish Long Neck Baglama.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/32.Mahalo Soprano Ukuleles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/33.Yamaha YAS-280 Saxophone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/34.Eastman Westburry Cello.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/4.Detailed Painted Acoustic Guitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/4.DetailedPaintedAcousticGuitar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/5.Jackson 6String Floyd Rose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/5.Jackson6StringFloydRose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/6.Jackson 6String Fixed Bridge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/6.Jackson6StringFixedBridge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/7.Royal Harp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/7.RoyalHarp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/8.Mid Range Tabla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/8.MidRangeTabla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/9.Mid Range Dhol.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Music/9.MidRangeDhol.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Orange 1kg 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Orange 1kg 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Rectangle 116.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Rectangle 142.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/Red apple 1kg 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/URL List.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/alexa-plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/apple-watch-0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/apple-watch-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/apple-watch-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/apple-watch-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/apple-watch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/beauty-cream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bg (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bg-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgbeauty (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgbeauty (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgbeauty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgchair1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgchair2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgchair3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgchair4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgchair5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgchair6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgearphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bghead-phone (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bghead-phone (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bghead-phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bglaptop1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bglaptop2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bglaptop3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bglaptop4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bglaptop5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bglaptop6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bglight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgmobile1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgmobile2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgmobile3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgmobile4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgmobile5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgmobile6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgvessel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bgwatch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/blog-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/blog-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/blu-tshirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bluetooth-headphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/bonsai-tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/brand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/camera-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/casmatics.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/backpack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/bag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/belt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/cap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/hat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/mini-bag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/pant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/sandal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/shirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/sneaker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/sunglass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/t-shirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/categories/watch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/chair-and-clothes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/chair-with-clothes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/clothes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/drone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/flash-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/flash-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/flash-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/flash-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/formal-shirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/game-box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/gaming-gear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/garlic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/golden-watch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/green-plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/headphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/hiclipart.com (14).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/hiclipart.com (15).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/hiclipart.com (16).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/hiclipart.com (18).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/imagegoggles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/imagelipstick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/imagemakeup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/imageshoes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/imagesmart-watch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/imagetree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/iphone-x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/iphone-xi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/jacket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/jeans-pant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/jim and jiko.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/kisspng-organic-food-leaf-vegetable-fruit-rich-vegetables-5aa9f4d026ae09 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/kisspng-organic-food-milk-food-gift-baskets-grocery-5abeaffc1e5b25 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/kisspng-rolex-submariner-rolex-sea-dweller-rolex-datejust-rolex-watch-png-transparent-image-5a780226cb3f98.5864291415178143108325.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/ladies-dress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/ladies-dress2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/lipstick (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/lipstick (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/lipstick (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/lipstick (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/lipsticks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/london-britches.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/long-product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/macbook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/make-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/makeup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/mobile-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/mobile-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/nike-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/nike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/paper-bag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/perfume.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/pnat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/rayban.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/red-dress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/red-shoe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/ring-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/samsung.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/sdafdsfdsfsdaf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/shoe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/shoes-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/shoes-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/smartwatch-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/smartwatch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/sunglass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/t-shirt-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/t-shirt2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/t-shirt3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/t-shirt4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/t-shirt5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/t-shirt6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/t-shirt7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/table.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/tomato.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/watch-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/watch-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/watch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/white-tops.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/products/xiaomi-watch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/promotion/offer-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/promotion/offer-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/promotion/offer-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/promotion/offer-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/promotion/offer-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/shops/hatil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/shops/herman miller.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/shops/otobi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/shops/steelcase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/shops/zeiss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shops/final_bepetshop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shops/icons/bbsfavicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[lng]/(home)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[lng]/(home)/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[lng]/[shop]/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[lng]/[shop]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/i18n/client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/i18n/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/i18n/locales/en/home.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/i18n/locales/vi/home.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/i18n/settings.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BazaarCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BazaarImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BazaarMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BazaarTextField.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LazyImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Scrollbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Typography.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/animations/keyframes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/CategoryMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/CategoryMenuCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/CategoryMenuItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/mega-menu/MegaMenu1.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/mega-menu/MegaMenu2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/mega-menu/MegaMenu3.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/categories/mega-menu/StyledMegaMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flex-box/FlexBetween.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flex-box/FlexBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flex-box/FlexRowCenter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flex-box/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/Category.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/Chair.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/Dress.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/Laptop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/MakeUp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/ShoppingBagOutlined.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/icons/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mini-cart/MiniCart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-link/NavLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/MegaMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/MegaMenu2/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/MegaMenu2/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/MobileMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/SaleNavbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/search-box/GrocerySearchBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/search-box/SearchBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/search-box/styled.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/ShopList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sessions/EyeToggleButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sessions/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sessions/Signup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sessions/SocialButtons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shop/ShopCard1.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sticky/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/topbar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/responseCategory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/responseConfig.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/responseShops.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useSettings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/SessionProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/SettingProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/SnackbarProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/handlers/categories/fetchChildCategory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/handlers/config/fetchConfig.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/handlers/shop/fetchShops.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/handlers/shop/getShop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/routers/subRouters/category.router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/shopCategory/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/shopCofig/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/store-initializer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/MuiTheme.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/components.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/themeColors.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/themeOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/typography.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/category.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/shop.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/cron.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seedData/categories.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seedData/products.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/categories/air-force.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/categories/air-force.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/categories/airmax.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/categories/airmax.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/categories/dunks.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/categories/dunks.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/categories/jordan.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/categories/jordan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/head.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/head.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loaders/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loaders/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/env/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/massageProductClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/massageProductClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/validations/cartItemSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validations/cartItemSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/validations/productRoutesSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validations/productRoutesSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/handlers/categories/fetchAllCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/handlers/categories/fetchAllCategories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/handlers/products/fetchPopularProducts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/handlers/products/fetchPopularProducts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/handlers/products/getCartProducts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/handlers/products/getCartProducts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/routers/_app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/routers/_app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Qsxdy7UWL2cUvpxaCUv0ZYcC1F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\laragon\\www\\Ecommart13\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Ecommart13\src\app\[lng]" />
+      <recent name="C:\laragon\www\Ecommart13\src\app\[lng]\(home)" />
+      <recent name="C:\laragon\www\Ecommart13\src\message" />
+      <recent name="C:\laragon\www\Ecommart13\src\components\flex-box" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e19c08f-b3f1-4a6d-9543-f8d7d108cedc" name="Changes" comment="" />
+      <created>1686156189168</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686156189168</updated>
+      <workItem from="1686156194957" duration="7820000" />
+      <workItem from="1686200418081" duration="13000" />
+      <workItem from="1686333288331" duration="2759000" />
+      <workItem from="1686371408909" duration="3068000" />
+      <workItem from="1686494104809" duration="5097000" />
+      <workItem from="1686847204981" duration="2089000" />
+      <workItem from="1686851071928" duration="3033000" />
+      <workItem from="1686856288468" duration="1524000" />
+      <workItem from="1687155033039" duration="604000" />
+      <workItem from="1687202075685" duration="793000" />
+      <workItem from="1687340825112" duration="9807000" />
+      <workItem from="1687365758120" duration="8666000" />
+      <workItem from="1687422958556" duration="12893000" />
+      <workItem from="1687453278059" duration="9253000" />
+      <workItem from="1687543822328" duration="4931000" />
+      <workItem from="1687679028441" duration="18820000" />
+      <workItem from="1687777114721" duration="3081000" />
+      <workItem from="1687953077018" duration="597000" />
+      <workItem from="1687969141329" duration="6023000" />
+      <workItem from="1688034051382" duration="14964000" />
+      <workItem from="1688119615601" duration="949000" />
+      <workItem from="1688141089874" duration="4827000" />
+      <workItem from="1688316806612" duration="2773000" />
+      <workItem from="1688396075445" duration="5918000" />
+      <workItem from="1688465850222" duration="6274000" />
+      <workItem from="1688484802542" duration="5891000" />
+      <workItem from="1688526841851" duration="1505000" />
+      <workItem from="1688531242534" duration="488000" />
+      <workItem from="1688533800983" duration="321000" />
+      <workItem from="1688552314159" duration="3075000" />
+      <workItem from="1688575264251" duration="8894000" />
+      <workItem from="1688618754944" duration="6397000" />
+      <workItem from="1688631598495" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

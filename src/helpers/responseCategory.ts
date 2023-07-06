@@ -1,0 +1,1 @@
+import {CategoryGroupType} from "../types/category";export const responseCategoryGroup = (group: CategoryGroupType) => JSON.parse(JSON.stringify(group));
