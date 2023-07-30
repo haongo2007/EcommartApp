@@ -22,8 +22,10 @@ import { CartItemProps } from "types/types";
 const MiniCart = ({ toggleSidenav}) => {
   const { palette } = useTheme();
   const { cartItems, setCartItems } = useCartContext();
-  const locale = useStore((state) => state.shopLocale.language);
-  const shopName = useStore((state) => state.shopInfo.domain);
+  const { shopLocale } = useStore((state) => state);
+  const { shopInfo } = useStore((state) => state);
+  const locale = shopLocale.language;
+  const shopName = shopInfo.domain;
   const { enqueueSnackbar } = useSnackbar();
 
   const handleCartAmountChange = (amount, item) => () => {
@@ -162,7 +164,7 @@ const MiniCart = ({ toggleSidenav}) => {
               </Link>
 
               <Tiny color="grey.600">
-                {useCurrency(item.finalPrice)} x {item.qty}
+                { useCurrency(item.finalPrice,null,shopLocale,shopInfo)} x {item.qty}
               </Tiny>
 
               <Box
@@ -171,7 +173,7 @@ const MiniCart = ({ toggleSidenav}) => {
                 color="primary.main"
                 mt={0.5}
               >
-                { useCurrency(item.finalPrice * item.qty) }
+                { useCurrency(item.finalPrice * item.qty,null,shopLocale,shopInfo) }
               </Box>
             </Box>
 
@@ -201,7 +203,7 @@ const MiniCart = ({ toggleSidenav}) => {
               }}
               onClick={toggleSidenav}
             >
-              Checkout Now ({useCurrency(getTotalPrice())})
+              Checkout Now ({useCurrency(getTotalPrice(),null,shopLocale,shopInfo)})
             </Button>
           </Link>
 
