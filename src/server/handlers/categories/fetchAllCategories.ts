@@ -1,33 +1,38 @@
-import {Prisma, PrismaClient} from "@prisma/client";
+import {Prisma, PrismaClient, ShopCategories} from "@prisma/client";
 import db from "../../../lib/servers/prismadb";
-import {groupBy} from "lodash-es";
+import {groupBy,flatten} from "lodash-es";
 import {responseCategoryGroup} from "../../../helpers/responseCategory";
 
-interface CategoryWhereType {
-    domain: string;
-}
 export const fetchAllCategories = async (
-    domainName?: string,
+    store_id?: number,
+    store_name?: string,
     prisma?: PrismaClient<Prisma.PrismaClientOptions,never,Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined>
     ) => {
     const where: {
         parent: number;
-        shop?: Partial<CategoryWhereType>;
+        store_id?: number;
     } = {
         parent: 0,
     };
-    if (domainName !== null){
-        where['shop'] = {
-            domain : domainName
-        }
+    const include: {
+        description: boolean,
+        shop?:boolean,
+    } = {
+        description: true,
+    };
+    if (store_id !== null){
+        where['store_id'] = store_id;
+    }
+    if(!store_name){
+        include['shop'] = true;
     }
     const data = await (prisma ?? db).shopCategories.findMany({
         where,
-        include: {
-            description: true,
-            shop: true
-        },
+        include
     });
-    const groupData = groupBy(data, 'shop.domain');
-    return responseCategoryGroup(groupData);
+    if(!store_name){
+        const groupData = groupBy(data, 'shop.domain');
+        return responseCategoryGroup(groupData);
+    }
+    return responseCategoryGroup({[`${store_name}`]: data});
 }

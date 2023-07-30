@@ -1,5 +1,5 @@
 import { Prisma, PrismaClient } from "@prisma/client";
-import { massageProductClientList } from "../../../helpers/massageProductClient";
+import { massageProductClientList } from "../../../helpers/responseProduct";
 import { CartProductsInput } from "../../../helpers/validations/productRoutesSchema";
 import db from "../../../lib/servers/prismadb";
 

@@ -88,7 +88,6 @@ const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, el
   const { settingState } = useSettings();
   const renderNestedNav = (list = [], isRoot = false) => {
     return list.map((nav) => {
-      console.log(nav);
       if (isRoot) {
         // show megamenu
         if (nav.megaMenu) {

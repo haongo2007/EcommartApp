@@ -1,1 +1,1 @@
-export const createConfigStore = () => ({  configs: [],});
+export const createConfigStore = () => ({  shopConfig: [],});

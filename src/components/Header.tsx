@@ -21,9 +21,9 @@ import {useCartContext} from "../providers/CartContextProvider";
 import Login from "./sessions/Login";
 import {LAYOUT_CONSTANT} from "../constants";
 import {useSession} from "next-auth/react"
-import {useRouter} from "next/navigation";
 import {useEffect} from "react";
-import {CategoryGroupType} from "../types/category";
+import {APP_INFOMATION} from "../constants";
+import { AppInfomation } from "types/types";
 
 export const HeaderWrapper = styled(Box)(({ theme }) => ({
     zIndex: 3,
@@ -37,7 +37,7 @@ export const HeaderWrapper = styled(Box)(({ theme }) => ({
 })); // ==============================================================
 
 // ==============================================================
-const Header = ({infomation, data, isFixed, className, searchBoxType = "type1" }:{infomation:{logo:string,domain?:string,lng?:string}, data:CategoryGroupType,isFixed?:boolean | false, className?:string | undefined,searchBoxType?:string}) => {
+const Header = ({infomation, isFixed, className, searchBoxType = "type1" }:{infomation?:AppInfomation | undefined, isFixed?:boolean | false, className?:string | undefined,searchBoxType?:string}) => {
     const theme = useTheme();
     const { cartItems } = useCartContext();
     const [dialogOpen, setDialogOpen] = useState(false);
@@ -46,9 +46,9 @@ const Header = ({infomation, data, isFixed, className, searchBoxType = "type1" }
     const downMd = useMediaQuery(theme.breakpoints.down(1150));
     const { data: session } = useSession();
     const cartLength = cartItems.reduce((total, curr) => (total += curr.qty),0);
-    const logoShop = infomation.logo;
-    const curLang = infomation.lng+'/' || '';
-    const curDomain = curLang+infomation.domain || '/';
+    const logoShop = infomation ? infomation.logo : APP_INFOMATION.logo;
+    const curLang = infomation ? infomation.language+'/' : '';
+    const curDomain = curLang + (infomation ? infomation.domain : '/');
     const toggleDialog = () => {
         setDialogOpen(!dialogOpen);
     };
@@ -82,10 +82,8 @@ const Header = ({infomation, data, isFixed, className, searchBoxType = "type1" }
                         justifyContent: 'center'
                     }}
                 >
-                    <Link legacyBehavior href={curDomain ? '/'+curDomain : '/'}>
-                        <a>
-                            <Image height={70} src={logoShop} alt="logo" />
-                        </a>
+                    <Link href={curDomain ? '/'+curDomain : '/'}>
+                        <Image height={70} src={logoShop} alt="logo" />
                     </Link>
 
                     {isFixed && (

@@ -24,3 +24,25 @@ export const getDateCompare = (after: Date) => {
     return `${differenceInYears(currDate, after)} year(s) ago`;
   }
 };
+
+export const currentDateTimeToString = (date) => {
+  var mm = date.getMonth() + 1; // getMonth() is zero-based
+  var dd = date.getDate();
+  var h = date.getHours();
+  var m = date.getMinutes();
+  var s = date.getSeconds();
+  return date.getFullYear() + '-' + (mm > 9 ? '' : '0') + mm + '-' + (dd > 9 ? '' : '0') + dd + ' ' + (h > 9 ? '' : '0') + h + ':' + (m > 9 ? '' : '0') + m + ':' + (s > 9 ? '' : '0') + s;
+}
+
+export const getDateDifference = (date) => {
+  let diff = differenceInMinutes(new Date(), new Date(date));
+  if (diff < 60) return diff + " minutes ago";
+  diff = Math.ceil(diff / 60);
+  if (diff < 24) return `${diff} hour${diff === 0 ? "" : "s"} ago`;
+  diff = Math.ceil(diff / 24);
+  if (diff < 30) return `${diff} day${diff === 0 ? "" : "s"} ago`;
+  diff = Math.ceil(diff / 30);
+  if (diff < 12) return `${diff} month${diff === 0 ? "" : "s"} ago`;
+  diff = diff / 12;
+  return `${diff.toFixed(1)} year${Math.ceil(diff) === 0 ? "" : "s"} ago`;
+}

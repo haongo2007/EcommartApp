@@ -1,1 +1,39 @@
-import {ShopCategories} from "@prisma/client";const recursiveChildren = (state,item) => {  state.children.map((child) => {    if(!child.hasOwnProperty('children')){      child['children'] = [];    }    if (child.id === item.parent){      child['has_mount'] = true;      child['children'].push(item);    }else{      recursiveChildren(child,item);    }  })}export const createCategoryStore = (set, get) => ({  allCategory: [],  setCategory: (params) => {    const { allCategory } = get();    const { data,id,domain } = params;    const indexState = allCategory[domain].findIndex((i:ShopCategories) => i.id === id);    if (indexState < 0) return;    data.map((item) => {      if (item.parent === id){        if(!allCategory[domain][indexState].hasOwnProperty('children')){          allCategory[domain][indexState]['children'] = [];        }        item['has_mount'] = true;        allCategory[domain][indexState]['has_mount'] = true;        allCategory[domain][indexState]['children'].push(item);      }else{        recursiveChildren(allCategory[domain][indexState],item);      }    })    set({ allCategory: allCategory });  },});
+import {ShopCategories} from "@prisma/client";
+
+const recursiveChildren = (state,item) => {
+  state.children.map((child) => {
+    if(!child.hasOwnProperty('children')){
+      child['children'] = [];
+    }
+    if (child.id === item.parent){
+      child['has_mount'] = true;
+      child['children'].push(item);
+    }else{
+      recursiveChildren(child,item);
+    }
+  })
+}
+
+export const createCategoryStore = (set, get) => ({
+  shopCategory: [],
+  setCategory: (params) => {
+    const { shopCategory } = get();
+    const { data,id,domain } = params;
+    const indexState = shopCategory[domain].findIndex((i:ShopCategories) => i.id === id);
+    if (indexState < 0) return;
+    
+    data.map((item) => {
+      if (item.parent === id){
+        if(!shopCategory[domain][indexState].hasOwnProperty('children')){
+          shopCategory[domain][indexState]['children'] = [];
+        }
+        item['has_mount'] = true;
+        shopCategory[domain][indexState]['has_mount'] = true;
+        shopCategory[domain][indexState]['children'].push(item);
+      }else{
+        recursiveChildren(shopCategory[domain][indexState],item);
+      }
+    })
+    set(shopCategory);
+  },
+});

@@ -1,20 +1,12 @@
-"use client";
-
-import { RotatingLines } from "react-loader-spinner";
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import LinearProgress from '@mui/material/LinearProgress';
 
 const Loader = () => {
   return (
-    // <div className="h-[60vh] max-w-6xl mx-auto w-full flex flex-row items-center justify-center py-40">
-  <div className="">
-      <RotatingLines
-        strokeColor="grey"
-        strokeWidth="5"
-        animationDuration="0.75"
-        width="30"
-        visible={true}
-      />
-    </div>
+    <Stack sx={{ width: '100%', color: 'grey.500' }}>
+      <LinearProgress color="secondary" />
+    </Stack>
   );
-};
-
+}
 export default Loader;

@@ -4,7 +4,7 @@ import { toast } from "react-hot-toast";
 import { useCartContext } from "../../providers/CartContextProvider";
 import { trpc } from "../../providers/trpcProvider";
 import Loader from "../loaders/Loader";
-import { CartItem } from "../../types/types";
+import { CartItemProps } from "../../types/types";
 import CartCard from "../cards/CartCard";
 import NotFoundText from "../NotFoundText";
 import { useMemo, useState } from "react";
@@ -53,8 +53,8 @@ const CartSection = () => {
         setProductsMap(Object.fromEntries(uniqueProducts));
 
         if (data.length !== cartItems.length) {
-          const updatedCarts: CartItem[] = [];
-          const unAvailableProducts: CartItem[] = [];
+          const updatedCarts: CartItemProps[] = [];
+          const unAvailableProducts: CartItemProps[] = [];
           cartItems.forEach((item) => {
             if (uniqueProducts.get(item.id)?.sizes.includes(item.size)) {
               updatedCarts.push(item);

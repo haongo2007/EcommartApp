@@ -7,6 +7,7 @@ acceptLanguage.languages(languages)
 const cookieName = 'i18next'
 
 export default async function middleware(req: NextRequest) {
+  const response = NextResponse.next();
   const baseUrl = req.nextUrl.origin;
   const path = req.nextUrl.pathname;
   const headers = {
@@ -25,7 +26,6 @@ export default async function middleware(req: NextRequest) {
     });
     pass = authCheck.status === 400;
   }
-
   if (!pass) {
     return NextResponse.redirect(new URL("/not-found", req.url), req);
   }
@@ -40,12 +40,28 @@ export default async function middleware(req: NextRequest) {
   }
   if (path === '/') {
     return NextResponse.redirect(new URL(`/${lng}`, req.url))
+  }else{
+    const regexCheckLang = /\/([^/]+)/;
+    const checkMatchLang : any = path.match(regexCheckLang);
+    if(checkMatchLang[1].length > 2 && checkMatchLang[1] !== 'assets'){
+      return NextResponse.redirect(new URL(`/${lng}`, req.url))
+    }
   }
+  // const regexPattern = /\/[^/]+\/([a-zA-Z0-9]+)/; // Biểu thức chính quy để tìm kiếm phần tử giữa "/lang/" và "/"
+  // const match = path.match(regexPattern);
+  // if (match !== null && match.length > 1) {
+  //   const result = match[1];
+  //   const {data} = await (await fetch(`${baseUrl}/api/shop-check/${result}`,{
+  //     headers,
+  //   })).json();
+  //   if(data){
+  //     response.cookies.set('store_id', data.id);
+  //   }
+  // }
 
   if (req.headers.has('referer')) {
     const refererUrl = new URL(req.headers.get('referer') || "")
     const lngInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`))
-    const response = NextResponse.next()
     if (lngInReferer){
       response.cookies.set(cookieName, lngInReferer)
     }
@@ -60,6 +76,6 @@ export const config = {
     "/user/:path*",
     "/checkout/:path*",
     "/orders/:path*",
-    "/admin/:path*"
+    "/admin/:path*",
   ],
 };

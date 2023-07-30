@@ -5,7 +5,7 @@ import {
   getCartProductsInputSchema,
   searchProductsSchema,
 } from "../../../helpers/validations/productRoutesSchema";
-import { fetchProductById } from "../../handlers/products/fetchProductById";
+import { fetchProductById } from "../../handlers/products/getProduct";
 import { getCartProducts } from "../../handlers/products/getCartProducts";
 import { getProductsBySearch } from "../../handlers/products/getProductsBySearch";
 import { procedure, router } from "../../trpc";

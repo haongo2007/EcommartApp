@@ -26,7 +26,7 @@ const megaMenu = [
 ];
 
 export const CateMega = ({data,shop}) => {
-    const locale = 'vi';
+    const locale = useStore((state) => state.shopLocale.language);
     if (shop === undefined || Object.keys(data).length === 0) return ;
     if(shop === ''){
       data = flatMap(mapValues(data));
@@ -43,7 +43,6 @@ export const CateMega = ({data,shop}) => {
                 icon={item.icon}
                 key={item.id}
                 id={item.id}
-                shop={item.shop}
                 child_list={item.child_list}
                 title={item.description.filter((desc) => desc.lang === locale)[0].title}
                 caret={!!item.has_child}
@@ -55,15 +54,15 @@ export const CateMega = ({data,shop}) => {
 }
 // ===============================================================
 const CategoryMenuCard = (props) => {
-  const { allCategory } = useStore();
+  const { shopCategory } = useStore();
   let categories;
   const currentShop = '';
     if (currentShop !== ''){
-      if (allCategory.hasOwnProperty(currentShop)){
-          categories = allCategory[currentShop];
+      if (shopCategory.hasOwnProperty(currentShop)){
+          categories = shopCategory[currentShop];
       }
     }else{
-      categories = allCategory
+      categories = shopCategory
     }
   const { open, position } = props;
   return (

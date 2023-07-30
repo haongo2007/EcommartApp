@@ -42,15 +42,15 @@ type CategoryMenuProps = {
   has_child:number;
   title:string;
   caret:boolean;
-  shop:Shops;
   icon:string | null;
   children:React.ReactNode;
 }
 
 const CategoryMenuItem = (props:CategoryMenuProps) => {
-  const { id, child_list, has_mount, href, has_child, title, caret, shop, icon, children } = props;
+  const { id, child_list, has_mount, href, has_child, title, caret, icon, children } = props;
   const { settingState } = useSettings();
   const { setCategory } = useStore();
+  const domain = useStore((state) => state.shopInfo.domain);
   const { refetch,isInitialLoading } = trpc.category.getChilds.useQuery(child_list,{
     enabled: false
   });
@@ -59,7 +59,7 @@ const CategoryMenuItem = (props:CategoryMenuProps) => {
       return false;
     }
     refetch().then(({data}) => {
-      setCategory({data,id,domain:shop.domain});
+      setCategory({data,id,domain});
     });
   }
   let SvgIcon = '';
@@ -68,7 +68,7 @@ const CategoryMenuItem = (props:CategoryMenuProps) => {
   }
   return (
     <Wrapper onMouseEnter={() => handleCallChild()}>
-      <Link href={shop.domain+href} passHref>
+      <Link href={domain+href} passHref>
         <MenuItem className="category-dropdown-link">
           {icon && <SvgIcon fontSize="small" color="inherit" />}
           <span className="title">{title}</span>

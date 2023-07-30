@@ -207,6 +207,8 @@ model ShopConfig {
 
     store_id         Int
 
+    store_name         String
+
     sort             Int    @default(0)
 
     detail         String?
@@ -459,6 +461,8 @@ model ShopProduct {
 
     store_id       Int
 
+    store_name     String
+
     date_available DateTime?  @db.Date()
 
     shop   Shops   @relation(fields: [store_id], references: [id])
@@ -544,6 +548,8 @@ model ShopProductPromotion {
     product_id     Int
 
     store_id       Int
+
+    store_name     String
 
     promo_type           String @default("normal")
 

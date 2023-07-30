@@ -25,14 +25,14 @@ const AboutSection = () => {
 
         <p className="text-sm">
           This project is built in public. You can refer the codebase here:{" "}
-          <a
+          <Link
             href="https://github.com/amirfakhrullah/ecommerce-next13beta"
             target="_blank"
             rel="noreferrer"
             className="underline text-blue-600"
           >
             ecommerce-next13beta
-          </a>
+          </Link>
         </p>
 
         <div className="my-4" />

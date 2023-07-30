@@ -10,11 +10,17 @@ export const LAYOUT_CONSTANT = {
   grocerySidenavWidth: 280,
 };
 
+export const arrowButtonStyle = {
+  backgroundColor: "white",
+  color: "#2B3445",
+};
+
 export const APP_INFOMATION = {
   logo: '/assets/images/logo2.svg',
   phone: "0972918120",
   email: 'haongodev@gmail.com',
   language: 'en',
+  defaultCurrency: 'USD',
   languages:[
     {
       'id':1,

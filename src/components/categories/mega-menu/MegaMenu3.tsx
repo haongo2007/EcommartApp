@@ -42,7 +42,6 @@ const MegaMenu3 = ({ data: { categories, rightImage }, minWidth }) => {
 
           {rightImage && (
             <Link legacyBehavior href={rightImage.href}>
-              <a>
                 <Box position="relative" width="153px" height="100%">
                   <LazyImage
                     alt="banner"
@@ -51,13 +50,11 @@ const MegaMenu3 = ({ data: { categories, rightImage }, minWidth }) => {
                     src={rightImage.imgUrl}
                   />
                 </Box>
-              </a>
             </Link>
           )}
         </FlexBox>
 
         <Link legacyBehavior href="/sale-page-2">
-          <a>
             <Grid
               className="h-full"
               container
@@ -98,7 +95,6 @@ const MegaMenu3 = ({ data: { categories, rightImage }, minWidth }) => {
                 </FlexBox>
               </Grid>
             </Grid>
-          </a>
         </Link>
       </BazaarCard>
     </StyledMegaMenu>

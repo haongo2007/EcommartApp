@@ -20,6 +20,7 @@ export const initShopProducts = [
     "status":1,
     "sort":1,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU02",
@@ -42,6 +43,7 @@ export const initShopProducts = [
     "status":1,
     "sort":2,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU03",
@@ -64,6 +66,7 @@ export const initShopProducts = [
     "status":1,
     "sort":3,
     "store_id":1,
+    "store_name": "bepetshop"
 
   },
   {
@@ -87,6 +90,7 @@ export const initShopProducts = [
     "status":1,
     "sort":4,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU05",
@@ -109,6 +113,7 @@ export const initShopProducts = [
     "status":1,
     "sort":5,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU06",
@@ -131,6 +136,7 @@ export const initShopProducts = [
     "status":1,
     "sort":6,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU07",
@@ -153,6 +159,7 @@ export const initShopProducts = [
     "status":1,
     "sort":7,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU08",
@@ -175,6 +182,7 @@ export const initShopProducts = [
     "status":1,
     "sort":8,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU09",
@@ -197,6 +205,7 @@ export const initShopProducts = [
     "status":1,
     "sort":9,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU010",
@@ -219,6 +228,7 @@ export const initShopProducts = [
     "status":1,
     "sort":10,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU011",
@@ -241,6 +251,7 @@ export const initShopProducts = [
     "status":1,
     "sort":11,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU012",
@@ -263,6 +274,7 @@ export const initShopProducts = [
     "status":1,
     "sort":12,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU013",
@@ -285,6 +297,7 @@ export const initShopProducts = [
     "status":1,
     "sort":13,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU014",
@@ -307,6 +320,7 @@ export const initShopProducts = [
     "status":1,
     "sort":14,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU015",
@@ -329,6 +343,7 @@ export const initShopProducts = [
     "status":1,
     "sort":15,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU016",
@@ -351,6 +366,7 @@ export const initShopProducts = [
     "status":1,
     "sort":16,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU017",
@@ -373,6 +389,7 @@ export const initShopProducts = [
     "status":1,
     "sort":17,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU018",
@@ -395,6 +412,7 @@ export const initShopProducts = [
     "status":1,
     "sort":18,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU019",
@@ -417,6 +435,7 @@ export const initShopProducts = [
     "status":1,
     "sort":19,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU020",
@@ -439,6 +458,7 @@ export const initShopProducts = [
     "status":1,
     "sort":20,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU021",
@@ -461,6 +481,7 @@ export const initShopProducts = [
     "status":1,
     "sort":21,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU022",
@@ -483,6 +504,7 @@ export const initShopProducts = [
     "status":1,
     "sort":22,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU023",
@@ -505,6 +527,7 @@ export const initShopProducts = [
     "status":1,
     "sort":23,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU024",
@@ -527,6 +550,7 @@ export const initShopProducts = [
     "status":1,
     "sort":24,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU025",
@@ -549,6 +573,7 @@ export const initShopProducts = [
     "status":1,
     "sort":25,
     "store_id":1,
+    "store_name": "bepetshop"
   },
   {
     "sku":"SKU026",
@@ -571,5 +596,6 @@ export const initShopProducts = [
     "status":1,
     "sort":26,
     "store_id":1,
+    "store_name": "bepetshop"
   }
 ];

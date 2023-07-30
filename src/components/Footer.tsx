@@ -1,64 +1,178 @@
+"use client"
 import Link from "next/link";
+import { Box, Container, Grid, IconButton, styled } from "@mui/material";
+import AppStore from "components/AppStore";
+import Image from "components/BazaarImage";
+import { FlexBox } from "components/flex-box";
+import { Paragraph } from "components/Typography";
+import Google from "components/icons/Google";
+import Twitter from "components/icons/Twitter";
+import Youtube from "components/icons/Youtube";
+import Facebook from "components/icons/Facebook";
+import Instagram from "components/icons/Instagram"; // styled component
+
+const StyledLink = styled("a")(({ theme }) => ({
+  display: "block",
+  borderRadius: 4,
+  cursor: "pointer",
+  position: "relative",
+  padding: "0.3rem 0rem",
+  color: theme.palette.grey[500],
+  "&:hover": {
+    color: theme.palette.grey[100],
+  },
+}));
 
 const Footer = () => {
   return (
-    <div className="sm:mx-3 mx-1 px-2 sm:py-5 py-4 border-t border-zinc-300">
-      <div className="mx-auto max-w-6xl flex md:flex-row md:justify-between flex-col gap-2">
-        <div className="sm:p-5">
-          <h1 className="text-2xl text-red-800 font-black mb-3">Checks!</h1>
-          <p className="text-[14px]">
-            Built by{" "}
-            <Link
-              className="underline"
-              target="_blank"
-              href="https://twitter.com/amirfkrlh"
-            >
-              @amirfkrlh
-            </Link>{" "}
-            (2023). See source code{" "}
-            <Link
-              className="underline"
-              target="_blank"
-              href="https://github.com/amirfakhrullah/ecommerce-next13beta"
-            >
-              here.
-            </Link>
-          </p>
-          <p className="text-[14px]">
-            Powered by{" "}
-            <Link
-              className="underline"
-              href="https://vercel.com/"
-              target="_blank"
-            >
-              Vercel
-            </Link>
-            ,{" "}
-            <Link
-              className="underline"
-              href="https://railway.app/"
-              target="_blank"
-            >
-              Railway
-            </Link>{" "}
-            &{" "}
-            <Link
-              className="underline"
-              href="https://aws.amazon.com/s3/"
-              target="_blank"
-            >
-              AWS S3
-            </Link>
-            .
-          </p>
-        </div>
+    <footer>
+      <Box bgcolor="#222935">
+        <Container
+          sx={{
+            p: "1rem",
+            color: "white",
+          }}
+        >
+          <Box py={10} overflow="hidden">
+            <Grid container spacing={3}>
+              <Grid item lg={4} md={6} sm={6} xs={12}>
+                <Link href="/">
+                  <Image mb={2.5} src="/assets/images/logo.svg" alt="logo" width="75%"/>
+                </Link>
 
-        <div className="flex flex-col justify-end sm:p-5">
-          <p className="text-[14px]">This is not a real e-commerce site.</p>
-        </div>
-      </div>
-    </div>
+                <Paragraph mb={2.5} color="grey.500">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor libero id et, in gravida. Sit diam duis mauris nulla
+                  cursus. Erat et lectus vel ut sollicitudin elit at amet.
+                </Paragraph>
+
+                <AppStore />
+              </Grid>
+
+              <Grid item lg={2} md={6} sm={6} xs={12}>
+                <Box
+                  fontSize="18px"
+                  fontWeight="600"
+                  mb={1.5}
+                  lineHeight="1"
+                  color="white"
+                >
+                  About Us
+                </Box>
+
+                <div>
+                  {aboutLinks.map((item, ind) => (
+                    <Link href="/" key={ind} passHref legacyBehavior>
+                      <StyledLink>{item}</StyledLink>
+                    </Link>
+                  ))}
+                </div>
+              </Grid>
+
+              <Grid item lg={3} md={6} sm={6} xs={12}>
+                <Box
+                  fontSize="18px"
+                  fontWeight="600"
+                  mb={1.5}
+                  lineHeight="1"
+                  color="white"
+                >
+                  Customer Care
+                </Box>
+
+                <div>
+                  {customerCareLinks.map((item, ind) => (
+                    <Link href="/" key={ind} passHref legacyBehavior>
+                      <StyledLink>{item}</StyledLink>
+                    </Link>
+                  ))}
+                </div>
+              </Grid>
+
+              <Grid item lg={3} md={6} sm={6} xs={12}>
+                <Box
+                  fontSize="18px"
+                  fontWeight="600"
+                  mb={1.5}
+                  lineHeight="1"
+                  color="white"
+                >
+                  Contact Us
+                </Box>
+                <Box py={0.6} color="grey.500">
+                  70 Washington Square South, New York, NY 10012, United States
+                </Box>
+                <Box py={0.6} color="grey.500">
+                  Email: uilib.help@gmail.com
+                </Box>
+                <Box py={0.6} mb={2} color="grey.500">
+                  Phone: +1 1123 456 780
+                </Box>
+
+                <FlexBox className="flex" mx={-0.625}>
+                  {iconList.map((item, ind) => (
+                    <Link
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer noopenner"
+                      key={ind}
+                    >
+                      <IconButton
+                        sx={{
+                          margin: 0.5,
+                          fontSize: 12,
+                          padding: "10px",
+                          backgroundColor: "rgba(0,0,0,0.2)",
+                        }}
+                      >
+                        <item.icon fontSize="inherit" />
+                      </IconButton>
+                    </Link>
+                  ))}
+                </FlexBox>
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
+      </Box>
+    </footer>
   );
 };
 
+const aboutLinks = [
+  "Careers",
+  "Our Stores",
+  "Our Cares",
+  "Terms & Conditions",
+  "Privacy Policy",
+];
+const customerCareLinks = [
+  "Help Center",
+  "How to Buy",
+  "Track Your Order",
+  "Corporate & Bulk Purchasing",
+  "Returns & Refunds",
+];
+const iconList = [
+  {
+    icon: Facebook,
+    url: "https://www.facebook.com/UILibOfficial",
+  },
+  {
+    icon: Twitter,
+    url: "https://twitter.com/uilibofficial",
+  },
+  {
+    icon: Youtube,
+    url: "https://www.youtube.com/channel/UCsIyD-TSO1wQFz-n2Y4i3Rg",
+  },
+  {
+    icon: Google,
+    url: "/",
+  },
+  {
+    icon: Instagram,
+    url: "https://www.instagram.com/uilibofficial/",
+  },
+];
 export default Footer;
