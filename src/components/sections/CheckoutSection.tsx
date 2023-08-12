@@ -3,7 +3,7 @@
 import { Elements } from "@stripe/react-stripe-js";
 import { getClientStripe } from "../../lib/clients/stripeClient";
 import CheckoutForm from "../forms/CheckoutForm";
-import { useCartContext } from "../../providers/CartContextProvider";
+import { useCartContext } from "../../providers/CartProvider";
 import { useEffect } from "react";
 import { OrderDetails } from "../../app/checkout/[orderId]/page";
 import CartCard from "../cards/CartCard";

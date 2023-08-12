@@ -1,24 +1,60 @@
 "use client";
-
+import Link from "next/link";
+import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
-import Button from "../components/buttons/Button";
+import BazaarImage from "components/BazaarImage";
+import { FlexBox, FlexRowCenter } from "components/flex-box";
+import { Metadata } from "next";
 
-const NotFoundPage = () => {
+
+export const metadata: Metadata = {
+  title: 'Nothing found',
+}
+
+
+const Error404 = () => {
   const router = useRouter();
 
+  const handleGoBack = () => router.back();
+
   return (
-    <div className="h-[60vh] py-20 flex flex-col items-center">
-      <h2 className="font-black text-4xl text-red-800 mb-4">404 Not Found</h2>
-      <p>Oh uh.. looks like the page you&apos;re looking for doesn&apos;t exist</p>
-      <Button
-        onClick={() => router.push("/")}
-        color="primary"
-        className="py-2 px-4 mt-5"
-      >
-        Back Home
-      </Button>
-    </div>
+    <FlexRowCenter px={2} minHeight="100vh" flexDirection="column">
+      <BazaarImage
+        src="/assets/images/illustrations/404.svg"
+        sx={{
+          display: "block",
+          maxWidth: 320,
+          width: "100%",
+          mb: 3,
+        }}
+      />
+
+      <FlexBox flexWrap="wrap">
+        <Button
+          variant="outlined"
+          color="primary"
+          sx={{
+            m: 1,
+          }}
+          onClick={handleGoBack}
+        >
+          Go Back
+        </Button>
+
+        <Link href="/" passHref legacyBehavior>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              m: 1,
+            }}
+          >
+            Go to Home
+          </Button>
+        </Link>
+      </FlexBox>
+    </FlexRowCenter>
   );
 };
 
-export default NotFoundPage;
+export default Error404;

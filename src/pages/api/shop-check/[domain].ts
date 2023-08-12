@@ -8,10 +8,14 @@ const checkShop = async (req: NextApiRequest, res: NextApiResponse) => {
   const {domain} = req.query;
   const shop = await db.shops.findFirst({
     where: {
-        domain: domain
+        domain
     }
   });
-  res.status(200).json({data:shop});
+  if(shop){
+    res.setHeader('store_id', String(shop.id));
+    return res.status(200).end();
+  }
+  return res.status(400).end();
 };
 
 export default checkShop;

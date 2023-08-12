@@ -2,7 +2,7 @@
 
 import { notFound } from "next/navigation";
 import cn from "../../helpers/cn";
-import { useUserContext } from "../../providers/UserProvider";
+import { useUserContext } from "../../providers/AccountProvider";
 import UserAvatar from "../Avatar";
 
 const UserHeadSection = () => {

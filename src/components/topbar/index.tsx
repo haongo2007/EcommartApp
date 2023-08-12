@@ -85,7 +85,6 @@ const TopbarWrapper = styled(Box, {
 const Topbar = ({ bgColor,infomation,useCurrency } : TopbarProps) => {
     const asPath = usePathname();
     const { shopLocale } = useStore();
-
     const languageList = shopLocale.hasOwnProperty('languages') ? shopLocale.languages : APP_INFOMATION.languages;
     const currencyList = shopLocale?.currencies;
     return (

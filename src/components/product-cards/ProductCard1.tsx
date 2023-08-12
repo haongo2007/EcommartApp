@@ -9,7 +9,6 @@ import LazyImage from "components/LazyImage";
 import BazaarCard from "components/BazaarCard";
 import { H3, Span } from "components/Typography";
 import BazaarRating from "components/BazaarRating";
-import { useCartContext } from "../../providers/CartContextProvider";
 import ProductViewDialog from "components/product/ProductViewDialog";
 import { FlexBox } from "../flex-box";
 import { useStore } from "stores";
@@ -76,6 +75,7 @@ const ProductCard1 = ({product}) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const shopName = useStore((state) => state.shopInfo.domain);
   const locale = useStore((state) => state.shopLocale.language);
+  const {shopCarts,setCart} = useStore();
   const link = `/${locale}/${shopName}/product/${slug}`;
 
   const rating_point = product.rate_point / product.rate_count;
@@ -84,8 +84,7 @@ const ProductCard1 = ({product}) => {
 
   const toggleDialog = useCallback(() => setOpenModal((open) => !open), []);
   const toggleIsFavorite = () => setIsFavorite((fav) => !fav);
-  const { cartItems, setCartItems } = useCartContext();
-  const cartItem = cartItems.find((item) => item.slug === slug);
+  const cartItem = shopCarts[shopName]?.find((item) => item.slug === slug);
   const { enqueueSnackbar } = useSnackbar();
   const handleCartAmountChange = (amount, item) => () => {
     const cloneProduct = {...item};
@@ -93,10 +92,7 @@ const ProductCard1 = ({product}) => {
     cloneProduct['variant'] = {};
     cloneProduct['finalPrice'] = {};
 
-    setCartItems({
-      type: "CHANGE_CART_AMOUNT",
-      payload: cloneProduct,
-    });
+    setCart(cloneProduct);
     enqueueSnackbar("Update Cart Success", {
       variant: "success",
     });

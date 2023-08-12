@@ -7,10 +7,11 @@ import {
   useStripe,
 } from "@stripe/react-stripe-js";
 import Button from "../buttons/Button";
-import { useUserContext } from "../../providers/UserProvider";
+import { useUserContext } from "../../providers/AccountProvider";
 import { notFound, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { getEnvSafely } from "env/config";
 
 const CheckoutForm = ({ clientSecret }: { clientSecret: string }) => {
   const stripe = useStripe();
@@ -52,7 +53,7 @@ const CheckoutForm = ({ clientSecret }: { clientSecret: string }) => {
       elements,
       confirmParams: {
         return_url: `${
-          process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000"
+          getEnvSafely('NEXT_PUBLIC_URL') ?? "http://localhost:3000"
         }/orders/status`,
       },
     });

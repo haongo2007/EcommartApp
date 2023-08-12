@@ -12,8 +12,8 @@ const RelatedProducts = ({ product } : { product:ProductTypeClient }) => {
   const { categories, brand_id, id, store_id } = product;
   const productRelate = use(getProductRelation(categories,brand_id,id,store_id));
   return (
-    productRelate && productRelate.length &&
-    <Box mb={7.5}>
+    productRelate && productRelate.length ?
+    (<Box mb={7.5}>
       <H3 mb={3}>Realted Products</H3>
         <Carousel
           infinite={true}
@@ -26,7 +26,8 @@ const RelatedProducts = ({ product } : { product:ProductTypeClient }) => {
             <ProductCard1 product={item} key={ind}/>
           ))}
         </Carousel>
-    </Box>
+    </Box>)
+    : null
   );
 };
 

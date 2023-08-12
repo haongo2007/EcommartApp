@@ -20,7 +20,6 @@ export const APP_INFOMATION = {
   phone: "0972918120",
   email: 'haongodev@gmail.com',
   language: 'en',
-  defaultCurrency: 'USD',
   languages:[
     {
       'id':1,
@@ -32,7 +31,7 @@ export const APP_INFOMATION = {
       'code':'en',
       'name':'English'
     }
-  ]
+  ],
 };
 
 export const SHOP_PER_PAGE = 12;

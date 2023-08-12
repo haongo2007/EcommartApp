@@ -1,5 +1,5 @@
-import { UserType } from "@prisma/client";
-import db from "./servers/prismadb";
+// import { UserType } from "@prisma/client";
+// import db from "./servers/prismadb";
 import { getSession } from "./servers/session";
 
 export const getCurrentUser = async () => {
@@ -7,18 +7,17 @@ export const getCurrentUser = async () => {
   return session?.user;
 };
 
-export const isAdmin = async (userId?: string) => {
-  if (!userId) return false;
+// export const isAdmin = async (userId?: string) => {
+//   if (!userId) return false;
 
-  const { userType } =
-    (await db.user.findFirst({
-      where: {
-        id: userId,
-      },
-      select: {
-        userType: true,
-      },
-    })) || {};
+//   const { userType } = (await db.user.findFirst({
+//       where: {
+//         id: userId,
+//       },
+//       select: {
+//         userType: true,
+//       },
+//     })) || {};
 
-  return userType === UserType.Admin;
-};
+//   return userType === UserType.Admin;
+// };

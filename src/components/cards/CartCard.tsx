@@ -6,7 +6,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import cn from "../../helpers/cn";
 import { displayNumbers } from "../../helpers/numbers";
-import { useCartContext } from "../../providers/CartContextProvider";
+import { useCartContext } from "../../providers/CartProvider";
 import { CartItemProps } from "../../types/types";
 import Button from "../buttons/Button";
 

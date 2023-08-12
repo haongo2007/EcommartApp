@@ -353,9 +353,9 @@ model ShopLanguage {
 
     sort           Int    @default(0)
 
-    store_id       Int
+    store_id       Int?
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+    shop   Shops?   @relation(fields: [store_id], references: [id])
 }
 
 model ShopCurrency {
@@ -383,9 +383,9 @@ model ShopCurrency {
 
     sort           Int    @default(0)
 
-    store_id       Int
+    store_id       Int?
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+    shop   Shops?   @relation(fields: [store_id], references: [id])
 }
 
 model ShopProductGroup {

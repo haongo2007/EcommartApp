@@ -1,33 +1,43 @@
-import { NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
-import TwitchProvider from "next-auth/providers/twitch";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import prisma from "./prismadb";
-import env from "../../env";
+import FacebookProvider from "next-auth/providers/facebook";
+import GoogleProvider from "next-auth/providers/google";
+import { getEnvSafely } from "env/config";
+import { NextAuthOptions } from "next-auth";
 
-const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
+export const authOptions : NextAuthOptions = {
+  secret: getEnvSafely('NEXTAUTH_SECRET'),
+  adapter: undefined,
   providers: [
     GitHubProvider({
-      clientId: env.GITHUB_CLIENT_ID,
-      clientSecret: env.GITHUB_CLIENT_SECRET,
+      clientId: getEnvSafely('GITHUB_CLIENT_ID'),
+      clientSecret: getEnvSafely('GITHUB_CLIENT_SECRET'),
     }),
-    TwitchProvider({
-      clientId: env.TWITCH_CLIENT_ID,
-      clientSecret: env.TWITCH_CLIENT_SECRET,
+    FacebookProvider({
+        clientId: getEnvSafely('FACEBOOK_CLIENT_ID'),
+        clientSecret: ('FACEBOOK_CLIENT_SECRET')
     }),
+    GoogleProvider({
+        clientId: getEnvSafely('GOOGLE_CLIENT_ID'),
+        clientSecret: getEnvSafely('GOOGLE_CLIENT_SECRET')
+    })
   ],
   pages: {
-    signIn: "/",
-    signOut: "/",
+    signIn: ''
   },
   callbacks: {
-    session({ user, session }) {
-      if (session.user) {
-        session.user.id = user.id;
-      }
-      return session;
-    },
+    async session({ session, token, user }) {
+        if (session?.user) {
+            session.user.id = user.id;
+            session.user.avatar = user.avatar;
+            session.user.first_name = user.first_name;
+            session.user.last_name = user.last_name;
+            session.user.email = user.email;
+            session.user.store_id = user.store_id;
+            session.user.phone = user.phone;
+            session.user.birthday = user.birthday;
+        }
+        return session
+    }
   },
 };
 

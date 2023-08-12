@@ -13,10 +13,10 @@ import { FlexBox } from "components/flex-box";
 import BazaarImage from "components/BazaarImage";
 import BazaarRating from "components/BazaarRating";
 import Carousel from "components/carousel/Carousel";
-import { useCartContext } from "../../providers/CartContextProvider";
 import { H1, H2, H3, H4, H6, Paragraph } from "components/Typography";
 import useCurrency from "hooks/useCurrency";
 import { arrowButtonStyle } from "../../constants";
+import { useStore } from "../../stores";
 
 const ContentWrapper = styled(Box)(({ theme }) => ({
   "& .carousel:hover": {
@@ -56,8 +56,8 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 const ProductViewDialog = (props) => {
   const { product, openDialog, handleCloseDialog } = props;
   const { price,promotion,brand,description,imgGroup } = product;
-  const { cartItems, setCartItems } = useCartContext();
-  const cartItem = cartItems.find((item) => item.id === product.id);
+  const getShopCarts = useStore((state) => state.shopCarts[state.shopInfo.domain]);
+  const cartItem = getShopCarts?.find((item) => item.id === product.id);
   const handleCartAmountChange = (amount) => () => {
     // setCartItems({});
   };

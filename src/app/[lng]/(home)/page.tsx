@@ -3,7 +3,7 @@ import ShopListSection from "../../../components/sections/ShopList";
 import {fetchShops} from "../../../server/handlers/shop/fetchShops";
 import {SHOP_PER_PAGE} from "../../../constants";
 
-export default function Home({ params: { lng } }: {params:{lng:string}}) {
+export default function Home({params:{lng}}:{params:{lng:string}}) {
     const shop = use(fetchShops(SHOP_PER_PAGE));
     return (
         <Fragment>

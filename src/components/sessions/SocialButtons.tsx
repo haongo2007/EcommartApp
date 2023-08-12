@@ -4,11 +4,12 @@ import { Box, Button, Divider } from "@mui/material";
 import Image from "../BazaarImage";
 import { FlexBox } from "../flex-box"; // =======================================
 import { signIn } from "next-auth/react"
+import { useStore } from "../../stores";
 
 // =======================================
 const SocialButtons = (props) => {
-  const curDomain = 'bepetshop'
-  const locale = 'vi';
+  const curDomain = useStore((state) => state.shopInfo.domain);
+  const locale = useStore((state) => state.shopLocale.language);
   return (
     <Fragment>
       <Box mb={3} mt={3.8}>
@@ -36,7 +37,7 @@ const SocialButtons = (props) => {
           alt="facebook"
         />
         <Box fontSize="12px" ml={1} onClick={() => signIn('facebook',{
-          callbackUrl: process.env.NEXTAUTH_URL+'/'+locale+'/'+curDomain,
+          callbackUrl: '/'+locale+'/'+curDomain,
         })}>
           Continue with Facebook
         </Box>
@@ -50,9 +51,12 @@ const SocialButtons = (props) => {
           height: 44,
         }}
       >
-        <Image src="/assets/images/icons/google-1.svg" alt="facebook" />
+        <Image 
+        src="/assets/images/icons/google-1.svg" 
+        alt="google" 
+        />
         <Box fontSize="12px" ml={1} onClick={() => signIn('google',{
-          callbackUrl: process.env.NEXTAUTH_URL+'/'+locale+'/'+curDomain,
+          callbackUrl: '/'+locale+'/'+curDomain,
         })}>
           Continue with Google
         </Box>

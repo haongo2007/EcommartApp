@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FullProductClient } from "../types/types";
 import Button from "./buttons/Button";
 import { IoIosAddCircle } from "react-icons/io";
-import { useCartContext } from "../providers/CartContextProvider";
+import { useCartContext } from "../providers/CartProvider";
 import { toast } from "react-hot-toast";
 import cn from "../helpers/cn";
 import { DEFAULT_SIZES, LIMIT_CART_SIZE } from "../constants";

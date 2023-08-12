@@ -5,10 +5,12 @@ import { createCategoryStore } from "./shopCategory";
 import { createConfigStore } from "./shopCofig";
 import { createShopInfoStore } from "./shopInfo";
 import { createShopLocaleStore } from "./shopLocale";
-import {CategoryGroupType} from "../types/category";
+import { CategoryGroupType } from "../types/category";
 import { createAttributeGroupProductStore } from "./shopAGroupP";
-import {ShopConfig, Shops, ShopBrand, ShopBanner, ShopAttributeGroup} from "@prisma/client";
-import {ShopLocal} from "../types/shop";
+import { createShopCartStore } from "./shopCart";
+import { ShopConfig, Shops, ShopBrand, ShopBanner, ShopAttributeGroup } from "@prisma/client";
+import { ShopLocal } from "../types/shop";
+import { persist } from "zustand/middleware";
 
 type initProps = {
     shopCategory: CategoryGroupType,
@@ -20,39 +22,41 @@ type initProps = {
     shopAGroupP: ShopAttributeGroup
 }
 
-export const useStore = create((...args) => ({
-    ...createCategoryStore(...args),
-    ...createConfigStore(...args),
-    ...createShopInfoStore(...args),
-    ...createShopLocaleStore(...args),
-    ...createBrandsStore(...args),
-    ...createBannerStore(...args),
-    ...createAttributeGroupProductStore(...args),
-    hydrateStore: (data : initProps) => {
-        const [set] = args;
-        set({ ...data });
-    },
-}));
+// export const useStore = create((...args) => ({
+//     ...createCategoryStore(...args),
+//     ...createConfigStore(...args),
+//     ...createShopInfoStore(...args),
+//     ...createShopLocaleStore(...args),
+//     ...createShopCartStore(...args),
+//     ...createBrandsStore(...args),
+//     ...createBannerStore(...args),
+//     ...createAttributeGroupProductStore(...args),
+//     hydrateStore: (data : initProps) => {
+//         const [set] = args;
+//         set({ ...data });
+//     },
+// }));
 
 // persist store
-// export const useStore = create(
-//     persist(
-//         (...args) => ({
-//             ...createCategoryStore(...args),
-//             ...createConfigStore(...args),
-//             ...createShopInfoStore(...args),
-//             ...createBrandsStore(...args),
-//             ...createShopLocaleStore(...args),
-//             ...createBannerStore(...args),
-//             ...createAttributeGroupProductStore(...args),
-//             hydrateStore: (data : initProps) => {
-//                 const [set] = args;
-//                 set({ ...data });
-//             },
-//         }),
-//         {
-//             name: 'shopState' , 
-//             partialize: (state) => ({ shopLocale: state.shopLocale , shopInfo: state.shopInfo }) ,
-//         }
-//     )
-// );
+export const useStore = create(
+    persist(
+        (...args) => ({
+            ...createCategoryStore(...args),
+            ...createConfigStore(...args),
+            ...createShopInfoStore(...args),
+            ...createBrandsStore(...args),
+            ...createShopCartStore(...args),
+            ...createShopLocaleStore(...args),
+            ...createBannerStore(...args),
+            ...createAttributeGroupProductStore(...args),
+            hydrateStore: (data : initProps) => {
+                const [set] = args;
+                set({ ...data });
+            },
+        }),
+        {
+            name: 'carts' , 
+            partialize: (state) => ({ shopCarts: state.shopCarts }) ,
+        }
+    )
+);

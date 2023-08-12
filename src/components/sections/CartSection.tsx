@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "react-hot-toast";
-import { useCartContext } from "../../providers/CartContextProvider";
+import { useCartContext } from "../../providers/CartProvider";
 import { trpc } from "../../providers/trpcProvider";
 import Loader from "../loaders/Loader";
 import { CartItemProps } from "../../types/types";
@@ -12,7 +12,7 @@ import Button from "../buttons/Button";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { displayNumbers } from "../../helpers/numbers";
-import { useUserContext } from "../../providers/UserProvider";
+import { useUserContext } from "../../providers/AccountProvider";
 
 interface ProductMap {
   [key: string]: {

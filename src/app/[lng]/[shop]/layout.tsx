@@ -1,6 +1,4 @@
 import React, {use} from "react";
-import CartContextProvider from "../../../providers/CartContextProvider";
-import {NextAuthProvider} from "../../../providers/SessionProvider";
 import Topbar from "components/topbar";
 import Sticky from "components/sticky";
 import Header from "components/Header";
@@ -11,6 +9,7 @@ import {getShop, getShopMeta} from "../../../server/handlers/shop/getShop";
 import {Metadata} from "next";
 import Footer from "components/Footer";
 import { getEnvSafely } from "env/config";
+
 
 
 type LayoutProps = {
@@ -74,9 +73,8 @@ export default function ShopListLayout({ children, params : { lng,shop }}: Layou
     shopAGroupP: shopConfig.attribute_group,
   }
   return (
-    <NextAuthProvider>
+    <>
       <StoreInitializer initialStore={dataInit} />
-      <CartContextProvider>
         {/* TOPBAR */}
         <Topbar infomation={infomation} useCurrency={true}/>
         {/* HEADER */}
@@ -91,8 +89,7 @@ export default function ShopListLayout({ children, params : { lng,shop }}: Layou
           {children}
         </div>
         <Footer/>
-      </CartContextProvider>
-    </NextAuthProvider>
+    </>
   );
 }
 

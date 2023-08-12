@@ -2,7 +2,7 @@
 
 import { SignInButton } from "./SignInButton";
 import UserMenu from "../menus/UserMenu";
-import { useUserContext } from "../../providers/UserProvider";
+import { useUserContext } from "../../providers/AccountProvider";
 
 const AuthButton = () => {
   const { user, isAdmin } = useUserContext();

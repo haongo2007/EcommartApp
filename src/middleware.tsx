@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import acceptLanguage from 'accept-language';
-import { fallbackLng, languages } from './app/i18n/settings';
+import { fallbackLng, languages } from './i18n/settings';
 
 acceptLanguage.languages(languages)
 
@@ -9,73 +9,70 @@ const cookieName = 'i18next'
 export default async function middleware(req: NextRequest) {
   const response = NextResponse.next();
   const baseUrl = req.nextUrl.origin;
-  const path = req.nextUrl.pathname;
+  let path = req.nextUrl.pathname;
+  const matchAuthUri = [
+    "/account",
+    "/checkout",
+    "/orders",
+  ];
   const headers = {
     cookie: req.headers.get("cookie") || "",
   };
   let lng;
-  let pass = false;
-  if (path.startsWith("/admin")) {
-    const adminCheck = await fetch(`${baseUrl}/api/admin-check`, {
-      headers,
-    });
-    pass = adminCheck.status === 200;
-  } else {
-    const authCheck = await fetch(`${baseUrl}/api/auth-check`, {
-      headers,
-    });
-    pass = authCheck.status === 400;
-  }
-  if (!pass) {
-    return NextResponse.redirect(new URL("/not-found", req.url), req);
-  }
-  if (req.cookies.has(cookieName)){
-    lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)
-  }
-  if (!lng){
-    lng = acceptLanguage.get(req.headers.get('Accept-Language'))
-  }
-  if (!lng){
-    lng = fallbackLng
-  }
-  if (path === '/') {
-    return NextResponse.redirect(new URL(`/${lng}`, req.url))
-  }else{
-    const regexCheckLang = /\/([^/]+)/;
-    const checkMatchLang : any = path.match(regexCheckLang);
-    if(checkMatchLang[1].length > 2 && checkMatchLang[1] !== 'assets'){
-      return NextResponse.redirect(new URL(`/${lng}`, req.url))
+  // băm path kiểm tra phần tử đầu tiên có phải là lng không
+  const regexCheckLng = /\/([^/]+)/;
+  const matchLng = path.match(regexCheckLng);
+  if(matchLng && languages.includes(matchLng[1])){ /// nếu match với [vi,en]
+    lng = matchLng[1];
+  }else{ /// ngược lại ko match lấy nn mặc định
+    if (req.cookies.has(cookieName)){
+      lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)
+    }
+    if (!lng){
+      lng = fallbackLng
+    }
+    if (!lng){
+      lng = acceptLanguage.get(req.headers.get('Accept-Language'))
     }
   }
-  // const regexPattern = /\/[^/]+\/([a-zA-Z0-9]+)/; // Biểu thức chính quy để tìm kiếm phần tử giữa "/lang/" và "/"
-  // const match = path.match(regexPattern);
-  // if (match !== null && match.length > 1) {
-  //   const result = match[1];
-  //   const {data} = await (await fetch(`${baseUrl}/api/shop-check/${result}`,{
-  //     headers,
-  //   })).json();
-  //   if(data){
-  //     response.cookies.set('store_id', data.id);
-  //   }
-  // }
-
-  if (req.headers.has('referer')) {
-    const refererUrl = new URL(req.headers.get('referer') || "")
-    const lngInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`))
-    if (lngInReferer){
-      response.cookies.set(cookieName, lngInReferer)
-    }
-    return response
+  if(lng){  
+    response.cookies.set(cookieName, lng);
   }
-  return;
+  if(path === '/'){
+    return NextResponse.redirect(new URL(`/${lng}`, req.url));
+  }
+  // băm path kiểm tra phần tử thứ 2 có phải là tên một store không
+  const regexCheckStore = /\/[^/]+\/([a-zA-Z0-9]+)/;
+  const matchStore = path.match(regexCheckStore);
+  if (matchStore !== null && matchStore.length > 1) {
+    const result = matchStore[1];
+    // kiểm tra xem store này có tồn tại hay không
+    const shopCheck = await fetch(`${baseUrl}/api/shop-check/${result}`,{
+      headers,
+    });
+    const store_id = shopCheck.headers.get('store_id');
+    if(shopCheck.status !== 200 && !store_id){
+      return NextResponse.redirect(new URL("/not-found", req.url), req);
+    }else{
+      response.cookies.set('store_id', String(store_id));
+    }
+  }
+  // băm path kiểm tra phần tử thứ 3 có nằm trong auth hay không
+  const regexCheckAuth = /(?<=\/[^/]+\/[^/]+\/)([^/]+)/;
+  const matchAuth = path.match(regexCheckAuth);
+  if (matchAuth !== null && matchAuthUri.includes(matchAuth[1])) {
+    const accountCheck = await fetch(`${baseUrl}/api/auth-check`, {
+      headers,
+    });
+    if(accountCheck.status !== 200){
+      return NextResponse.redirect(new URL("/not-found", req.url), req);
+    }
+  }
+  return response;
 }
 
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)",
-    "/user/:path*",
-    "/checkout/:path*",
-    "/orders/:path*",
-    "/admin/:path*",
+    '/((?!api|_next|.*\\..*).*)'
   ],
 };

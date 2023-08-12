@@ -21,6 +21,7 @@ import MoneyGuarantee from "./MoneyGurantee";
 import OnlineSupport from "./OnlineSupport";
 import Payment from "./Payment";
 import AlarmClock from "./AlarmClock";
+import CustomerService from "./CustomerService";
 
 type AppIconType = {
   [key: string]: React.FunctionComponent<SvgIconProps>
@@ -46,6 +47,7 @@ const appIcons: AppIconType = {
   MoneyGuarantee,
   OnlineSupport,
   Payment,
-  AlarmClock
+  AlarmClock,
+  CustomerService
 };
 export default appIcons;

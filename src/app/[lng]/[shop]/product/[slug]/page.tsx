@@ -6,18 +6,11 @@ import { notFound } from "next/navigation";
 import ProductIntro from "components/product/ProductIntro";
 import ProductDescription from "components/product/ProductDescription";
 import ProductRelation from "components/product/ProductRelation";
-
 import { Metadata } from 'next'
+import { ProductPageEditProps } from "types/types";
  
-type Props = {
-    params: {
-        lng:string,
-        shop:string,
-        slug:string
-    }
-}
  
-export async function generateMetadata( { params }: Props): Promise<Metadata> {
+export async function generateMetadata( { params }: ProductPageEditProps): Promise<Metadata> {
   // fetch data
   const { lng,shop,slug } = params;
   const productDesc = await getProductMeta(shop,slug,lng);
@@ -33,7 +26,7 @@ export async function generateMetadata( { params }: Props): Promise<Metadata> {
   }
 }
 
-export default function ProductDetail({ params }: Props) {
+export default function ProductDetail({ params }: ProductPageEditProps) {
     const { lng,shop,slug } = params;
     const product = use(getProduct(shop,slug));
     if (!product) {

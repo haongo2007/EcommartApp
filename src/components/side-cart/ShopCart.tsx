@@ -12,18 +12,17 @@ import LazyImage from "../LazyImage";
 import { FlexBox } from "../flex-box";
 import { H5, Tiny } from "../Typography";
 import ShoppingBagOutlined from "../icons/ShoppingBagOutlined";
-import {useCartContext} from "../../providers/CartContextProvider";
 import {useSnackbar} from "notistack";
 import { useStore } from "stores";
 import useCurrency from "hooks/useCurrency";
 import { CartItemProps } from "types/types";
 
 // =========================================================
-const MiniCart = ({ toggleSidenav}) => {
+const ShopCart = ({ toggleSidenav}) => {
   const { palette } = useTheme();
-  const { cartItems, setCartItems } = useCartContext();
   const { shopLocale } = useStore((state) => state);
   const { shopInfo } = useStore((state) => state);
+  const { setCart,shopCarts } = useStore();
   const locale = shopLocale.language;
   const shopName = shopInfo.domain;
   const { enqueueSnackbar } = useSnackbar();
@@ -38,25 +37,23 @@ const MiniCart = ({ toggleSidenav}) => {
       promotion: item.promotion,
       description: item.description,
       finalPrice: item.finalPrice,
-      images: item.images
+      images: item.images,
+      shopName
     };
-    setCartItems({
-      type: "CHANGE_CART_AMOUNT",
-      payload: ProductItem,
-    });
+    setCart(ProductItem);
     enqueueSnackbar("Update Cart Success", {
       variant: "success",
     });
   };
   const getTotalPrice = () => {
-    return cartItems.reduce((accum, item) => accum + item.finalPrice * item.qty, 0);
+    return shopCarts[shopName].reduce((accum, item) => accum + item.finalPrice * item.qty, 0);
   };
 
   return (
     <Box width="380px">
       <Box
         overflow="auto"
-        height={`calc(100vh - ${!!cartItems.length ? "80px - 3.25rem" : "0px"})`}
+        height={`calc(100vh - ${!!shopCarts[shopName]?.length ? "80px - 3.25rem" : "0px"})`}
       >
         <FlexBox
           alignItems="center"
@@ -66,13 +63,13 @@ const MiniCart = ({ toggleSidenav}) => {
         >
           <ShoppingBagOutlined color="inherit" />
           <Box fontWeight={600} fontSize="16px" ml={1}>
-            {cartItems.length} item
+            {shopCarts[shopName]?.length} item
           </Box>
         </FlexBox>
 
         <Divider />
 
-        {!cartItems.length && (
+        {!shopCarts[shopName]?.length && (
           <FlexBox
             alignItems="center"
             flexDirection="column"
@@ -97,7 +94,7 @@ const MiniCart = ({ toggleSidenav}) => {
           </FlexBox>
         )}
 
-        {cartItems.length ? cartItems.map((item,ind) => (
+        {shopCarts[shopName]?.length ? shopCarts[shopName].map((item,ind) => (
           <FlexBox
             py={2}
             px={2.5}
@@ -190,7 +187,7 @@ const MiniCart = ({ toggleSidenav}) => {
         )) : null }
       </Box>
 
-      {cartItems.length ? (
+      {shopCarts[shopName]?.length ? (
         <Box p={2.5}>
           <Link href="/checkout-alternative" passHref>
             <Button
@@ -226,4 +223,4 @@ const MiniCart = ({ toggleSidenav}) => {
   );
 };
 
-export default MiniCart;
+export default ShopCart;

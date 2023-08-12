@@ -1,10 +1,10 @@
 import { inferAsyncReturnType, initTRPC } from "@trpc/server";
 import { CreateNextContextOptions } from "@trpc/server/adapters/next";
 import superjson from "superjson";
-import { getServerAuthSession } from "./common/get-server-auth-session";
 import { Session } from "next-auth";
 import { ZodError } from "zod";
 import db from "../lib/servers/prismadb"
+import { getServerAuthSession } from "lib/servers/trpcAuthSession";
 
 // eslint-disable-next-line 
 interface CreateContextOptions {

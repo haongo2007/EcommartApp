@@ -16,7 +16,6 @@ const useCurrency = (price: number | Decimal,promo?: number | object | null, sho
     if(!shopInfo){
         shopInfo = useStore((state) => state.shopInfo);
     }
-
     if (shopInfo.currency !== shopLocale.currency){
         const indexOldCur = shopLocale.currencies.findIndex((item) => item.code === shopInfo.currency);
         if (indexOldCur >= 0){

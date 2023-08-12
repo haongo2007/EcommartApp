@@ -8,7 +8,6 @@ import BazaarRating from "components/BazaarRating";
 import { H1, H2, H3, H6 } from "components/Typography";
 import { FlexBox, FlexRowCenter } from "../flex-box";
 import ProductVariant from "./ProductVariant";
-import { useCartContext } from "../../providers/CartContextProvider";
 import {isEqual} from "lodash";
 import {useSnackbar} from "notistack";
 import { useStore } from "stores";
@@ -22,7 +21,7 @@ const ProductIntro = ({ product }: {product:ShopProduct}) => {
   const locale = useStore((state) => state.shopLocale.language);
   const shopName = useStore((state) => state.shopInfo.domain);
   const attributeGroup = useStore((state) => state.shopAGroupP);
-  const { cartItems, setCartItems } = useCartContext();
+  const { setCart,shopCarts } = useStore();
   const { enqueueSnackbar } = useSnackbar();
   const prefixUrl = `/${locale}/${shopName}`;
   const imagesHash = images.split(',');
@@ -31,45 +30,25 @@ const ProductIntro = ({ product }: {product:ShopProduct}) => {
   const [dsbAddCart, setDsbAddCart] = useState(true);
   const [variant, setVariant] = useState({});
   const [selectedImage, setSelectedImage] = useState(0);
-  const cartItem = cartItems.find((el) => el.id === id && isEqual(el.variant,variant)) || null;
-  // useEffect(() => {
-  //   setImage(images_ori);
-  //   setSelectedImage(0);
-  //   reRenderPrice();
-  // }, [router]);
+  const cartItem = shopCarts[shopName]?.find((el) => el.id === id && isEqual(el.variant,variant)) || null;
 
-  // useEffect(() => {
-  //   reRenderPrice();
-  // },[curCurrency]);
-
-  // const reRenderPrice = () => {
-  //   if (promotion.length > 0){
-  //     setOldPrice(currency(currencies,curCurrency,defaultCurrency,product.price))
-  //     setProductPrice(calculateDiscount(currencies,curCurrency,defaultCurrency,product.price,promotion[0].discount_percent))
-  //   }else{
-  //     setProductPrice(currency(currencies,curCurrency,defaultCurrency,product.price))
-  //     setOldPrice(0)
-  //   }
-  // }
   const title = description.filter((desc) => desc.lang === locale)[0].name;
   const handleImageClick = (ind) => () => setSelectedImage(ind);
   const handleCartAmountChange = (amount) => () => {
-    const ProductItem : CartItemProps = 
-    {
-      id,
-      slug,
-      qty: amount,
-      variant,
-      price,
-      promotion,
-      description,
-      finalPrice: PriceProduct,
-      images: imageState
-    };
-    setCartItems({
-      type: "CHANGE_CART_AMOUNT",
-      payload: ProductItem,
-    });
+    const ProductItem 
+    : CartItemProps =  {
+                          id,
+                          slug,
+                          qty: amount,
+                          variant,
+                          price,
+                          promotion,
+                          description,
+                          finalPrice: PriceProduct,
+                          images: imageState,
+                          shopName
+                      };
+    setCart(ProductItem);
     enqueueSnackbar("Update Cart Success", {
       variant: "success",
     });

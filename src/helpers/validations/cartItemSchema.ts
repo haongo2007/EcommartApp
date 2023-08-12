@@ -9,7 +9,8 @@ export const cartItemSchema = z.object({
   promotion:z.any(),
   description:z.any(),
   finalPrice:z.number(),
-  images:z.any()
+  images:z.any(),
+  shopName:z.string()
 });
 
 export const cartsSchema = z.array(cartItemSchema)
