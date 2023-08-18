@@ -11,9 +11,9 @@ export default async function middleware(req: NextRequest) {
   const baseUrl = req.nextUrl.origin;
   let path = req.nextUrl.pathname;
   const matchAuthUri = [
-    "/account",
-    "/checkout",
-    "/orders",
+    "account",
+    "checkout",
+    "orders",
   ];
   const headers = {
     cookie: req.headers.get("cookie") || "",

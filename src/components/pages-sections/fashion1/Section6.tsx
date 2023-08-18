@@ -19,7 +19,7 @@ const Section6 = ({ most_buyed }) => {
               price={most_buyed[0].price}
               promotion={most_buyed[0].promotion.length > 0 ? most_buyed[0].promotion[0].discount_percent : 0}
               rating={most_buyed[0].rate_point / most_buyed[0].rate_count}
-              imgUrl={most_buyed[0].images.split(',')[0]}
+              imgUrl={most_buyed[0].images[0]}
             />) }
         </Grid>
 
@@ -32,7 +32,7 @@ const Section6 = ({ most_buyed }) => {
                 price={item.price}
                 promotion={item.promotion.length > 0 ? item.promotion[0].discount_percent : 0}
                 rating={item.rate_point / item.rate_count}
-                imgUrl={item.images.split(',')[0]}
+                imgUrl={item.images[0]}
               />
             </Grid>
           ))}

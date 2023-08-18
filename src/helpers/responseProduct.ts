@@ -8,7 +8,9 @@ export const responseProduct = (product: ProductTypeClient) => ({
   // decimal cannot be rendered on the client side later on, so we convert it to string
   price: JSON.parse(JSON.stringify(product.price)),
   cost: JSON.parse(JSON.stringify(product.cost)),
-  attribute: JSON.parse(JSON.stringify(product.attribute)),
+  tax_id: JSON.parse(JSON.stringify(product.tax_id)),
+  images: product.images?.split(','),
+  attribute: product.attribute ? JSON.parse(JSON.stringify(product.attribute)) : null,
   createdAt: product.createdAt.toUTCString(),
   updatedAt: product.updatedAt?.toUTCString(),
   promotion: product.promotion ? responsePromotionList(product.promotion) : null,

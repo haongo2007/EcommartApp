@@ -40,11 +40,14 @@ const TopbarWrapper = styled(Box, {
         "& .title": {
             marginLeft: "10px",
         },
-        "@media only screen and (max-width: 900px)": {
-            "& .logo": {
-                display: "block",
-            },
-            "& > *:not(.logo)": {
+        "@media only screen and (max-width: 600px)": {
+            // "& .logo": {
+            //     display: "block",
+            // },
+            // "& > *:not(.logo)": {
+            //     display: "none",
+            // },
+            "& > *": {
                 display: "none",
             },
         },
@@ -98,7 +101,7 @@ const Topbar = ({ bgColor,infomation,useCurrency } : TopbarProps) => {
                 }}
             >
                 <FlexBox className="topbarLeft" alignItems="center">
-                    <div className="logo">
+                    {/* <div className="logo">
                         <Link href="/" passHref>
                             <Image
                                 display="block"
@@ -107,7 +110,7 @@ const Topbar = ({ bgColor,infomation,useCurrency } : TopbarProps) => {
                                 alt="logo"
                             />
                         </Link>
-                    </div>
+                    </div> */}
 
                     <FlexBox alignItems="center">
                         <CallOutlined fontSize="small" />

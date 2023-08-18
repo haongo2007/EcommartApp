@@ -26,7 +26,6 @@ const ShopCart = ({ toggleSidenav}) => {
   const locale = shopLocale.language;
   const shopName = shopInfo.domain;
   const { enqueueSnackbar } = useSnackbar();
-
   const handleCartAmountChange = (amount, item) => () => {
     const ProductItem :CartItemProps = {
       id:item.id,
@@ -204,7 +203,7 @@ const ShopCart = ({ toggleSidenav}) => {
             </Button>
           </Link>
 
-          <Link href="/cart" passHref>
+          <Link href={`/${locale}/${shopName}/cart`} passHref>
             <Button
               fullWidth
               color="primary"

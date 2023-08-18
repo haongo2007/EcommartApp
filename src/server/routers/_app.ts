@@ -6,6 +6,7 @@ import { productRouter } from "./subRouters/product.router";
 // import { userRouter } from "./subRouters/user.router";
 import { categoryRouter } from "./subRouters/category.router";
 import { customerRouter } from "./subRouters/customer.router";
+import { cartsRouter } from "./subRouters/carts.router";
 
 export const appRouter = router({
   // user: userRouter,
@@ -14,7 +15,8 @@ export const appRouter = router({
   // payment: paymentRouter,
   // order: orderRouter,
   category: categoryRouter,
-  customer: customerRouter
+  customer: customerRouter,
+  carts: cartsRouter,
 });
 
 // export type definition of API

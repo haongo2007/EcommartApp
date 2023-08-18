@@ -40,12 +40,6 @@ const AccountHeader = ({ title, button, ...props }) => {
           </H2>
         </FlexBox>
 
-        <Box className="sidenav">
-          <Sidenav position="left" handle={<Menu fontSize="small" />}>
-            <CustomerDashboardNavigation />
-          </Sidenav>
-        </Box>
-
         {!isTablet && button}
       </FlexBox>
 

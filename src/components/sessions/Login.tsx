@@ -10,6 +10,7 @@ import BazaarTextField from "../BazaarTextField";
 import SocialButtons from "./SocialButtons";
 import EyeToggleButton from "./EyeToggleButton";
 import { FlexBox, FlexRowCenter } from "../flex-box";
+import { useStore } from "stores";
 const fbStyle = {
   background: "#3B5998",
   color: "white",
@@ -43,11 +44,12 @@ export const Wrapper = styled(({ children, passwordVisibility, ...rest }) => (
   },
 }));
 
-const Login = () => {
+const Login = ({locale,domain}:{locale:string,domain?:string}) => {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
   const togglePasswordVisibility = useCallback(() => {
     setPasswordVisibility((visible) => !visible);
   }, []);
+  const logo = useStore((state) => state.shopInfo.logo);
 
   const handleFormSubmit = async (values) => {
     console.log(values);
@@ -63,7 +65,8 @@ const Login = () => {
     <Wrapper elevation={3} passwordVisibility={passwordVisibility}>
       <form onSubmit={handleSubmit}>
         <BazaarImage
-          src="/assets/images/bazaar-black-sm.svg"
+          src={logo}
+          height={70} 
           sx={{
             m: "auto",
           }}
@@ -131,12 +134,10 @@ const Login = () => {
 
       <FlexRowCenter mt="1.25rem">
         <Box>Don&apos;t have account?</Box>
-        <Link href="/signup" passHref legacyBehavior>
-          <a>
-            <H6 ml={1} mb={0} mt={0} borderBottom="1px solid" borderColor="grey.900">
-              Sign Up
-            </H6>
-          </a>
+        <Link href={`/${locale}/${domain}/signup`}>
+          <H6 ml={1} mb={0} mt={0} borderBottom="1px solid" borderColor="grey.900">
+            Sign Up
+          </H6>
         </Link>
       </FlexRowCenter>
 
@@ -148,12 +149,10 @@ const Login = () => {
         mt="1.25rem"
       >
         Forgot your password?
-        <Link href="/reset-password" passHref legacyBehavior>
-          <a>
-            <H6 ml={1} mb={0} mt={0} borderBottom="1px solid" borderColor="grey.900">
-              Reset It
-            </H6>
-          </a>
+        <Link href={`/${locale}/${domain}/reset-password`}>
+          <H6 ml={1} mb={0} mt={0} borderBottom="1px solid" borderColor="grey.900">
+            Reset It
+          </H6>
         </Link>
       </FlexBox>
     </Wrapper>

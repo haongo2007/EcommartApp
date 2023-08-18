@@ -80,7 +80,7 @@ const ProductCard1 = ({product}) => {
 
   const rating_point = product.rate_point / product.rate_count;
   const description = product.description.filter((desc) => desc.lang === locale)[0];
-  const imgUrl = product.images.split(',')[0];
+  const imgUrl = product.images[0];
 
   const toggleDialog = useCallback(() => setOpenModal((open) => !open), []);
   const toggleIsFavorite = () => setIsFavorite((fav) => !fav);

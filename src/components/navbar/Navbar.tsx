@@ -84,10 +84,26 @@ const ChildNavsWrapper = styled(Box)(() => ({
   transform: "translate(-50%, 0%)",
 }));
 // ==========================================================
-const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, elevation, border }: {data:CategoryGroupType, navListOpen?:boolean, hideCategories?:boolean,hideHorizontalCategories?:boolean, elevation?:number, border?:number}) => {
+const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, elevation, border, domain, locale }: {data:CategoryGroupType, navListOpen?:boolean, hideCategories?:boolean,hideHorizontalCategories?:boolean, elevation?:number, border?:number, domain:string, locale:string}) => {
   const { settingState } = useSettings();
-  const renderNestedNav = (list = [], isRoot = false) => {
-    return list.map((nav) => {
+  
+  const MenuMain = [
+    {
+      title: "Home",
+      href: `/${locale}/${domain}`,
+      key: 'home',
+      count: 1,
+    },
+    {
+      title: "Shop",
+      href: `/${locale}/${domain}/shop`,
+      key: 'shop',
+      count: 2,
+    },
+  ];
+
+  const renderNestedNav = (isRoot = false) => {
+    return MenuMain.map((nav) => {
       if (isRoot) {
         // show megamenu
         if (nav.megaMenu) {
@@ -104,9 +120,9 @@ const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, el
           );
         }
 
-        if (nav.url) {
+        if (nav.href) {
           return (
-            <StyledNavLink href={nav.url} key={nav.title}>
+            <StyledNavLink href={nav.href} key={nav.title}>
               {nav.title}
             </StyledNavLink>
           );
@@ -153,9 +169,9 @@ const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, el
           );
         }
       } else {
-      if (nav.url) {
+      if (nav.href) {
         return (
-          <NavLink href={nav.url} key={nav.title}>
+          <NavLink href={nav.href} key={nav.title}>
             <MenuItem>{nav.title}</MenuItem>
           </NavLink>
         );
@@ -222,7 +238,7 @@ const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, el
 
           {/* Horizontal menu */}
           {!hideHorizontalCategories ? (
-            <FlexBox gap={4}>{renderNestedNav(data, true)}</FlexBox>
+            <FlexBox sx={{ width: "70%"}} gap={4}>{renderNestedNav(false)}</FlexBox>
           ) : ('')}
         </InnerContainer>
       ) : (
@@ -231,7 +247,7 @@ const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, el
             justifyContent: "center",
           }}
         >
-          <FlexBox gap={4}>{renderNestedNav(data, true)}</FlexBox>
+          <FlexBox gap={4}>{renderNestedNav(true)}</FlexBox>
         </InnerContainer>
       )}
     </NavBarWrapper>

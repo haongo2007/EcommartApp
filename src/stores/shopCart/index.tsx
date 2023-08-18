@@ -1,6 +1,7 @@
 import { isEqual } from "lodash-es";
 import { CartItemProps } from "types/types";
 
+
 export const createShopCartStore = (set, get) => ({
     shopCarts: {},
     setCart: (itemCart:CartItemProps) => {
@@ -21,9 +22,10 @@ export const createShopCartStore = (set, get) => ({
             shopCarts[shopName][checkCart].qty = itemCart.qty;
           }
         }else{
-          shopCarts[shopName] = [ itemCart ];
+          shopCarts[shopName] = [ ...shopCarts[shopName],itemCart ];
         }
       }
       set(shopCarts);
     },
 });
+

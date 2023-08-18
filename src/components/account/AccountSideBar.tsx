@@ -7,7 +7,6 @@ import ShoppingBagOutlined from "@mui/icons-material/ShoppingBagOutlined";
 import { FlexBox } from "components/flex-box";
 import CustomerService from "components/icons/CustomerService";
 import NavLink from "components/nav-link/NavLink";
-import { useStore } from "../../stores";
 
 const MainContainer = styled(Card)(({ theme }) => ({
   paddingBottom: "1.5rem",
@@ -40,27 +39,28 @@ const StyledNavLink = styled(({ children, isCurrentPath, ...rest }) => (
 }));
 
 const AccountSideBar = ({locale,domain}:{locale:string,domain:string}) => {
-  const pathname = usePathname();
+  const pathname : string | null = usePathname();
+  const hashPath = pathname?.split('/'); 
   const linkList = [
     {
       title: "DASHBOARD",
       list: [
         {
-          href: "/orders",
+          href: `/${locale}/${domain}/account/orders`,
           title: "Orders",
           icon: ShoppingBagOutlined,
           key: 'orders',
           count: 5,
         },
         {
-          href: "/wish-list",
+          href: `/${locale}/${domain}/account/wish-list`,
           title: "Wishlist",
           icon: FavoriteBorder,
           key: 'wish-list',
           count: 19,
         },
         {
-          href: "/support-tickets",
+          href: `/${locale}/${domain}/account/support-tickets`,
           title: "Support Tickets",
           icon: CustomerService,
           key: 'support-tickets',
@@ -72,23 +72,23 @@ const AccountSideBar = ({locale,domain}:{locale:string,domain:string}) => {
       title: "ACCOUNT SETTINGS",
       list: [
         {
-          href: `/${locale}/${domain}/profile`,
+          href: `/${locale}/${domain}/account`,
           key: 'account',
           title: "Profile Info",
           icon: Person,
-          count: 3,
+          count: '',
         },
         {
-          href: "/address",
+          href: `/${locale}/${domain}/account/address`,
           title: "Addresses",
           key: 'address',
           icon: Place,
           count: 16,
         },
         {
-          href: "/payment-methods",
+          href: `/${locale}/${domain}/account/payment-methods`,
           title: "Payment Methods",
-          key: 'payment',
+          key: 'payment-methods',
           icon: CreditCard,
           count: 4,
         },
@@ -107,7 +107,7 @@ const AccountSideBar = ({locale,domain}:{locale:string,domain:string}) => {
             <StyledNavLink
               href={item.href}
               key={item.title}
-              isCurrentPath={pathname.includes(item.key)}
+              isCurrentPath={hashPath && hashPath[hashPath.length - 1] == item.key}
             >
               <FlexBox alignItems="center" gap={1}>
                 <item.icon

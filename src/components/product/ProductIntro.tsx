@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import {Add, Done, Remove} from "@mui/icons-material";
 import {Avatar, Box, Button, ButtonGroup, Chip, Grid} from "@mui/material";
 import LazyImage from "components/LazyImage";
@@ -14,29 +14,33 @@ import { useStore } from "stores";
 import { ShopProduct } from "@prisma/client";
 import useCurrency from "hooks/useCurrency";
 import { CartItemProps } from "types/types";
+import useCartSync from "hooks/useCartSync";
+import { trpc } from "providers/trpcProvider";
+import { useAccountContext } from "providers/AccountProvider";
 
 // ================================================================
 const ProductIntro = ({ product }: {product:ShopProduct}) => {
-  const { id, stock, description, promotion, slug, price, rate_count, rate_point, images, brand, categories,attribute } = product;
+  const { account } = useAccountContext();
+  const { id, stock, description, promotion, slug, price, rate_count, rate_point, images, brand, categories,attribute, store_id } = product;
   const locale = useStore((state) => state.shopLocale.language);
   const shopName = useStore((state) => state.shopInfo.domain);
   const attributeGroup = useStore((state) => state.shopAGroupP);
   const { setCart,shopCarts } = useStore();
   const { enqueueSnackbar } = useSnackbar();
   const prefixUrl = `/${locale}/${shopName}`;
-  const imagesHash = images.split(',');
+  const imagesHash: any = images;
   const [PriceProduct, setPriceProduct] = useState(price);
   const [imageState, setImage] = useState([...imagesHash]);
   const [dsbAddCart, setDsbAddCart] = useState(true);
   const [variant, setVariant] = useState({});
   const [selectedImage, setSelectedImage] = useState(0);
   const cartItem = shopCarts[shopName]?.find((el) => el.id === id && isEqual(el.variant,variant)) || null;
-
   const title = description.filter((desc) => desc.lang === locale)[0].name;
   const handleImageClick = (ind) => () => setSelectedImage(ind);
-  const handleCartAmountChange = (amount) => () => {
-    const ProductItem 
-    : CartItemProps =  {
+  const { mutate: updateCart } = trpc.carts.updateCart.useMutation();
+  const [syncCartTimer, setSyncCartTimer] = useState(0);
+  const handleCartAmountChange = (amount: number) => () => {
+    const ProductItem : CartItemProps =  {
                           id,
                           slug,
                           qty: amount,
@@ -46,12 +50,16 @@ const ProductIntro = ({ product }: {product:ShopProduct}) => {
                           description,
                           finalPrice: PriceProduct,
                           images: imageState,
+                          store_id,
                           shopName
                       };
-    setCart(ProductItem);
+    setCart(ProductItem,syncCartTimer,setSyncCartTimer);
     enqueueSnackbar("Update Cart Success", {
       variant: "success",
     });
+    if(account){
+      useCartSync(shopCarts[shopName], account.id, syncCartTimer, setSyncCartTimer, updateCart);
+    }
   };
   const handleAttributeCallback = (props) =>{
     setSelectedImage(0);

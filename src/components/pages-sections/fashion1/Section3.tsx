@@ -35,7 +35,7 @@ const Section3 = ({ newArrivals }) => {
             price={item.price}
             promotion={item.promotion.length > 0 ? item.promotion[0].discount_percent : 0}
             rating={item.rate_point / item.rate_count}
-            imgUrl={item.images.split(',')[0]}
+            imgUrl={item.images[0]}
           />
         ))}
       </Carousel>

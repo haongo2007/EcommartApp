@@ -1,5 +1,6 @@
 import { Prisma, PrismaClient, ShopConfig } from "@prisma/client";
 import { currentDateTimeToString } from "helpers/date";
+import { responseProductList } from "helpers/responseProduct";
 import { groupBy } from "lodash-es";
 import db from "../../../lib/servers/prismadb";
 
@@ -124,11 +125,11 @@ export const getProductHome = async (
   let productDealOfWeek = await (prisma ?? db).shopProductPromotion.findMany(productPromo.deal_of_week.config);
 
   const data = {
-      product_new_arrivals:JSON.parse(JSON.stringify(productNewArrivals)),
+      product_new_arrivals:responseProductList({data:productNewArrivals}),
       product_flash_deals:JSON.parse(JSON.stringify(productFlashDeals)),
       product_deals_day:JSON.parse(JSON.stringify(productDealOfDay)),
       product_deals_week:JSON.parse(JSON.stringify(productDealOfWeek)),
-      product_most_buyed:JSON.parse(JSON.stringify(productMostBuyed)),
+      product_most_buyed:responseProductList({data:productMostBuyed}),
   }
   return data;
 };

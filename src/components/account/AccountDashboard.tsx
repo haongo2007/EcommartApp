@@ -15,14 +15,12 @@ import TableRow from "components/TableRow";
 import { H3, H5, Small } from "components/Typography";
 import { FlexBetween, FlexBox } from "components/flex-box";
 import AccountHeader from "./AccountHeader";
-import AccountSideBar from "./AccountSideBar";
 import {signOut} from "next-auth/react"
 import { useAccountContext } from "providers/AccountProvider";
 
 // ============================================================
 const AccountDashboard = ({locale,domain}:{locale:string,domain:string}) => {
   const { account } = useAccountContext();
-  console.log(account);
   const downMd = useMediaQuery((theme) => theme.breakpoints.down("md")); // SECTION TITLE HEADER LINK
   const HEADER_LINK = (
     <FlexBox>
@@ -81,7 +79,6 @@ const AccountDashboard = ({locale,domain}:{locale:string,domain:string}) => {
         icon={Person}
         title="My Profile"
         button={HEADER_LINK}
-        navigation={<AccountSideBar />}
       />
 
       {/* USER PROFILE INFO */}

@@ -1,3 +1,4 @@
+"use client"
 import { useCallback, useState } from "react";
 import { Button, Checkbox, Box, FormControlLabel } from "@mui/material";
 import Link from "next/link";
@@ -10,12 +11,14 @@ import BazaarTextField from "../BazaarTextField";
 import { Wrapper } from "./Login";
 import SocialButtons from "./SocialButtons";
 import EyeToggleButton from "./EyeToggleButton";
+import { useStore } from "stores";
 
-const Signup = () => {
+const Signup = ({locale,domain}:{locale:string,domain:string}) => {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
   const togglePasswordVisibility = useCallback(() => {
     setPasswordVisibility((visible) => !visible);
   }, []);
+  const logo = useStore((state) => state.shopInfo.logo);
 
   const handleFormSubmit = async (values) => {
     console.log(values);
@@ -31,7 +34,8 @@ const Signup = () => {
     <Wrapper elevation={3} passwordVisibility={passwordVisibility}>
       <form onSubmit={handleSubmit}>
         <BazaarImage
-          src="/assets/images/bazaar-black-sm.svg"
+          src={logo}
+          height={70} 
           sx={{
             m: "auto",
           }}
@@ -139,11 +143,11 @@ const Signup = () => {
               justifyContent="flex-start"
             >
               By signing up, you agree to
-              <a href="/" target="_blank" rel="noreferrer noopener">
+              <Link href="/" target="_blank" rel="noreferrer noopener">
                 <H6 ml={1} borderBottom="1px solid" borderColor="grey.900">
                   Terms & Condtion
                 </H6>
-              </a>
+              </Link>
             </FlexBox>
           }
         />
@@ -164,12 +168,10 @@ const Signup = () => {
       <SocialButtons />
       <FlexRowCenter mt="1.25rem">
         <Box>Already have an account?</Box>
-        <Link href="/login" passHref legacyBehavior>
-          <a>
-            <H6 ml={1} borderBottom="1px solid" borderColor="grey.900">
-              Login
-            </H6>
-          </a>
+        <Link href={`/${locale}/${domain}/login`}>
+          <H6 ml={1} borderBottom="1px solid" borderColor="grey.900">
+            Login
+          </H6>
         </Link>
       </FlexRowCenter>
     </Wrapper>

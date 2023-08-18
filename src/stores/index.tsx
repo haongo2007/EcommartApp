@@ -8,7 +8,7 @@ import { createShopLocaleStore } from "./shopLocale";
 import { CategoryGroupType } from "../types/category";
 import { createAttributeGroupProductStore } from "./shopAGroupP";
 import { createShopCartStore } from "./shopCart";
-import { ShopConfig, Shops, ShopBrand, ShopBanner, ShopAttributeGroup } from "@prisma/client";
+import { ShopConfig, Shops, ShopBrand, ShopBanner, ShopAttributeGroup, ShopCustomerCart } from "@prisma/client";
 import { ShopLocal } from "../types/shop";
 import { persist } from "zustand/middleware";
 
@@ -19,6 +19,7 @@ type initProps = {
     shopLocale: ShopLocal,
     shopBrands: ShopBrand,
     shopBanner: ShopBanner,
+    shopCarts: ShopCustomerCart,
     shopAGroupP: ShopAttributeGroup
 }
 
@@ -57,6 +58,6 @@ export const useStore = create(
         {
             name: 'carts' , 
             partialize: (state) => ({ shopCarts: state.shopCarts }) ,
-        }
-    )
+        },
+    ),
 );

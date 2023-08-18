@@ -98,12 +98,11 @@ const MobileMenu = () => {
         onClick={() => setOpenDrawer(true)}
         sx={{
           flexShrink: 0,
-          border: (theme) => `1px solid ${theme.palette.grey[400]}`,
+          bgcolor: (theme) => `${theme.palette.grey[200]}`
         }}
       >
         <Menu />
       </IconButton>
-
       <Drawer
         anchor="right"
         open={openDrawer}
@@ -139,6 +138,7 @@ const MobileMenu = () => {
                   position: "absolute",
                   right: 30,
                   top: 15,
+                  bgcolor: (theme) => `${theme.palette.grey[200]}`
                 }}
               >
                 <Clear fontSize="small" />

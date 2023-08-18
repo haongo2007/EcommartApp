@@ -1,11 +1,17 @@
+"use client"
 import Link from "next/link";
 import { Add, Close, Remove } from "@mui/icons-material";
 import { Button, Card, IconButton, styled } from "@mui/material";
 import Image from "components/BazaarImage";
 import { Span } from "components/Typography";
 import { FlexBox } from "components/flex-box";
-import { useCartContext } from "contexts/CartContext";
-import { currency } from "lib"; // styled components
+import { useStore } from "stores";
+import useCurrency from "hooks/useCurrency";
+import { useSnackbar } from "notistack";
+import { useAccountContext } from "providers/AccountProvider";
+import useCartSync from "hooks/useCartSync";
+import { CartItemProps } from "types/types";
+import { useState } from "react";
 
 const Wrapper = styled(Card)(({ theme }) => ({
   display: "flex",
@@ -26,31 +32,47 @@ const Wrapper = styled(Card)(({ theme }) => ({
 })); // =========================================================
 
 // =========================================================
-const ProductCard7 = ({ id, name, qty, price, imgUrl, slug }) => {
-  const { dispatch } = useCartContext(); // handle change cart
-
+const ProductCard7 = ({product,updateCart}) => {
+  const { id, description, finalPrice, store_id, price, promotion, images, slug, shopName, variant, qty } = product;
+  const { account } = useAccountContext();
+  const { shopLocale } = useStore((state) => state);
+  const { shopInfo } = useStore((state) => state);
+  const currentLang = useStore((state) => state.shopLocale.language);
+  const { setCart,shopCarts } = useStore();
+  const { enqueueSnackbar } = useSnackbar();
+  const title = description.filter((item) => item.lang === currentLang)[0].name;
+  const [syncCartTimer, setSyncCartTimer] = useState(0);
   const handleCartAmountChange = (amount) => () => {
-    dispatch({
-      type: "CHANGE_CART_AMOUNT",
-      payload: {
+    const ProductItem : CartItemProps =  {
         id,
-        name,
-        price,
-        imgUrl,
-        qty: amount,
         slug,
-      },
+        qty: amount,
+        variant,
+        price,
+        promotion,
+        description,
+        finalPrice,
+        images,
+        store_id,
+        shopName
+    };
+    setCart(ProductItem,syncCartTimer,setSyncCartTimer);
+    enqueueSnackbar("Update Cart Success", {
+      variant: "success",
     });
+    if(account){
+      useCartSync(shopCarts[shopName], account.id, syncCartTimer, setSyncCartTimer, updateCart);
+    }
   };
 
   return (
     <Wrapper>
       <Image
-        alt={name}
+        alt={title}
         width={140}
         height={140}
         display="block"
-        src={imgUrl || "/assets/images/products/iphone-xi.png"}
+        src={images[0] || "/assets/images/products/iphone-xi.png"}
       />
 
       <IconButton
@@ -66,19 +88,19 @@ const ProductCard7 = ({ id, name, qty, price, imgUrl, slug }) => {
       </IconButton>
 
       <FlexBox p={2} rowGap={2} width="100%" flexDirection="column">
-        <Link href={`/product/${slug}`}>
+        <Link href={`/${currentLang}/${shopName}/product/${slug}`}>
             <Span ellipsis fontWeight="600" fontSize={18}>
-              {name}
+              {title}
             </Span>
         </Link>
 
         <FlexBox gap={1} flexWrap="wrap" alignItems="center">
           <Span color="grey.600">
-            {currency(price)} x {qty}
+            { useCurrency(finalPrice,null,shopLocale,shopInfo) } x {qty}
           </Span>
 
           <Span fontWeight={600} color="primary.main">
-            {currency(price * qty)}
+            { useCurrency(finalPrice * qty,null,shopLocale,shopInfo)}
           </Span>
         </FlexBox>
 

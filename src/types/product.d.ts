@@ -5,10 +5,10 @@ export interface ProductTypeClient extends Omit<ShopProduct, "createdAt" | "upda
     updatedAt: any | null;
     promotion?: ShopProductPromotion[];
     attribute?: ShopProductAttribute;
-    categories: ShopProductCategories[];
+    categories?: ShopProductCategories[];
 }
 
 export type ProductListType = {
-    total: number;
+    total?: number;
     data: ProductTypeClient[];
 }

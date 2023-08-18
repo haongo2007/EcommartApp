@@ -28,7 +28,6 @@ const AccountProvider = ({
   // isAdmin,
 }: AccountContextProviderProps) => {
   const [accountSession, setAccountSession] = useState<AccountSession>(account);
-
   return (
     <AccountContext.Provider
       value={{

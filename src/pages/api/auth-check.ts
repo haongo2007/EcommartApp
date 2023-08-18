@@ -1,5 +1,5 @@
+import { getServerAuthSession } from "lib/servers/trpcAuthSession";
 import { NextApiRequest, NextApiResponse } from "next";
-import { getServerAuthSession } from "../../server/common/get-server-auth-session";
 
 const checkAuth = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== "GET") {

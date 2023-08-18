@@ -1,15 +1,17 @@
 import React, {use} from "react";
 import Topbar from "components/topbar";
-import Sticky from "components/sticky";
 import Header from "components/Header";
 import Navbar from "components/navbar/Navbar";
+import AccountProvider from "providers/AccountProvider";
 import {fetchAllCategories} from "../../../server/handlers/categories/fetchAllCategories";
 import {StoreInitializer} from "../../../stores/store-initializer";
 import {getShop, getShopMeta} from "../../../server/handlers/shop/getShop";
 import {Metadata} from "next";
 import Footer from "components/Footer";
 import { getEnvSafely } from "env/config";
-
+import { getCurrentUser } from "lib/getCurrentUser";
+import { getCartByCustomerId } from "server/handlers/carts/getCartByCustomerId";
+import { MobileNavigationBar } from "components/mobile-navigation";
 
 
 type LayoutProps = {
@@ -72,23 +74,32 @@ export default function ShopListLayout({ children, params : { lng,shop }}: Layou
     shopBanner: shopConfig.banner,
     shopAGroupP: shopConfig.attribute_group,
   }
+  const account = use(getCurrentUser());
+  if(account !== undefined && account !== null){
+    const carts = use(getCartByCustomerId(account.id,account.store_id));
+    const objCart = {};
+    objCart[shop] = carts;
+    dataInit['shopCarts'] = objCart;
+  }
   return (
     <>
-      <StoreInitializer initialStore={dataInit} />
-        {/* TOPBAR */}
-        <Topbar infomation={infomation} useCurrency={true}/>
-        {/* HEADER */}
-        <Sticky fixedOn={0} scrollDistance={300}>
+      <AccountProvider account={account} >
+        <StoreInitializer initialStore={dataInit} />
+          {/* TOPBAR */}
+          <Topbar infomation={infomation} useCurrency={true}/>
+          {/* HEADER */}
           <Header infomation={infomation}/>
-        </Sticky>
-        <div className="section-after-sticky">
-          {/* NAVIGATION BAR */}
-          <Navbar data={shopCategory} elevation={0} border={1} hideHorizontalCategories={true} />
+          <div className="section-after-sticky">
+            {/* NAVIGATION BAR */}
+            <Navbar data={shopCategory} elevation={0} border={1} hideHorizontalCategories={false} locale={lng} domain={shopConfig.domain}/>
 
-          {/* BODY CONTENT */}
-          {children}
-        </div>
-        <Footer/>
+            {/* BODY CONTENT */}
+            {children}
+          </div>
+          {/* SMALL DEVICE BOTTOM NAVIGATION */}
+          <MobileNavigationBar domain={shopConfig.domain} locale={lng}/>
+          <Footer/>
+      </AccountProvider>
     </>
   );
 }

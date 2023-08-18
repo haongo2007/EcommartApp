@@ -1,10 +1,11 @@
 // import { UserType } from "@prisma/client";
 // import db from "./servers/prismadb";
+import { responseCustomer } from "helpers/responseCustomer";
 import { getSession } from "./servers/session";
 
 export const getCurrentUser = async () => {
   const session = await getSession();
-  return session?.user;
+  return responseCustomer(session?.user);
 };
 
 // export const isAdmin = async (userId?: string) => {
