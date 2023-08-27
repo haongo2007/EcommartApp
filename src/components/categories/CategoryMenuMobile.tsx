@@ -9,12 +9,11 @@ import CategoryMenuImageBox from "./CategoryMenuImageBox";
 import CategoryMenuNavStyle from "./CategoryMenuNavStyle";
 import { useStore } from "stores";
 import appIcons from "components/icons";
+import { trpc } from "providers/trpcProvider";
 
 export default function MobileCategoryNav({domain,locale}:{domain:string,locale:string}){
-    const [category, setCategory] = useState(null);
+    const { setCategory,shopCategory } = useStore();
     const [suggestedList, setSuggestedList] = useState([]);
-    const [subCategoryList, setSubCategoryList] = useState([]);
-    
     const suggestion = [
         {
             title: "Belt",
@@ -57,31 +56,32 @@ export default function MobileCategoryNav({domain,locale}:{domain:string,locale:
             imgUrl: "/assets/images/products/categories/t-shirt.png",
         },
     ];
-    const handleCategoryClick = (cat) => () => {
-        let menuData = cat.menuData;
-        if (menuData) setSubCategoryList(menuData.categories || menuData);
-        else setSubCategoryList([]);
-        setCategory(cat);
+    const handleCategoryClick = (item) => () => {
+        if (!item.has_child || item.has_mount){
+            return false;
+        }
+        const getCat = trpc.category.getChilds.useQuery(item.child_list);
+        console.log(getCat);
     };
 
-     useEffect(() => setSuggestedList(suggestion), []);
-  
-    const shopCategory = useStore((state) => state.shopCategory[domain]);
+    const getTitle = (description) => {
+        return description.filter((item) => item.lang === locale)[0].title;
+    }
+
+    useEffect(() => setSuggestedList(suggestion), []);
     let SvgIcon = '';
     return (
         <CategoryMenuNavStyle>
-
             <Box className="main-category-holder">
-                {shopCategory.map((item) => {
+                {shopCategory[domain].map((item) => {
                     if(item.icon !== '' && item.icon !== null){
                       SvgIcon = appIcons[item.icon];
                     }
-                    const title = item.description.filter((item) => item.lang === locale)[0].title;
                     return (<Box
-                        key={title}
+                        key={getTitle(item.description)}
                         className="main-category-box"
                         onClick={handleCategoryClick(item)}
-                        borderLeft={`${category?.href === item.href ? "3" : "0"}px solid`}
+                        borderLeft={`${item?.selected === true ? "3" : "0"}px solid`}
                     >
                         {item.icon && <SvgIcon fontSize="small" color="inherit" sx={{fontSize: "28px", mb: "0.5rem",}}/>}
                         <Typography
@@ -90,73 +90,71 @@ export default function MobileCategoryNav({domain,locale}:{domain:string,locale:
                         fontSize="11px"
                         lineHeight="1"
                         >
-                        {title}
+                        {getTitle(item.description)}
                         </Typography>
                     </Box>)
                 })}
             </Box>
 
             <Box className="container">
-                <Typography fontWeight="600" fontSize="15px" mb={2}>
+                {/* <Typography fontWeight="600" fontSize="15px" mb={2}>
                 Recommended Categories
-                </Typography>
+                </Typography> */}
 
-                <Box mb={4}>
-                <Grid container spacing={3}>
-                    {suggestedList.map((item, ind) => (
-                    <Grid item lg={1} md={2} sm={3} xs={4} key={ind}>
-                        <Link href="/product/search/423423" legacyBehavior>
-                        <a>
-                            <CategoryMenuImageBox {...item} />
-                        </a>
-                        </Link>
-                    </Grid>
-                    ))}
-                </Grid>
-                </Box>
-
-                {category?.menuComponent === "MegaMenu1" ? (
-                subCategoryList.map((item, ind) => (
-                    <Fragment key={ind}>
-                    <Divider />
-                    <Accordion>
-                        <AccordionHeader px={0} py={1.25}>
-                        <Typography fontWeight="600" fontSize="15px">
-                            {item.title}
-                        </Typography>
-                        </AccordionHeader>
-
-                        <Box mb={4} mt={1}>
-                        <Grid container spacing={3}>
-                            {item.subCategories?.map((item, ind) => (
-                            <Grid item lg={1} md={2} sm={3} xs={4} key={ind}>
-                                <Link href="/product/search/423423" legacyBehavior>
-                                <a>
-                                    <CategoryMenuImageBox {...item} />
-                                </a>
-                                </Link>
-                            </Grid>
-                            ))}
+                {/* <Box mb={4}>
+                    <Grid container spacing={3}>
+                        {suggestedList.map((item, ind) => (
+                        <Grid item lg={1} md={2} sm={3} xs={4} key={ind}>
+                            <Link href="/product/search/423423">
+                                <CategoryMenuImageBox {...item} />
+                            </Link>
                         </Grid>
-                        </Box>
-                    </Accordion>
-                    </Fragment>
-                ))
+                        ))}
+                    </Grid>
+                </Box> */}
+
+                {/* {category?.deep == 1 ? (
+                subCategoryList.map((item, ind) => {
+                    return (<Fragment key={ind}>
+                        <Divider />
+                        <Accordion>
+                            <AccordionHeader px={0} py={1.25}>
+                            <Typography fontWeight="600" fontSize="15px">
+                                {getTitle(item.description)}
+                            </Typography>
+                            </AccordionHeader>
+
+                            <Box mb={4} mt={1}>
+                            <Grid container spacing={3}>
+                                {item.children?.map((item, ind) => (
+                                <Grid item lg={1} md={2} sm={3} xs={4} key={ind}>
+                                    <Link href="/product/search/423423" >
+                                        <CategoryMenuImageBox {...item} />
+                                    </Link>
+                                </Grid>
+                                ))}
+                            </Grid>
+                            </Box>
+                        </Accordion>
+                        </Fragment>)
+                })
                 ) : (
                 <Box mb={4}>
                     <Grid container spacing={3}>
-                    {subCategoryList.map((item, ind) => (
-                        <Grid item lg={1} md={2} sm={3} xs={4} key={ind}>
-                        <Link href="/product/search/423423" legacyBehavior>
-                            <a>
-                            <CategoryMenuImageBox {...item} />
-                            </a>
-                        </Link>
-                        </Grid>
-                    ))}
+                    {subCategoryList.map((item, ind) => {
+                        if(item.icon !== '' && item.icon !== null){
+                            SvgIcon = appIcons[item.icon];
+                        }
+                        const title = item.description.filter((item) => item.lang === locale)[0].title;
+                        return (<Grid item lg={1} md={2} sm={3} xs={4} key={ind}>
+                            <Link href={`/${locale}/${domain}/category/${item.alias}`}>
+                                <CategoryMenuImageBox title={title} Icon={SvgIcon} imgUrl={''}/>
+                            </Link>
+                        </Grid>)
+                    })}
                     </Grid>
                 </Box>
-                )}
+                )} */}
             </Box>
 
             <MobileNavigationBar locale={locale} domain={domain}/>

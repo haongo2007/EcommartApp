@@ -10,780 +10,799 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Shops {
-    @@map("ef_shops")
 
-    id          Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    logo        String?
+  logo String?
 
-    template    String?
+  template String?
 
-    phone       String?
+  phone String?
 
-    email       String?
+  email String?
 
-    domain      String?     @unique
+  domain String? @unique
 
-    partner     Int?
+  partner Int?
 
-    code        String?
+  code String?
 
-    language    String?
+  language String?
 
-    timezone    String?
+  timezone String?
 
-    currency    String?
+  currency String?
 
-    status      Int? @default(0)
+  status Int? @default(0)
 
-    active      Int? @default(0)
+  active Int? @default(0)
 
-    site_name   String?     @unique
+  site_name String? @unique
 
-    short_name  String?     @unique
+  short_name String? @unique
 
-    favicon     String?
+  favicon String?
 
-    description ShopDescriptions[]
+  description ShopDescriptions[]
 
-    address     ShopAddress[]
+  address ShopAddress[]
 
-    categories  ShopCategories[]
+  categories ShopCategories[]
 
-    configs     ShopConfig[]
+  configs ShopConfig[]
 
-    banner      ShopBanner[]
+  banner ShopBanner[]
 
-    languages   ShopLanguage[]
+  languages ShopLanguage[]
 
-    currencies  ShopCurrency[]
+  currencies ShopCurrency[]
 
-    products    ShopProduct[]
+  products ShopProduct[]
 
-    ratings     ShopProductRating[]
+  ratings ShopProductRating[]
 
-    promotions  ShopProductPromotion[]
+  promotions ShopProductPromotion[]
 
-    carts       ShopCustomerCart[]
+  carts ShopCustomerCart[]
 
-    customer    ShopCustomer[]
+  customer ShopCustomer[]
 
-    brand       ShopBrand[]
+  brand ShopBrand[]
 
-    supplier    ShopSupplier[]
+  supplier ShopSupplier[]
 
-    measure     ShopMeasure[]
+  measure ShopMeasure[]
 
-    attribute_group    ShopAttributeGroup[]
+  attribute_group ShopAttributeGroup[]
 
-    createdAt  DateTime   @default(now())
+  createdAt DateTime @default(now())
 
-    updatedAt DateTime?  @updatedAt
+  updatedAt DateTime? @updatedAt
 
+  @@map("ef_shops")
 }
 
 model ShopDescriptions {
-    @@map("ef_shops_description")
 
-    id          Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    lang        String?
+  lang String?
 
-    title       String?
+  title String?
 
-    description String?
+  description String?
 
-    keyword     String?
+  keyword String?
 
-    maintain_content     String?
+  maintain_content String?
 
-    store_id    Int
+  store_id Int
 
-    maintain_note        String?
+  maintain_note String?
 
-    shop  Shops    @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_description")
 }
 
 model ShopAddress {
-    @@map("ef_shops_address")
 
-    id               Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    phone            String?
+  phone String?
 
-    address          String?
+  address String?
 
-    street           String?
+  street String?
 
-    ward_name        String?
+  ward_name String?
 
-    district_name    String?
+  district_name String?
 
-    province_name    String?
+  province_name String?
 
-    ward             Int?
+  ward Int?
 
-    district         String?
+  district String?
 
-    province         String?
+  province String?
 
-    country          String?
+  country String?
 
-    office           String?
+  office String?
 
-    warehouse        String?
+  warehouse String?
 
-    store_id         Int
+  store_id Int
 
-    pickup           Int?
+  pickup Int?
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_address")
 }
 
 model ShopCategories {
-    @@map("ef_shops_categories")
 
-    id               Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    store_id         Int
+  store_id Int
 
-    icon             String?
+  icon String?
 
-    alias            String?
+  alias String?
 
-    parent           Int    @default(0)
+  image String?
 
-    child_list       String?
+  parent Int @default(0)
 
-    has_child        Int    @default(0)
+  child_list String?
 
-    top              Int    @default(0)
+  has_child Int @default(0)
 
-    deep             Int    @default(0)
+  top Int @default(0)
 
-    status           Int    @default(0)
+  deep Int @default(0)
 
-    sort             Int    @default(0)
+  status Int @default(0)
 
-    description   ShopCategoriesDescription[]
+  sort Int @default(0)
 
-    product       ShopProductCategories[]
+  description ShopCategoriesDescription[]
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  product ShopProductCategories[]
+
+  shop Shops @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_categories")
 }
 
 model ShopCategoriesDescription {
-    @@map("ef_shops_categories_description")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    category_id    Int
+  category_id Int
 
-    lang           String?
+  lang String?
 
-    title          String?
+  title String?
 
-    keyword        String?
+  keyword String?
 
-    description     String?
+  description String?
 
-    category   ShopCategories   @relation(fields: [category_id], references: [id])
+  category ShopCategories @relation(fields: [category_id], references: [id])
+
+  @@map("ef_shops_categories_description")
 }
 
 model ShopConfig {
-    @@map("ef_shops_config")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    group          String?
+  group String?
 
-    code           String?
+  code String?
 
-    key            String?
+  key String?
 
-    value            Int  @default(0)
+  value Int @default(0)
 
-    store_id         Int
+  store_id Int
 
-    store_name         String
+  store_name String
 
-    sort             Int    @default(0)
+  sort Int @default(0)
 
-    detail         String?
+  detail String?
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_config")
 }
 
 model ShopBanner {
-    @@map("ef_shops_banner")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    title          String?
+  title String?
 
-    subtitle       String?
+  subtitle String?
 
-    buttonName     String?
+  buttonName String?
 
-    description    String? @db.Text
+  description String? @db.Text
 
-    image          String?
+  image String?
 
-    url            String?
+  url String?
 
-    target         String?
+  target String?
 
-    html           String? @db.Text
+  html String? @db.Text
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    sort           Int    @default(0)
+  sort Int @default(0)
 
-    clicked        Int    @default(0)
+  clicked Int @default(0)
 
-    type           String
+  type String
 
-    store_id       Int
+  store_id Int
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
 
-    createdAt  DateTime   @default(now())
+  createdAt DateTime @default(now())
 
-    updatedAt DateTime?  @updatedAt
+  updatedAt DateTime? @updatedAt
+
+  @@map("ef_shops_banner")
 }
 
 model ShopBrand {
-    @@map("ef_shops_brand")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    slug           String
+  slug String
 
-    name           String?
+  name String?
 
-    image          String? @db.Text
+  image String? @db.Text
 
-    store_id       Int
+  store_id Int
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    products   ShopProduct[]
+  products ShopProduct[]
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_brand")
 }
 
 model ShopSupplier {
-    @@map("ef_shops_supplier")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    slug           String
+  slug String
 
-    name           String?
+  name String?
 
-    email          String?
+  email String?
 
-    phone          String?
+  phone String?
 
-    address        String?
+  address String?
 
-    image          String? @db.Text
+  image String? @db.Text
 
-    store_id       Int
+  store_id Int
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    products   ShopProduct[]
+  products ShopProduct[]
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_supplier")
 }
 
 model ShopMeasure {
-    @@map("ef_shops_length")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    code           String?
+  code String?
 
-    name           String?
+  name String?
 
-    store_id       Int
+  store_id Int
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    type           String?
+  type String?
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_length")
 }
 
 model ShopAttributeGroup {
-    @@map("ef_shops_attribute_group")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    name           String?
+  name String?
 
-    store_id       Int
+  store_id Int
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    type           String?
+  type String?
 
-    multiple       Int    @default(0)
+  multiple Int @default(0)
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
 
-    attribute      ShopProductAttribute[]
+  attribute ShopProductAttribute[]
+
+  @@map("ef_shops_attribute_group")
 }
 
 model ShopLanguage {
-    @@map("ef_shops_language")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    name           String?
+  name String?
 
-    code           String?
+  code String?
 
-    flag           String?
+  flag String?
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    sort           Int    @default(0)
+  sort Int @default(0)
 
-    store_id       Int?
+  store_id Int?
 
-    shop   Shops?   @relation(fields: [store_id], references: [id])
+  shop Shops? @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_language")
 }
 
 model ShopCurrency {
-    @@map("ef_shops_currency")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    name           String?
+  name String?
 
-    code           String?
+  code String?
 
-    symbol         String?
+  symbol String?
 
-    exchange_rate  Decimal @db.Decimal(12, 2)
+  exchange_rate Decimal @db.Decimal(12, 2)
 
-    round_thousand Int @db.TinyInt
+  round_thousand Int @db.TinyInt
 
-    precision      Int @db.TinyInt
+  precision Int @db.TinyInt
 
-    symbol_first   Int @db.TinyInt
+  symbol_first Int @db.TinyInt
 
-    thousand       String?
+  thousand String?
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    sort           Int    @default(0)
+  sort Int @default(0)
 
-    store_id       Int?
+  store_id Int?
 
-    shop   Shops?   @relation(fields: [store_id], references: [id])
+  shop Shops? @relation(fields: [store_id], references: [id])
+
+  @@map("ef_shops_currency")
 }
 
 model ShopProductGroup {
-    @@map("ef_shops_product_group")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    product_id     Int
+  product_id Int
+
+  @@map("ef_shops_product_group")
 }
 
 model ShopProduct {
-    @@map("ef_shops_product")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    sku            String?
+  sku String?
 
-    slug           String?
+  slug String?
 
-    upc            String?
+  upc String?
 
-    ean            String?
+  ean String?
 
-    jan            String?
+  jan String?
 
-    isbn           String?
+  isbn String?
 
-    mpn            String?
+  mpn String?
 
-    images         String?
+  images String?
 
-    brand_id       Int
+  brand_id Int
 
-    supplier_id    Int
+  supplier_id Int
 
-    price          Decimal @db.Decimal(12, 2)
+  price Decimal @db.Decimal(12, 2)
 
-    cost           Decimal @db.Decimal(12, 2)
+  cost Decimal @db.Decimal(12, 2)
 
-    stock          Int?    @default(0)
+  stock Int? @default(0)
 
-    sold           Int?    @default(0)
+  sold Int? @default(0)
 
-    minimum        Int?
+  minimum Int?
 
-    weight_class   String?
+  weight_class String?
 
-    length_class   String?
+  length_class String?
 
-    weight         Int?
+  weight Int?
 
-    length         Int?
+  length Int?
 
-    width          Int?
+  width Int?
 
-    height         Int?
+  height Int?
 
-    kind           Int @db.TinyInt  @default(1)
+  kind Int @default(1) @db.TinyInt
 
-    property       String @default("physical")
+  property String @default("physical")
 
-    tax_id         Int?
+  tax_id Int?
 
-    status         Int    @db.TinyInt @default(0)
+  status Int @default(0) @db.TinyInt
 
-    sort           Int    @default(0)
+  sort Int @default(0)
 
-    view           Int?   @default(0)
+  view Int? @default(0)
 
-    rate_point     Int?   @default(0)
+  rate_point Int? @default(0)
 
-    rate_count     Int?   @default(0)
+  rate_count Int? @default(0)
 
-    store_id       Int
+  store_id Int
 
-    store_name     String
+  store_name String
 
-    date_available DateTime?  @db.Date()
+  date_available DateTime? @db.Date()
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
 
-    description    ShopProductDescription[]
+  description ShopProductDescription[]
 
-    promotion    ShopProductPromotion[]
+  promotion ShopProductPromotion[]
 
-    ratings    ShopProductRating[]
+  ratings ShopProductRating[]
 
-    categories ShopProductCategories[]
+  categories ShopProductCategories[]
 
-    carts      ShopCustomerCart[]
+  carts ShopCustomerCart[]
 
-    attribute ShopProductAttribute[]
+  attribute ShopProductAttribute[]
 
-    brand      ShopBrand   @relation(fields: [brand_id], references: [id])
+  brand ShopBrand @relation(fields: [brand_id], references: [id])
 
-    supplier   ShopSupplier   @relation(fields: [supplier_id], references: [id])
+  supplier ShopSupplier @relation(fields: [supplier_id], references: [id])
 
-    createdAt  DateTime   @default(now())
+  createdAt DateTime @default(now())
 
-    updatedAt DateTime?  @updatedAt
+  updatedAt DateTime? @updatedAt
 
-    @@index([brand_id,store_id,tax_id,kind,supplier_id,view])
+  @@index([brand_id, store_id, tax_id, kind, supplier_id, view])
+  @@map("ef_shops_product")
 }
 
 model ShopProductDescription {
-    @@map("ef_shops_product_description")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    product_id     Int
+  product_id Int
 
-    lang           String
+  lang String
 
-    name           String?
+  name String?
 
-    keyword        String? @db.Text
+  keyword String? @db.Text
 
-    description    String? @db.Text
+  description String? @db.Text
 
-    content        String? @db.Text
+  content String? @db.Text
 
-    product   ShopProduct   @relation(fields: [product_id], references: [id])
+  product ShopProduct @relation(fields: [product_id], references: [id])
 
-    @@index([product_id])
+  @@index([product_id])
+  @@map("ef_shops_product_description")
 }
 
 model ShopProductAttribute {
-    @@map("ef_shops_product_attribute")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    name           String?
+  name String?
 
-    images         String?
+  images String?
 
-    attribute_group_id   Int
+  attribute_group_id Int
 
-    product_id     Int
+  product_id Int
 
-    child_list     String?
+  child_list String?
 
-    parent         Int    @default(0)
+  parent Int @default(0)
 
-    price          Decimal @db.Decimal(12, 2)
+  price Decimal @db.Decimal(12, 2)
 
-    qty            Float
+  qty Float
 
-    status         Int    @default(0)
+  status Int @default(0)
 
-    product           ShopProduct   @relation(fields: [product_id], references: [id])
+  product ShopProduct @relation(fields: [product_id], references: [id])
 
-    attribute_group   ShopAttributeGroup   @relation(fields: [attribute_group_id], references: [id])
+  attribute_group ShopAttributeGroup @relation(fields: [attribute_group_id], references: [id])
+
+  @@map("ef_shops_product_attribute")
 }
 
 model ShopProductPromotion {
-    @@map("ef_shops_product_promotion")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    product_id     Int
+  product_id Int
 
-    store_id       Int
+  store_id Int
 
-    store_name     String
+  store_name String
 
-    promo_type           String @default("normal")
+  promo_type String @default("normal")
 
-    stock          Int     @default(1)
+  stock Int @default(1)
 
-    sold           Int     @default(0)
+  sold Int @default(0)
 
-    discount_percent    Float
+  discount_percent Float
 
-    dateStart      DateTime?  @db.DateTime()
+  dateStart DateTime? @db.DateTime()
 
-    dateEnd        DateTime?  @db.DateTime()
+  dateEnd DateTime? @db.DateTime()
 
-    status         Int    @db.TinyInt @default(0)
+  status Int @default(0) @db.TinyInt
 
-    sort           Int      @default(1)
+  sort Int @default(1)
 
-    product   ShopProduct   @relation(fields: [product_id], references: [id])
+  product ShopProduct @relation(fields: [product_id], references: [id])
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
 
-    createdAt  DateTime   @default(now())
+  createdAt DateTime @default(now())
 
-    updatedAt DateTime?  @updatedAt
+  updatedAt DateTime? @updatedAt
 
-    @@index([product_id,store_id])
+  @@index([product_id, store_id])
+  @@map("ef_shops_product_promotion")
 }
 
 model ShopProductCategories {
-    @@map("ef_shops_product_category")
 
-    product_id     Int
+  product_id Int
 
-    category_id    Int
+  category_id Int
 
-    product       ShopProduct     @relation(fields: [product_id], references: [id])
+  product ShopProduct @relation(fields: [product_id], references: [id])
 
-    category      ShopCategories  @relation(fields: [category_id], references: [id])
+  category ShopCategories @relation(fields: [category_id], references: [id])
 
-    assignedAt DateTime @default(now())
+  assignedAt DateTime @default(now())
 
-    assignedBy String
+  assignedBy String
 
-    @@id([product_id, category_id])
+  @@id([product_id, category_id])
+  @@map("ef_shops_product_category")
 }
 
 model ShopProductRating {
-    @@map("ef_shops_product_rating")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    product_id     Int
+  product_id Int
 
-    store_id       Int
+  store_id Int
 
-    customer_id    Int
+  customer_id Int
 
-    name           String
+  name String
 
-    point          Int
+  point Int
 
-    comment        String
+  comment String
 
-    status         Int    @db.TinyInt @default(0)
+  status Int @default(0) @db.TinyInt
 
-    createdAt  DateTime   @default(now())
+  createdAt DateTime @default(now())
 
-    updatedAt DateTime?  @updatedAt
+  updatedAt DateTime? @updatedAt
 
-    product   ShopProduct   @relation(fields: [product_id], references: [id])
+  product ShopProduct @relation(fields: [product_id], references: [id])
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
 
-    @@index([product_id,store_id,customer_id])
+  @@index([product_id, store_id, customer_id])
+  @@map("ef_shops_product_rating")
 }
 
 model ShopCustomer {
-    @@map("ef_shops_customer")
 
-    id             String  @id @default(cuid())
+  id String @id @default(cuid())
 
-    first_name     String?
+  first_name String?
 
-    last_name      String?
+  last_name String?
 
-    email          String  @unique
+  email String @unique
 
-    sex            String?
+  sex String?
 
-    birthday    DateTime?  @db.DateTime()
+  birthday DateTime? @db.DateTime()
 
-    password       String?
+  password String?
 
-    postcode       Int?
+  postcode Int?
 
-    phone          String?
+  phone String?
 
-    company        String?
+  company String?
 
-    store_id       Int
+  store_id Int
 
-    facebook_auth  String?
+  facebook_auth String?
 
-    google_auth    String?
+  google_auth String?
 
-    remember_token String?
+  remember_token String?
 
-    avatar         String?      @db.Text
+  avatar String? @db.Text
 
-    status         Int    @db.TinyInt @default(1)
+  status Int @default(1) @db.TinyInt
 
-    email_verify_at  DateTime?  @db.DateTime()
+  email_verify_at DateTime? @db.DateTime()
 
-    createdAt  DateTime   @default(now())
+  createdAt DateTime @default(now())
 
-    updatedAt DateTime?  @updatedAt
+  updatedAt DateTime? @updatedAt
 
-    shop   Shops   @relation(fields: [store_id], references: [id])
+  shop Shops @relation(fields: [store_id], references: [id])
 
-    address    ShopCustomerAddress[]
+  address ShopCustomerAddress[]
 
-    carts      ShopCustomerCart[]
+  carts ShopCustomerCart[]
 
-    accounts      ShopAccount[]
+  accounts ShopAccount[]
 
-    sessions      ShopSession[]
+  sessions ShopSession[]
+
+  @@map("ef_shops_customer")
 }
 
 model ShopCustomerAddress {
-    @@map("ef_shops_customer_address")
 
-    id             Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    province_id    String?
+  province_id String?
 
-    district_id    String?
+  district_id String?
 
-    ward_id        String?
+  ward_id String?
 
-    country_code   String?
+  country_code String?
 
-    address        String?
+  address String?
 
-    street         String?
+  street String?
 
-    province_name  String?
+  province_name String?
 
-    district_name  String?
+  district_name String?
 
-    ward_name      String?
+  ward_name String?
 
-    country_name   String?
+  country_name String?
 
-    customer_id    String
+  customer_id String
 
-    customer       ShopCustomer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
+  customer ShopCustomer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
+
+  @@map("ef_shops_customer_address")
 }
 
 model ShopCustomerCart {
-    @@map("ef_shops_customer_cart")
 
-    id          String  @id @default(uuid())
+  id String @id @default(uuid())
 
-    customer_id    String
+  customer_id String
 
-    product_id     Int
+  product_id Int
 
-    store_id       Int
+  store_id Int
 
-    qty            Decimal @db.Decimal(12, 2)
+  qty Decimal @db.Decimal(12, 2)
 
-    variant        String?  @db.Text
+  variant String? @db.Text
 
-    customer       ShopCustomer   @relation(fields: [customer_id], references: [id], onDelete: Cascade)
+  customer ShopCustomer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
 
-    product        ShopProduct   @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  product ShopProduct @relation(fields: [product_id], references: [id], onDelete: Cascade)
 
-    shop   Shops   @relation(fields: [store_id], references: [id], onDelete: Cascade)
+  shop Shops @relation(fields: [store_id], references: [id], onDelete: Cascade)
+
+  @@map("ef_shops_customer_cart")
 }
 
 model ShopAccount {
-  @@map("ef_shops_account")
 
-  id                 String  @id @default(cuid())
+  id String @id @default(cuid())
 
-  customer_id        String
+  customer_id String
 
-  type               String
+  type String
 
-  provider           String
+  provider String
 
-  providerAccountId  String
+  providerAccountId String
 
-  refresh_token      String?  @db.Text
+  refresh_token String? @db.Text
 
-  access_token       String?  @db.Text
+  access_token String? @db.Text
 
-  expires_at         Int?
+  expires_at Int?
 
-  token_type         String?
+  token_type String?
 
-  scope              String?
+  scope String?
 
-  id_token           String?  @db.Text
+  id_token String? @db.Text
 
-  session_state      String?
+  session_state String?
 
-  customer           ShopCustomer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
+  customer ShopCustomer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@map("ef_shops_account")
 }
 
 model ShopSession {
+
+  id String @id @default(cuid())
+
+  sessionToken String @unique
+
+  customer_id String
+
+  expires DateTime
+
+  customer ShopCustomer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
+
   @@map("ef_shops_session")
-
-  id           String   @id @default(cuid())
-
-  sessionToken String   @unique
-
-  customer_id  String
-
-  expires      DateTime
-
-  customer     ShopCustomer     @relation(fields: [customer_id], references: [id], onDelete: Cascade)
 }
 
 model ShopVerificationToken {
-  @@map("ef_shops_verification_token")
 
   identifier String
 
-  token      String   @unique
+  token String @unique
 
-  expires    DateTime
+  expires DateTime
 
   @@unique([identifier, token])
+  @@map("ef_shops_verification_token")
 }

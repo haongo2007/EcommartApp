@@ -3,19 +3,12 @@ import { LAYOUT_CONSTANT } from "../../constants";
 const CategoryMenuNavStyle = styled("div")(({ theme }) => ({
   position: "relative",
   height: "80vh",
+  display: "flex",
   "& .header": {
-    top: 0,
-    left: 0,
-    right: 0,
-    position: "fixed",
   },
   "& .main-category-holder": {
-    left: 0,
-    position: "fixed",
     overflowY: "auto",
     background: theme.palette.grey[300],
-    top: LAYOUT_CONSTANT.mobileNavHeightPage,
-    bottom: LAYOUT_CONSTANT.mobileNavHeight,
     "& .main-category-box": {
       width: "90px",
       height: "80px",
@@ -31,13 +24,9 @@ const CategoryMenuNavStyle = styled("div")(({ theme }) => ({
     },
   },
   "& .container": {
-    left: "90px",
     flex: "1 1 0",
-    position: "fixed",
     overflowY: "auto",
     padding: "0.5rem 1rem",
-    top: LAYOUT_CONSTANT.mobileHeaderHeight,
-    bottom: LAYOUT_CONSTANT.mobileNavHeight,
   },
   "& .ellipsis": {
     width: "100%",
