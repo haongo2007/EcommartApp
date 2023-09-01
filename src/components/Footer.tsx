@@ -10,6 +10,7 @@ import Twitter from "components/icons/Twitter";
 import Youtube from "components/icons/Youtube";
 import Facebook from "components/icons/Facebook";
 import Instagram from "components/icons/Instagram"; // styled component
+import useCheckCatePage from "hooks/useCheckCatePage";
 
 const StyledLink = styled("a")(({ theme }) => ({
   display: "block",
@@ -24,6 +25,9 @@ const StyledLink = styled("a")(({ theme }) => ({
 }));
 
 const Footer = () => {
+  if (useCheckCatePage()) {
+    return (<></>);
+  }
   return (
     <footer>
       <Box bgcolor="#222935">

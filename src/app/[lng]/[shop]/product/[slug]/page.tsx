@@ -1,22 +1,23 @@
 import Container from "@mui/material/Container";
-import Box from '@mui/material/Box';
 import {use} from "react";
-import { getProduct, getProductMeta } from "server/handlers/products/getProduct";
+import { getProduct } from "server/handlers/products/getProduct";
 import { notFound } from "next/navigation";
 import ProductIntro from "components/product/ProductIntro";
 import ProductDescription from "components/product/ProductDescription";
 import ProductRelation from "components/product/ProductRelation";
 import { Metadata } from 'next'
-import { ProductPageEditProps } from "types/types";
- 
- 
-export async function generateMetadata( { params }: ProductPageEditProps): Promise<Metadata> {
+import { PageDetailProps } from "types/types";
+
+export async function generateMetadata( { params }: PageDetailProps): Promise<Metadata> {
   // fetch data
   const { lng,shop,slug } = params;
-  const productDesc = await getProductMeta(shop,slug,lng);
+  const product = await getProduct(shop,slug);
+  const productDesc = product.description.filter((item) => item.lang === lng);
+  const {name} = productDesc[0];
+  const {description} = productDesc[0];
   return {
-    title: productDesc.name,
-    description: productDesc.description,
+    title: name,
+    description: description,
     alternates:{
         canonical:`${shop}/product/${slug}`,
         languages: {
@@ -26,7 +27,7 @@ export async function generateMetadata( { params }: ProductPageEditProps): Promi
   }
 }
 
-export default function ProductDetail({ params }: ProductPageEditProps) {
+export default function ProductDetail({ params }: PageDetailProps) {
     const { lng,shop,slug } = params;
     const product = use(getProduct(shop,slug));
     if (!product) {

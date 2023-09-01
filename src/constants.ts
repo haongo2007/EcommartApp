@@ -7,7 +7,7 @@ export const LAYOUT_CONSTANT = {
   mobileNavHeight: 64,
   mobileNavHeightPage: 120,
   containerWidth: 1200,
-  mobileHeaderHeight: 120,
+  mobileHeaderHeight: 80,
   grocerySidenavWidth: 280,
 };
 

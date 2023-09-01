@@ -3,9 +3,9 @@ import Topbar from "components/topbar";
 import Header from "components/Header";
 import Navbar from "components/navbar/Navbar";
 import AccountProvider from "providers/AccountProvider";
-import {fetchAllCategories} from "../../../server/handlers/categories/fetchAllCategories";
+import {fetchAllCategoriesParentWithGroup} from "../../../server/handlers/categories/fetchAllCategoriesParentWithGroup";
 import {StoreInitializer} from "../../../stores/store-initializer";
-import {getShop, getShopMeta} from "../../../server/handlers/shop/getShop";
+import {getShop} from "../../../server/handlers/shop/getShop";
 import {Metadata} from "next";
 import Footer from "components/Footer";
 import { getEnvSafely } from "env/config";
@@ -19,20 +19,24 @@ type LayoutProps = {
   params: { lng: string,shop: string }
 }
 
-export async function generateMetadata( { params }: LayoutProps): Promise<Metadata> {
-  const shopMeta = await getShopMeta(params);
+export async function generateMetadata( { children, params : { lng,shop }}: LayoutProps): Promise<Metadata> {
+  const shopInfo = await getShop({description:true},shop);
+  const {favicon} = shopInfo;
+  const shopDesc = shopInfo.description.filter((item) => item.lang === lng);
+  const {title} = shopDesc[0];
+  const {description} = shopDesc[0];
   return {
     metadataBase: new URL(getEnvSafely('NEXT_PUBLIC_URL')),
     title: {
-      default: `${shopMeta.title}`,
-      template: `%s | ${shopMeta.title}`,
+      default: `${title}`,
+      template: `%s | ${title}`,
     },
-    description: shopMeta.description,
+    description: description,
     verification: {
       google: 'google-site-verification=878787878'
     },
     icons: {
-      icon: getEnvSafely('NEXT_PUBLIC_URL')+shopMeta.favicon,
+      icon: getEnvSafely('NEXT_PUBLIC_URL')+favicon,
     },
   }
 }
@@ -49,7 +53,7 @@ export default function ShopListLayout({ children, params : { lng,shop }}: Layou
     attribute_group:true
   }
   const shopConfig = use(getShop(shopInclude,shop));
-  const shopCategory = use(fetchAllCategories(shopConfig.id,shop));
+  const shopCategory = use(fetchAllCategoriesParentWithGroup(shopConfig.id,shop));
   const infomation = {
     email: shopConfig.email,
     phone: shopConfig.phone,

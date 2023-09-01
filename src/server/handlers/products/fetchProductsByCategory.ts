@@ -1,9 +1,10 @@
 import { Prisma, PrismaClient } from "@prisma/client";
-import { massageProductClientList } from "../../../helpers/responseProduct";
+import { currentDateTimeToString } from "helpers/date";
+import { responseProductCategories } from "helpers/responseProductCategories";
 import db from "../../../lib/servers/prismadb";
 
 export const fetchProductsByCategory = async (
-  categoryId: string,
+  categoryId: number[],
   take?: number,
   skip?: number,
   prisma?: PrismaClient<
@@ -12,34 +13,36 @@ export const fetchProductsByCategory = async (
     Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined
   >
 ) => {
-  const prismadb = prisma ?? db;
-
-  const [category, products] = await prismadb.$transaction([
-    prismadb.category.findFirst({
-      where: {
-        id: categoryId,
-      },
-    }),
-    prismadb.product.findMany({
-      where: {
-        categoryId,
-        deleted: false,
-      },
-      include: {
-        category: true,
-        _count: {
-          select: {
-            orderItems: true,
-          },
-        },
-      },
-      ...(take && { take }),
-      ...(skip && { skip }),
-    }),
-  ]);
+  const curDate = currentDateTimeToString(new Date());
+  const promotion = {
+          where:{
+              promo_type: 'normal',
+              dateStart:{
+                  lt: new Date(curDate),
+              },
+              dateEnd:{
+                  gte: new Date(curDate),
+              }
+          }
+      }
+  const products = await (prisma ?? db).shopProductCategories.findMany({
+    where: {
+      category_id:{
+        in : categoryId
+      }
+    },
+    include: {
+      product:{
+        include:{
+          brand:true,
+          description: true,
+          promotion
+        }
+      }
+    },
+    ...(take && { take }),
+    ...(skip && { skip }),
+  });
   
-  return {
-    category,
-    products: massageProductClientList(products),
-  };
+  return responseProductCategories(products)
 };

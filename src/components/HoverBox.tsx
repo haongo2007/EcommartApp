@@ -15,7 +15,4 @@ const HoverBox = styled(Box)({
     background: "rgba(0, 0, 0, 0.3)",
   },
 });
-HoverBox.defaultProps = {
-  overflow: "hidden",
-};
 export default HoverBox;

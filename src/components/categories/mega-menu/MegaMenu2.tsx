@@ -2,10 +2,11 @@ import StyledMegaMenu from "./StyledMegaMenu";
 import {Box, Card, Grid} from "@mui/material";
 import { FlexBox } from "../../flex-box";
 import NavLink from "../../nav-link/NavLink";
+import { useStore } from "stores";
 
 // =======================================================================
 const MegaMenu2 = ({ data,minWidth = "760px" }) => {
-  const locale = 'vi';
+  const locale = useStore((state) => state.shopLocale.language);
   return data ? (
       <StyledMegaMenu>
           <Card
@@ -21,14 +22,14 @@ const MegaMenu2 = ({ data,minWidth = "760px" }) => {
                           {data.map((item, ind) => (
                               <Grid item md={3} key={ind}>
                                   {item.alias ? (
-                                      <NavLink className="title-link" href={item.shop.domain+item.alias}>
+                                      <NavLink className="title-link" href={`/${locale}/${item.shop.domain}/category/${item.alias}`}>
                                           {item.description.filter((desc) => desc.lang === locale)[0].title}
                                       </NavLink>
                                   ) : (
                                       <Box className="title-link">{item.description.filter((desc) => desc.lang === locale)[0].title}</Box>
                                   )}
                                   {item.children?.map((sub, ind) => (
-                                      <NavLink className="child-link" href={sub.shop.domain+sub.alias} key={ind}>
+                                      <NavLink className="child-link" href={`/${locale}/${sub.shop.domain}/category/${sub.alias}`} key={ind}>
                                           {sub.description.filter((desc) => desc.lang === locale)[0].title}
                                       </NavLink>
                                   ))}

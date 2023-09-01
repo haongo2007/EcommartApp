@@ -12,11 +12,12 @@ import { FlexBox } from "../flex-box";
 import Category from "../icons/Category";
 import NavLink from "../nav-link/NavLink";
 import { Paragraph } from "../Typography";
-import CategoryMenu from "../categories/CategoryMenu";
+import CategoryMenu from "../categories/menu/CategoryMenu";
 import MegaMenu from "./MegaMenu";
 import MegaMenu2 from "./MegaMenu2";
 import useSettings from "../../hooks/useSettings";
 import {CategoryGroupType} from "../../types/category";
+import useCheckCatePage from "hooks/useCheckCatePage";
 
 // const common css style
 const navLinkStyle = {
@@ -85,8 +86,10 @@ const ChildNavsWrapper = styled(Box)(() => ({
 }));
 // ==========================================================
 const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, elevation, border, domain, locale }: {data:CategoryGroupType, navListOpen?:boolean, hideCategories?:boolean,hideHorizontalCategories?:boolean, elevation?:number, border?:number, domain:string, locale:string}) => {
+  if(useCheckCatePage()){
+    return (<></>);
+  }
   const { settingState } = useSettings();
-  
   const MenuMain = [
     {
       title: "Home",

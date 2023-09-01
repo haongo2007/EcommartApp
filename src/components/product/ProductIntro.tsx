@@ -163,7 +163,7 @@ const ProductIntro = ({ product }: {product:ShopProduct}) => {
             <FlexBox alignItems="center" mb={2}>
               <Box>Categories:</Box>
               {categories.map((item,i) => (
-                <Link href={`/${prefixUrl}/category${item.category.alias}`} passHref key={i} >
+                <Link href={`/${prefixUrl}/category/${item.category.alias}`} passHref key={i} >
                     <H6 ml={1}>{item.category.description.filter((desc) => desc.lang === locale)[0].title},</H6>
                 </Link>
               ))}

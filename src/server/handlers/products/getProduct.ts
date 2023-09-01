@@ -2,10 +2,10 @@ import { Prisma, PrismaClient, ShopConfig, ShopProductCategories } from "@prisma
 import { currentDateTimeToString } from "helpers/date";
 import { responseProduct, responseProductList } from "../../../helpers/responseProduct";
 import db from "../../../lib/servers/prismadb";
-import {merge} from "lodash-es";
 import { uniq } from "lodash";
+import { cache } from "react";
 
-export const getProduct = async (
+export const getProduct = cache(async (
   store_name: string,
   slug: string,
   prisma?: PrismaClient<
@@ -50,36 +50,7 @@ export const getProduct = async (
   });
   if (!product) return;
   return responseProduct(product);
-};
-
-export const getProductMeta = async (
-  store_name: string,
-  slug: string,
-  lang: string,
-  prisma?: PrismaClient<
-    Prisma.PrismaClientOptions,
-    never,
-    Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined
-  >
-) => {
-  const product = await (prisma ?? db).shopProduct.findFirst({
-    where: {
-      store_name,
-      slug,
-      status: 1,
-    },
-    select:{
-      description:{
-        where:{
-          lang
-        }
-      },
-    },
-  });
-  
-  if (!product) return;
-  return merge({}, ...product.description);
-};
+});
 
 export const getProductRelation = async (
   categories: ShopProductCategories[],
@@ -92,7 +63,7 @@ export const getProductRelation = async (
     Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined
   >
 ) => {
-  const curDate = currentDateTimeToString(new Date());
+    const curDate = currentDateTimeToString(new Date());
     const promotion = {
             where:{
                 promo_type: 'normal',

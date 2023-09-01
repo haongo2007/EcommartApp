@@ -2,12 +2,19 @@ import { alpha, styled } from "@mui/material";
 import SimpleBar from "simplebar-react";
 const StyledScrollBar = styled(SimpleBar)(({ theme }) => ({
   maxHeight: "100%",
+  position: "relative",
+  "& .simplebar-wrapper" : {
+    overflow: "hidden",
+    width: "inherit",
+    height: "inherit",
+    maxWidth: "inherit",
+    maxHeight: "inherit",
+  },
   "& .simplebar-scrollbar": {
+    backgroundColor: "rgb(15 52 96 / 89%)",
+    borderRadius: "4px",
     "&.simplebar-visible:before": {
       opacity: 1,
-    },
-    "&:before": {
-      backgroundColor: alpha(theme.palette.grey[400], 0.6),
     },
   },
   "& .simplebar-track.simplebar-vertical": {
@@ -18,6 +25,28 @@ const StyledScrollBar = styled(SimpleBar)(({ theme }) => ({
   },
   "& .simplebar-mask": {
     zIndex: "inherit",
+    position: "absolute",
+    padding: "0px",
+    margin: "0px",
+    inset: "0px",
+    direction: "inherit",
+    overflow: "hidden",
+    width: "auto !important",
+    height: "auto !important",
+    "& .simplebar-offset": {
+      direction: "inherit !important",
+      boxSizing: "inherit !important",
+      resize: "none !important",
+      "& .simplebar-content-wrapper": {
+        direction: "inherit",
+        position: "relative",
+        display: "block",
+        width: "auto",
+        maxWidth: "100%",
+        maxHeight: "100%",
+        boxSizing: "border-box !important",
+      }
+    },
   },
 })); // =============================================================
 

@@ -1,56 +1,63 @@
-import { Box, Container, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import { H5 } from "../Typography";
-import appIcons from "../icons";
-import Scrollbar from "..//Scrollbar";
+import Scrollbar from "../Scrollbar";
 import { FlexRowCenter } from "../flex-box";
+import appIcons from "components/icons";
+import Link from "next/link";
 // styled compoentents
 const StyledScrollbar = styled(Scrollbar)(() => ({
   "& .simplebar-content": {
-    height: "5rem",
+    maxWidth: "899px",
+    height: "4rem",
     display: "flex",
     backgroundColor: "white",
-    justifyContent: "center",
+    justifyContent: "start",
+    alignItems: "end"
   },
 }));
-const Title = styled(H5)(({ selected, theme }) => ({
+const Title = styled(H5)(({ theme }) => ({
   fontSize: "12px",
   textAlign: "center",
-  fontWeight: selected ? "600" : "400",
-  color: selected ? theme.palette.primary.main : "inherit",
+  fontWeight: "400",
+  color: "inherit",
+  textOverflow: "ellipsis",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  width: "90%",
 })); // ==========================================================================
 
 // ==========================================================================
-const SaleNavbar = ({ categories, selected, onChangeCategory }) => {
+const SaleNavbar = ({ categories,locale,domain }) => {
+  let SvgIcon = '';
   return (
-    <Box bgcolor="background.paper">
-      <Container>
-        <StyledScrollbar autoHide={false}>
-          {categories.map((item) => {
-            const Icon = appIcons[item.icon];
-            const selectedItem = item.slug === selected ? 1 : 0;
-            return (
+    <Box sx={{width:"calc(100% - 96px)",margin: "0 auto"}}>
+      <StyledScrollbar autoHide={false}>
+        {categories.map((item) => {
+          console.log(item);
+          if(item.icon !== '' && item.icon !== null){
+              SvgIcon = appIcons[item.icon];
+          }
+          const title = item.description.filter((desc) => desc.lang === locale)[0].title;
+          return (
+            <Link href={`/${locale}/${domain}/category/${item.alias}`}>
               <FlexRowCenter
                 key={item.id}
-                onClick={onChangeCategory(item.slug)}
                 sx={{
+                  color: "#000",
+                  paddingBottom: "5px",
                   cursor: "pointer",
                   minWidth: "100px",
                   flexDirection: "column",
-                  background: selectedItem ? "primary.light" : "transparent",
+                  background: "transparent",
                 }}
               >
-                <Icon
-                  sx={{
-                    fontSize: "1.75rem",
-                  }}
-                  color={selectedItem ? "primary" : "secondary"}
-                />
-                <Title selected={selectedItem}>{item.name}</Title>
+                  {item.icon && <SvgIcon fontSize="small" color="inherit" sx={{fontSize: "1.75rem"}}/>}
+                  <Title>{title}</Title>
               </FlexRowCenter>
-            );
-          })}
-        </StyledScrollbar>
-      </Container>
+            </Link>
+          );
+        })}
+      </StyledScrollbar>
     </Box>
   );
 };

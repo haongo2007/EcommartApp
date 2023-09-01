@@ -21,7 +21,7 @@ export type PageDefaultProps = {
     }
 }
 
-export type AccountPageEditProps = {
+export type AccountPageDetailProps = {
     params: {
         lng:string,
         shop:string,
@@ -29,7 +29,7 @@ export type AccountPageEditProps = {
     }
 }
 
-export type ProductPageEditProps = {
+export type PageDetailProps = {
     params: {
         lng:string,
         shop:string,

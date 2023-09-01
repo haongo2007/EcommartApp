@@ -8,7 +8,7 @@ import NavLink from "../..//nav-link/NavLink";
 import { H3, Small } from "../../Typography"; // ====================================================================================
 
 // ====================================================================================
-const MegaMenu3 = ({ data: { categories, rightImage }, minWidth }) => {
+const MegaMenu3 = ({ data: { categories, rightImage }, minWidth = '760px' }) => {
   return categories ? (
     <StyledMegaMenu>
       <BazaarCard
@@ -101,7 +101,4 @@ const MegaMenu3 = ({ data: { categories, rightImage }, minWidth }) => {
   ) : null;
 };
 
-MegaMenu3.defaultProps = {
-  minWidth: "760px",
-};
 export default MegaMenu3;

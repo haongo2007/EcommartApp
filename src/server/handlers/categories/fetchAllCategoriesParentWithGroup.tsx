@@ -1,9 +1,9 @@
-import {Prisma, PrismaClient, ShopCategories} from "@prisma/client";
+import {Prisma, PrismaClient} from "@prisma/client";
 import db from "../../../lib/servers/prismadb";
-import {groupBy,flatten} from "lodash-es";
+import {groupBy} from "lodash-es";
 import {responseCategoryGroup} from "../../../helpers/responseCategory";
 
-export const fetchAllCategories = async (
+export const fetchAllCategoriesParentWithGroup = async (
     store_id?: number,
     store_name?: string,
     prisma?: PrismaClient<Prisma.PrismaClientOptions,never,Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined>

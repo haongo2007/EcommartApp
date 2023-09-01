@@ -14,7 +14,7 @@ import ShopCart from "./side-cart/ShopCart";
 import HomeCart from "./side-cart/HomeCart";
 import MobileMenu from "./navbar/MobileMenu";
 import MobileSearch from "./navbar/MobileSearch";
-import CategoryMenu from "./categories/CategoryMenu";
+import CategoryMenu from "./categories/menu/CategoryMenu";
 import GrocerySearchBox from "./search-box/GrocerySearchBox";
 import SearchBox from "./search-box/SearchBox";
 import Category from "./icons/Category";
@@ -28,6 +28,8 @@ import { useStore } from "../stores";
 import { useRouter } from "next/navigation";
 import { useAccountContext } from "providers/AccountProvider";
 import Sticky from "components/sticky";
+import useCheckCatePage from "hooks/useCheckCatePage";
+import { publish } from "helpers/event";
 
 export const HeaderWrapper = styled(Box)(({ theme }) => ({
     zIndex: 3,
@@ -44,7 +46,10 @@ export const HeaderWrapper = styled(Box)(({ theme }) => ({
 const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:AppInfomation | undefined, className?:string | undefined,searchBoxType?:string}) => {
     const theme = useTheme();
     const [isFixed, setIsFixed] = useState(false);
-    const toggleIsFixed = useCallback((fixed:boolean) => setIsFixed(fixed), []);
+    const toggleIsFixed = useCallback((fixed:boolean) => {
+        setIsFixed(fixed);
+        publish('eventStickyHeader',fixed);
+    }, []);
     const [dialogOpen, setDialogOpen] = useState(false);
     const [sidenavOpen, setSidenavOpen] = useState(false);
     const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
@@ -78,7 +83,7 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
     const toggleSidenav = () => setSidenavOpen(!sidenavOpen);
 
     return (
-        <Sticky fixedOn={0} scrollDistance={300} onSticky={toggleIsFixed}>
+        <Sticky fixedOn={0} scrollDistance={0} onSticky={toggleIsFixed}>
             <HeaderWrapper className={clsx(className)}>
                 <Container
                     sx={{
@@ -105,8 +110,8 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
                         <Link href={curDomain ? '/'+curDomain : '/'}>
                             <Image height={70} src={logoShop} alt="logo" />
                         </Link>
-
-                        {isFixed && !downMd && (
+                        
+                        { !useCheckCatePage() && isFixed && !downMd && (
                             <CategoryMenu>
                                 <FlexBox color="grey.600" alignItems="center" ml={2}>
                                     <Button color="inherit">
@@ -168,7 +173,7 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
                     >
                         <Login locale={curLang} domain={infomation.domain}/>
                     </Dialog>
-                    <Drawer open={sidenavOpen} anchor="right" onClose={toggleSidenav}>
+                    <Drawer open={sidenavOpen} anchor="right" onClose={toggleSidenav} sx={{zIndex:1201}}>
                         { infomation !== undefined ? (<ShopCart toggleSidenav={() => {}} />) : (<HomeCart toggleSidenav={() => {}} />) }
                     </Drawer>
                 </Container>

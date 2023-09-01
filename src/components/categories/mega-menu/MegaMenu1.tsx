@@ -1,6 +1,6 @@
 import StyledMegaMenu from "./StyledMegaMenu";
 import BazaarCard from "../../BazaarCard";
-import { CateMega } from "../CategoryMenuCard";
+import { CateMega } from "../menu/CategoryMenuCard";
 
 // =========================================================
 const MegaMenu1 = ({data,shop}) => {

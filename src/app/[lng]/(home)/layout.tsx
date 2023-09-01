@@ -3,14 +3,14 @@ import Topbar from "../../../components/topbar";
 import Sticky from "../../../components/sticky";
 import Header from "../../../components/Header";
 import Navbar from "../../../components/navbar/Navbar";
-import {fetchAllCategories} from "../../../server/handlers/categories/fetchAllCategories";
+import {fetchAllCategoriesParentWithGroup} from "../../../server/handlers/categories/fetchAllCategoriesParentWithGroup";
 import {StoreInitializer} from "../../../stores/store-initializer";
 import { getLocale } from "server/handlers/locale/getLocale";
 import { cookies } from 'next/headers'
 
 
 export default function ShopListLayout({ children, params:{lng} }:{ children: React.ReactNode,params:{lng:string} }) {
-    const shopCategory = use(fetchAllCategories());
+    const shopCategory = use(fetchAllCategoriesParentWithGroup());
     const shopLocale = use(getLocale());
     shopLocale.language = lng || null;
     const dataInit = {

@@ -1,28 +1,37 @@
 import { Typography } from "@mui/material";
 import LazyImage from "components/LazyImage";
-import { FlexRowCenter } from "components/flex-box"; // ==============================================================
+import { FlexRowCenter } from "components/flex-box";
+import appIcons from "components/icons";
 
 // ==============================================================
-const CategoryMenuImageBox = ({ title, imgUrl, Icon }) => {
+const CategoryImageBox = ({ title, image, icon }) => {
+  let SvgIcon = '';
+  if(icon !== '' && icon !== null){
+      SvgIcon = appIcons[icon];
+  }
   return (
     <FlexRowCenter flexDirection="column">
-      {imgUrl ? (
+      {image ? (
         <LazyImage
           width={100}
           height={100}
-          src={imgUrl}
+          src={image}
           alt="banner"
           objectFit="cover"
           borderRadius="5px"
         />
       ) : (
-        Icon && <Icon size="48px">{Icon}</Icon>
+        SvgIcon && <SvgIcon color="inherit" sx={{fontSize: "48px", mb: "0.5rem",}}/>
       )}
       <Typography
         className="ellipsis"
         textAlign="center"
-        fontSize="11px"
+        fontSize="14px"
         lineHeight="1"
+        width="90%"
+        whiteSpace="nowrap"
+        textOverflow="ellipsis"
+        overflow="hidden"
         mt={1}
       >
         {title}
@@ -31,4 +40,4 @@ const CategoryMenuImageBox = ({ title, imgUrl, Icon }) => {
   );
 };
 
-export default CategoryMenuImageBox;
+export default CategoryImageBox;

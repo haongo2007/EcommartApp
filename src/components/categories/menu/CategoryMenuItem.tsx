@@ -1,10 +1,10 @@
 import Link from "next/link";
 import {Box, CircularProgress, MenuItem, styled, SvgIcon} from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import useSettings from "../../hooks/useSettings";
-import appIcons from "../icons";
-import { useStore } from "../../stores";
-import {trpc} from "../../providers/trpcProvider";
+import useSettings from "../../../hooks/useSettings";
+import appIcons from "../../icons";
+import { useStore } from "../../../stores";
+import {trpc} from "../../../providers/trpcProvider";
 
 const Wrapper = styled(Box)(({ theme}:{theme:any}) => ({
   "& .category-dropdown-link": {
@@ -50,7 +50,7 @@ const CategoryMenuItem = (props:CategoryMenuProps) => {
   const { settingState } = useSettings();
   const { setCategory } = useStore();
   const domain = useStore((state) => state.shopInfo.domain);
-  const currentLang = useStore((state) => state.shopLocale.language);
+  const locale = useStore((state) => state.shopLocale.language);
   const { refetch,isInitialLoading } = trpc.category.getChilds.useQuery(child_list,{
     enabled: false
   });
@@ -68,7 +68,7 @@ const CategoryMenuItem = (props:CategoryMenuProps) => {
   }
   return (
     <Wrapper onMouseEnter={() => handleCallChild()}>
-      <Link href={'/'+currentLang+'/'+domain+href} passHref>
+      <Link href={`/${locale}/${domain}/category/${href}`}>
         <MenuItem className="category-dropdown-link">
           {icon && <SvgIcon fontSize="small" color="inherit" />}
           <span className="title">{title}</span>

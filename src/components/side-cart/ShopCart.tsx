@@ -133,7 +133,7 @@ const ShopCart = ({ toggleSidenav}) => {
               </Button>
             </FlexBox>
 
-            <Link href={`${locale}/${shopName}/product/${item.slug}`}>
+            <Link href={`/${locale}/${shopName}/product/${item.slug}`}>
                 <Avatar
                   alt={item.slug}
                   src={item.images[0]}
@@ -153,7 +153,7 @@ const ShopCart = ({ toggleSidenav}) => {
                 textOverflow: "ellipsis",
               }}
             >
-              <Link href={`${locale}/${shopName}/product/${item.slug}`}>
+              <Link href={`/${locale}/${shopName}/product/${item.slug}`}>
                   <H5 ellipsis fontSize="14px" className="title">
                     {item.description.filter((desc) => locale === desc.lang)[0].name}
                   </H5>

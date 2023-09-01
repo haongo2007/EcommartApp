@@ -22,6 +22,7 @@ import OnlineSupport from "./OnlineSupport";
 import Payment from "./Payment";
 import AlarmClock from "./AlarmClock";
 import CustomerService from "./CustomerService";
+import Tshirt from "./Tshirt";
 
 type AppIconType = {
   [key: string]: React.FunctionComponent<SvgIconProps>
@@ -48,6 +49,7 @@ const appIcons: AppIconType = {
   OnlineSupport,
   Payment,
   AlarmClock,
-  CustomerService
+  CustomerService,
+  Tshirt
 };
 export default appIcons;

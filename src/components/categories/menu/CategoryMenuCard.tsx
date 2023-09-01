@@ -1,8 +1,8 @@
 import { Box, styled } from "@mui/material";
 import CategoryMenuItem from "./CategoryMenuItem";
-import MegaMenu1 from "./mega-menu/MegaMenu1";
-import MegaMenu2 from "./mega-menu/MegaMenu2";
-import {useStore} from "../../stores";
+import MegaMenu1 from "../mega-menu/MegaMenu1";
+import MegaMenu2 from "../mega-menu/MegaMenu2";
+import {useStore} from "../../../stores";
 import {flatMap, mapValues} from "lodash-es";
 
 const Wrapper = styled(Box)(({ theme, position, open }) => ({
