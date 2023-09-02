@@ -142,17 +142,17 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
                         }}
                     >
                         {downMd && <MobileMenu />}
-
-                        <Box
-                            bgcolor="grey.200"
-                            component={IconButton}
-                            ml={2.5}
-                            p={1}
-                            onClick={toggleDialog}
-                        >
-                            <PersonOutline />
-                        </Box>
-
+                        { infomation !== undefined &&
+                            <Box
+                                bgcolor="grey.200"
+                                component={IconButton}
+                                ml={2.5}
+                                p={1}
+                                onClick={toggleDialog}
+                            >
+                                <PersonOutline />
+                            </Box>
+                        }
                         <Badge badgeContent={cartLength} color="primary">
                             <Box
                                 bgcolor="grey.200"
@@ -171,7 +171,7 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
                         fullWidth={isMobile}
                         onClose={toggleDialog}
                     >
-                        <Login locale={curLang} domain={infomation.domain}/>
+                        { infomation !== undefined && <Login locale={curLang} domain={infomation.domain}/> }
                     </Dialog>
                     <Drawer open={sidenavOpen} anchor="right" onClose={toggleSidenav} sx={{zIndex:1201}}>
                         { infomation !== undefined ? (<ShopCart toggleSidenav={() => {}} />) : (<HomeCart toggleSidenav={() => {}} />) }

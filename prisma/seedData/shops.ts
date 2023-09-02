@@ -1,7 +1,7 @@
 export const initShops = [
     {
         "id": 1,
-        "logo":"assets/images/shops/final_bepetshop.png",
+        "logo":"/assets/images/shops/final_bepetshop.png",
         "template":"Fashion Shop 1",
         "phone":"0922595351",
         "email":"haongolog@gmail.com",
@@ -14,11 +14,11 @@ export const initShops = [
         "status":1,
         "active":1,
         "short_name":"BPShop",
-        "favicon":"assets/images/shops/icons/bbsfavicon.png",
+        "favicon":"/assets/images/shops/icons/bbsfavicon.png",
     },
     {
         "id": 2,
-        "logo":"assets/images/shops/final_bepetshop.png",
+        "logo":"/assets/images/shops/final_bepetshop.png",
         "template":"Fashion Shop 2",
         "phone":"0972918122",
         "email":"localhost@gmail.com",
@@ -35,7 +35,7 @@ export const initShops = [
     },
     {
         "id": 3,
-        "logo":"assets/images/shops/final_bepetshop.png",
+        "logo":"/assets/images/shops/final_bepetshop.png",
         "template":"Fashion Shop 3",
         "phone":"0345486224",
         "email":"tutran@gmail.com",

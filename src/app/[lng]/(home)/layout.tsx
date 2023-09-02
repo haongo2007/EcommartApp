@@ -6,7 +6,6 @@ import Navbar from "../../../components/navbar/Navbar";
 import {fetchAllCategoriesParentWithGroup} from "../../../server/handlers/categories/fetchAllCategoriesParentWithGroup";
 import {StoreInitializer} from "../../../stores/store-initializer";
 import { getLocale } from "server/handlers/locale/getLocale";
-import { cookies } from 'next/headers'
 
 
 export default function ShopListLayout({ children, params:{lng} }:{ children: React.ReactNode,params:{lng:string} }) {

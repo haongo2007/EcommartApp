@@ -2,7 +2,7 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon":"Dress",
-    "alias":"/fashion",
+    "alias":"fashion",
     "parent":0,
     "child_list":"2,3,4,5,6,22,23",
     "has_child":1,
@@ -14,7 +14,7 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon": null,
-    "alias":"/man-clothes",
+    "alias":"man-clothes",
     "parent":1,
     "child_list":"3,4,5,6,22,23",
     "has_child":1,
@@ -26,7 +26,7 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon": null,
-    "alias":"/shirt",
+    "alias":"shirt",
     "parent":2,
     "child_list":"0",
     "has_child":0,
@@ -38,7 +38,7 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon": null,
-    "alias":"/t-shirt",
+    "alias":"t-shirt",
     "parent":2,
     "child_list":"22,23",
     "has_child":1,
@@ -50,7 +50,7 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon": null,
-    "alias":"/pant",
+    "alias":"pant",
     "parent":2,
     "child_list":"0",
     "has_child":0,
@@ -62,7 +62,7 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon": null,
-    "alias":"/underwear",
+    "alias":"underwear",
     "parent":2,
     "child_list":"0",
     "has_child":0,
@@ -74,7 +74,7 @@ export const initShopCategories = [
   {
     "store_id":2,
       "icon":"Laptop",
-      "alias":"/electronics",
+      "alias":"electronics",
       "parent":0,
       "child_list":"8,9,10,11,12,13,14,15",
       "has_child":1,
@@ -86,7 +86,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/phone",
+    "alias":"phone",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -98,7 +98,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/laptop",
+    "alias":"laptop",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -110,7 +110,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/speaker",
+    "alias":"speaker",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -122,7 +122,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/screen",
+    "alias":"screen",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -134,7 +134,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/case-pc",
+    "alias":"case-pc",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -146,7 +146,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/mouse",
+    "alias":"mouse",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -158,7 +158,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/key-board",
+    "alias":"key-board",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -170,7 +170,7 @@ export const initShopCategories = [
   {
     "store_id":2,
     "icon": null,
-    "alias":"/graphic-card",
+    "alias":"graphic-card",
     "parent":7,
     "child_list":"0",
     "has_child":0,
@@ -182,7 +182,7 @@ export const initShopCategories = [
   {
     "store_id":3,
     "icon":"Chair",
-    "alias":"/furniture",
+    "alias":"furniture",
     "parent":0,
     "child_list":"17,18,19,20",
     "has_child":1,
@@ -194,7 +194,7 @@ export const initShopCategories = [
   {
     "store_id":3,
     "icon": null,
-    "alias":"/bed",
+    "alias":"bed",
     "parent":16,
     "child_list":"0",
     "has_child":0,
@@ -206,7 +206,7 @@ export const initShopCategories = [
   {
     "store_id":3,
     "icon": null,
-    "alias":"/chair",
+    "alias":"chair",
     "parent":16,
     "child_list":"0",
     "has_child":0,
@@ -218,7 +218,7 @@ export const initShopCategories = [
   {
     "store_id":3,
     "icon": null,
-    "alias":"/sofa",
+    "alias":"sofa",
     "parent":16,
     "child_list":"0",
     "has_child":0,
@@ -230,7 +230,7 @@ export const initShopCategories = [
   {
     "store_id":3,
     "icon": null,
-    "alias":"/table",
+    "alias":"table",
     "parent":16,
     "child_list":"0",
     "has_child":0,
@@ -242,10 +242,10 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon":"MakeUp",
-    "alias":"/healthy-beauty",
+    "alias":"healthy-beauty",
     "parent":0,
     "child_list":"0",
-    "has_child":1,
+    "has_child":0,
     "top":0,
     "deep":0,
     "status":1,
@@ -254,10 +254,10 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon": null,
-    "alias":"/long-sleeved-shirt",
+    "alias":"long-sleeved-shirt",
     "parent":4,
     "child_list":"0",
-    "has_child":1,
+    "has_child":0,
     "top":0,
     "deep":0,
     "status":1,
@@ -266,10 +266,10 @@ export const initShopCategories = [
   {
     "store_id":1,
     "icon": null,
-    "alias":"/short-sleeved-shirt",
+    "alias":"short-sleeved-shirt",
     "parent":4,
     "child_list":"0",
-    "has_child":1,
+    "has_child":0,
     "top":0,
     "deep":0,
     "status":1,

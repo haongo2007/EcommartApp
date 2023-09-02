@@ -37,6 +37,7 @@ export const CateMega = ({data,shop}) => {
         let MegaMenu = megaMenu[item.deep];
         return (
             <CategoryMenuItem
+                shop={item.shop}
                 has_child={item.has_child}
                 has_mount={item.has_mount || false}
                 href={item.alias}
