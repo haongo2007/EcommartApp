@@ -1,5 +1,7 @@
+import Box from "@mui/material/Box";
 import { ShopCategories, ShopProductCategories } from "@prisma/client";
 import CategoryPageContain from "components/categories/page/CategoryPageContain";
+import CategoryPageSideBar from "components/categories/page/CategoryPageSideBar";
 import { Metadata } from "next";
 import { use } from "react";
 import { fetchAllCategories } from "server/handlers/categories/fetchAllCategories";
@@ -21,6 +23,11 @@ export default function CategoryPage({ params }: PageDefaultProps){
     }
     const suggestionCategory : ShopCategories[] | undefined = use(fetchAllCategorySuggestion(shop));
     return (
-        <CategoryPageContain locale={lng} domain={shop} suggestionCategory={suggestionCategory} categories={rootCategories} products={products}/>
+        <>
+            <CategoryPageSideBar locale={lng} domain={shop} categories={rootCategories}/>
+            <Box width={"100%"} mt={8}>
+                <CategoryPageContain locale={lng} domain={shop} suggestionCategory={suggestionCategory} products={products}/>
+            </Box>
+        </>
     );
 };

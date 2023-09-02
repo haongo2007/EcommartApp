@@ -15,9 +15,9 @@ import { publish } from "helpers/event";
 type CategoryPageProps = {
     domain:string,
     locale:string,
-    categories:ShopCategories[] | undefined,
+    categories?:ShopCategories[] | undefined,
     childCategories?:ShopCategories[] | undefined,
-    suggestionCategory:ShopCategories[] | undefined,
+    suggestionCategory?:ShopCategories[] | undefined,
     products: ShopProductCategories[]
 }
 export default function CategoryPageContain({domain,locale,categories,childCategories,suggestionCategory,products}: CategoryPageProps){
@@ -34,7 +34,7 @@ export default function CategoryPageContain({domain,locale,categories,childCateg
         <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
             { suggestionCategory && (
                 <>
-                    <Typography fontWeight="600" fontSize="16px" mt={8} mb={2}>
+                    <Typography fontWeight="600" fontSize="16px" mb={2}>
                         Recommended Categories
                     </Typography> 
                     <Box mb={4}>

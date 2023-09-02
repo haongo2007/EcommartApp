@@ -1,4 +1,4 @@
-import { alpha, styled } from "@mui/material";
+import { styled } from "@mui/material";
 import SimpleBar from "simplebar-react";
 const StyledScrollBar = styled(SimpleBar)(({ theme }) => ({
   maxHeight: "100%",

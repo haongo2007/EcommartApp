@@ -21,15 +21,26 @@ import ListItemText from '@mui/material/ListItemText';
 import { LAYOUT_CONSTANT } from "../../../constants";
 import { subscribe } from "helpers/event";
 import SaleNavbar from "components/navbar/SaleNavbar";
+import { usePathname } from 'next/navigation'
 
 interface AppBarProps extends MuiAppBarProps {
     open?: boolean;
 }
-  
-export default function CategoryPageSideBar({domain,locale,rootCategories}:{domain:string,locale:string,rootCategories:ShopCategories[] | []}){
+type CategoriesPageProps = {
+    domain:string,
+    locale:string,
+    categories?:ShopCategories[] | undefined,
+    childCategories?:ShopCategories[] | undefined,
+}
+
+const drawerWidth = 240;
+
+export default function CategoryPageSideBar({domain,locale,categories,childCategories}:CategoriesPageProps){
     const router = useRouter();
     const theme = useTheme();
-    const [childCate, setChildCate] = React.useState([]);
+    const path = usePathname()?.split('/');
+    const currentCat = path[path.length - 1];
+
     const [open, setOpen] = React.useState(false);
     const [topBar, setTopbar] = React.useState(LAYOUT_CONSTANT.headerHeight + LAYOUT_CONSTANT.topbarHeight);
     subscribe('eventStickyHeader',(e) => {
@@ -39,19 +50,23 @@ export default function CategoryPageSideBar({domain,locale,rootCategories}:{doma
             setTopbar(LAYOUT_CONSTANT.headerHeight + LAYOUT_CONSTANT.topbarHeight)
         }
     })
-    subscribe('eventGetCategoriesChild',(e) => {
-        if(e.detail.length > 0){
-            setChildCate(e.detail);
-        }
-    })
     const handleCategoryClick = (item) => () => {
+        if(item.alias === currentCat) return;
         router.push(`/${locale}/${domain}/category/${item.alias}`);
     };
 
     const getTitle = (description) => {
         return description.filter((item) => item.lang === locale)[0].title;
     }
-
+    
+    const IconTitle = (props) => {
+        const hashing = props.text.split(' ');
+        let result = '';
+        for (let i = 0; i < hashing.length; i++) {
+            result += hashing[i].charAt(0);
+        }
+        return (<>{result.toUpperCase()}</>);
+    }
     let SvgIcon = '';
     const openedMixin = (theme: Theme): CSSObject => ({
         width: drawerWidth,
@@ -74,7 +89,6 @@ export default function CategoryPageSideBar({domain,locale,rootCategories}:{doma
             width: `calc(${theme.spacing(8)} + 1px)`,
         },
     });
-    const drawerWidth = 240;
     const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
         ({ theme, open }) => ({
           width: drawerWidth,
@@ -145,7 +159,7 @@ export default function CategoryPageSideBar({domain,locale,rootCategories}:{doma
                     >
                         <MenuIcon />
                     </IconButton>
-                    { childCate && <SaleNavbar categories={childCate} locale={locale} domain={domain}/> }
+                    { childCategories && <SaleNavbar categories={childCategories} locale={locale} domain={domain}/> }
                 </Toolbar>
             </AppBar>
             <Drawer variant="permanent" open={open}>
@@ -156,12 +170,13 @@ export default function CategoryPageSideBar({domain,locale,rootCategories}:{doma
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {rootCategories.map((item, index) => {
+                    {categories && categories.map((item, index) => {
                         if(item.icon !== '' && item.icon !== null){
                             SvgIcon = appIcons[item.icon];
                         }
+                        const title :string = getTitle(item.description);
                         return (
-                            <ListItem key={getTitle(item.description)} disablePadding sx={{ display: 'block' }}>
+                            <ListItem key={getTitle(item.description)} disablePadding sx={{ display: 'block',borderRight:`${currentCat === item.alias ? "3" : "0"}px solid`}}>
                                 <ListItemButton
                                     onClick={handleCategoryClick(item)}
                                     sx={{
@@ -177,9 +192,10 @@ export default function CategoryPageSideBar({domain,locale,rootCategories}:{doma
                                             justifyContent: 'center',
                                         }}
                                     >
-                                        {item.icon && <SvgIcon fontSize="small" color="inherit" sx={{fontSize: "28px"}}/>}
+                                        {item.icon && (<SvgIcon fontSize="small" color="inherit" sx={{fontSize: "28px"}} />) }
+                                        { !item.icon && !open && <IconTitle text={title} />}
                                     </ListItemIcon>
-                                    <ListItemText primary={getTitle(item.description)} sx={{ opacity: open ? 1 : 0 }} />
+                                    <ListItemText primary={title} sx={{ opacity: open ? 1 : 0 }} />
                                 </ListItemButton>
                             </ListItem>
                         )
