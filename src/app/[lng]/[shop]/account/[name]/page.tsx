@@ -5,10 +5,6 @@ import { PageDefaultProps,AccountPageDetailProps } from "types/types";
 import { use } from "react";
 import { notFound } from "next/navigation";
 
-
-export const metadata: Metadata = {
-    title: 'Account',
-}
 export async function generateMetadata({ params: { lng,shop,name } }: AccountPageDetailProps): Promise<Metadata> {
     return {
       title: decodeURIComponent(name)
