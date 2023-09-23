@@ -13,7 +13,6 @@ import { getCurrentUser } from "lib/getCurrentUser";
 import { getCartByCustomerId } from "server/handlers/carts/getCartByCustomerId";
 import { MobileNavigationBar } from "components/mobile-navigation";
 
-
 type LayoutProps = {
   children: React.ReactNode,
   params: { lng: string,shop: string }

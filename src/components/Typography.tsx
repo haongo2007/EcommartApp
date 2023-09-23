@@ -5,8 +5,6 @@ import React from "react";
 
 interface DefaultType {
     children: React.ReactNode,
-    mb?: number | string,
-    mt?: number | string,
     className?: string,
     ellipsis?: boolean,
     fontWeight?: number | string,
@@ -16,8 +14,15 @@ interface DefaultType {
     borderColor?:string,
     textAlign?: string,
     lineHeight?: string,
+    fontSize?: string,
+    sx?: object,
     mx?: number,
-    ml?: number
+    ml?: number,
+    mb?: number | string,
+    mt?: number | string,
+    py?: number | string,
+    pl?: number | string,
+    px?: number | string,
 }
 const StyledBox = styled(Box, { shouldForwardProp: (props) => props !== "textTransformStyle" }) (({textTransformStyle, ellipsis}) => ({
     textTransform: textTransformStyle || "none",

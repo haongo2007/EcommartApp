@@ -68,6 +68,7 @@ const Login = ({locale,domain}:{locale:string,domain?:string}) => {
           src={logo}
           height={70} 
           sx={{
+            display: "block",
             m: "auto",
           }}
         />

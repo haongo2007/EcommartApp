@@ -1,8 +1,8 @@
 import { router } from "../trpc";
 // import { adminRouter } from "./subRouters/admin.router";
-import { orderRouter } from "./subRouters/order.router";
-import { paymentRouter } from "./subRouters/payment.router";
-import { productRouter } from "./subRouters/product.router";
+// import { orderRouter } from "./subRouters/order.router";
+// import { paymentRouter } from "./subRouters/payment.router";
+// import { productRouter } from "./subRouters/product.router";
 // import { userRouter } from "./subRouters/user.router";
 import { categoryRouter } from "./subRouters/category.router";
 import { customerRouter } from "./subRouters/customer.router";

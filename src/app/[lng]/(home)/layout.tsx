@@ -7,6 +7,7 @@ import {fetchAllCategoriesParentWithGroup} from "../../../server/handlers/catego
 import {StoreInitializer} from "../../../stores/store-initializer";
 import { getLocale } from "server/handlers/locale/getLocale";
 
+export const dynamic = 'force-static'
 
 export default function ShopListLayout({ children, params:{lng} }:{ children: React.ReactNode,params:{lng:string} }) {
     const shopCategory = use(fetchAllCategoriesParentWithGroup());

@@ -2,6 +2,7 @@ import type { GetServerSidePropsContext } from "next";
 import { getServerSession } from "next-auth/next";
 import { AuthAdapter } from "./authAdapter";
 import authOptions from "./authOptions";
+import db from "./prismadb";
 
 export const getServerAuthSession = async (ctx: {
     req: GetServerSidePropsContext["req"];
@@ -15,7 +16,7 @@ export const getServerAuthSession = async (ctx: {
     if(authOptions.pages && urlCallBack){
         authOptions.pages.signIn = urlCallBack;
     }
-    authOptions.adapter = AuthAdapter(prisma,store_id);
-    return await getServerSession(ctx.req, ctx.res, authOptions);
+    authOptions.adapter = AuthAdapter(db,store_id);
+    return await getServerSession(ctx.req,ctx.res,authOptions);
   };
   

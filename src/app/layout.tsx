@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: 'React Next.js ecommerce template. Build SEO friendly Online store, delivery app and Multivendor store'
 }
 
+export const dynamic = 'force-static'
+
 export default function RootLayout({ children }: {children: React.ReactNode}) {
     return (
     <html lang="vi" className={inter.variable}>

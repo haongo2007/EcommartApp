@@ -16,6 +16,8 @@ model Shops {
 
   logo String?
 
+  picture String?
+
   template String?
 
   phone String?

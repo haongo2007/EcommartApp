@@ -99,7 +99,7 @@ const Navbar = ({ data, navListOpen, hideCategories,hideHorizontalCategories, el
     },
     {
       title: "Shop",
-      href: `/${locale}/${domain}/shop`,
+      href: `/${locale}/${domain}/store`,
       key: 'shop',
       count: 2,
     },

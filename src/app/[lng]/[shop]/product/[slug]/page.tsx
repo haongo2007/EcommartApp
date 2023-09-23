@@ -8,6 +8,8 @@ import ProductRelation from "components/product/ProductRelation";
 import { Metadata } from 'next'
 import { PageDetailProps } from "types/types";
 
+export const revalidate = 86400;
+
 export async function generateMetadata( { params }: PageDetailProps): Promise<Metadata> {
   // fetch data
   const { lng,shop,slug } = params;

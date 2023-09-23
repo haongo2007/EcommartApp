@@ -1,47 +1,43 @@
 import { Prisma, PrismaClient } from "@prisma/client";
 import { Sort } from "../../routers/subRouters/admin.router";
+import db from "../../../lib/servers/prismadb";
+import { responseProductList } from "helpers/responseProduct";
+import { currentDateTimeToString } from "helpers/date";
 
 export const fetchPaginatedProducts = async (
-  prisma: PrismaClient<
+  store_id: number,
+  take: number,
+  sort: Sort,
+  cursor?: string,
+  prisma?: PrismaClient<
     Prisma.PrismaClientOptions,
     never,
     Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined
   >,
-  sort: Sort,
-  take: number,
-  cursor?: string
-) =>
-  prisma.product.findMany({
+) => {
+  const curDate = currentDateTimeToString(new Date());
+  const promotion = {
+      where:{
+          promo_type: 'normal',
+          dateStart:{
+              lt: new Date(curDate),
+          },
+          dateEnd:{
+              gte: new Date(curDate),
+          }
+      }
+  }
+  const products = await (prisma ?? db).shopProduct.findMany({
     where: {
-      deleted: false,
+      status: 1,
+      store_id
     },
-    select: {
-      id: true,
-      image: true,
-      name: true,
-      price: true,
-      quantity: true,
-      createdAt: true,
-      updatedAt: true,
-      category: {
-        select: {
-          id: true,
-          name: true,
-        },
-      },
-      _count: {
-        select: {
-          orderItems: true,
-        },
-      },
+    include:{
+      description:true,
+      brand: true,
+      promotion,
     },
     take: take,
-    ...(cursor && {
-      skip: 1,
-      cursor: {
-        id: cursor,
-      },
-    }),
     orderBy: {
       ...(sort === Sort.Asc && { id: "asc" }),
       ...(sort === Sort.Desc && { id: "desc" }),
@@ -49,3 +45,7 @@ export const fetchPaginatedProducts = async (
       ...(sort === Sort.PriceUp && { price: "asc" }),
     },
   });
+  if (!products) return;
+  return responseProductList({data:products});
+}
+
