@@ -1,14 +1,20 @@
 function subscribe(eventName:string, listener:() => {}) {
-    document.addEventListener(eventName, listener);
+    if (typeof window !== "undefined") {
+        document.addEventListener(eventName, listener);
+    }
 }
   
 function unsubscribe(eventName:string, listener:() => {}) {
-    document.removeEventListener(eventName, listener);
+    if (typeof window !== "undefined") {
+        document.removeEventListener(eventName, listener);
+    }
 }
   
 function publish(eventName:string, data:any) {
-    const event = new CustomEvent(eventName, { detail: data });
-    document.dispatchEvent(event);
+    if (typeof window !== "undefined") {
+        const event = new CustomEvent(eventName, { detail: data });
+        document.dispatchEvent(event);
+    }
 }
   
 export { publish, subscribe, unsubscribe};

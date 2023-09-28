@@ -10,7 +10,7 @@ declare module "next-auth" {
       email: string;
       store_id: number;
       phone: string;
-      birthday: Date;
+      birthday: Date | null;
     };
   }
 }

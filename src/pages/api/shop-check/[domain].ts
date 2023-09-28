@@ -13,9 +13,9 @@ const checkShop = async (req: NextApiRequest, res: NextApiResponse) => {
   });
   if(shop){
     res.setHeader('store_id', String(shop.id));
-    return res.status(200).end();
+    return res.status(200).json({status:true});
   }
-  return res.status(400).end();
+  return res.status(400).json({status:false});
 };
 
 export default checkShop;

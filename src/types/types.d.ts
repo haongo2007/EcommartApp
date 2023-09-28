@@ -2,7 +2,7 @@ import { User } from "next-auth";
 import { z } from "zod";
 import { cartItemSchema } from "../helpers/validations/cartItemSchema";
 
-export type AccountSession = User | undefined;
+export type AccountSession = { birthday: any; } | null | User;
 
 export type CartItemProps = z.infer<typeof cartItemSchema>;
 
@@ -15,6 +15,7 @@ export type AppInfomation = {
     domain?: string,
 }
 export type PageDefaultProps = {
+    children?: React.ReactNode,
     params: {
         lng:string,
         shop:string,

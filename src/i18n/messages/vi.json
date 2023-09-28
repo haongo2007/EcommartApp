@@ -1,0 +1,9 @@
+{  
+    "Home":{    
+        "title": "Tất cả cửa hàng"
+    },
+    "Ecommflex":{
+        "title":"Một ứng dụng web thương mại điện tử | Ecommflex",
+        "description":"Mẫu thương mại điện tử React Next.js. Xây dựng cửa hàng trực tuyến, ứng dụng giao hàng và cửa hàng Multivendor thân thiện với SEO"
+    }
+}

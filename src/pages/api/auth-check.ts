@@ -4,8 +4,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 export async function GET(req: NextApiRequest,res: NextApiResponse) {
   const session = await getServerAuthSession({ req, res });
   if (session && session.user) {
-    res.status(200).end();
+    return res.status(200).json({status:true});
   } else {
-    res.status(400).end();
+    return res.status(400).json({status:false});
   }
 }

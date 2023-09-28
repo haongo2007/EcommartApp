@@ -1,9 +1,11 @@
 import {CategoryGroupType} from "./category";
-import {ShopConfig,ShopLanguage,ShopCurrency} from "@prisma/client";
+import {ShopConfig,ShopLanguage,ShopCurrency, ShopBrand, ShopBanner, ShopAttributeGroup} from "@prisma/client";
 
 export interface ShopTypeClient extends Omit<Shops, "createdAt" | "updatedAt"> {
     createdAt: any;
-    updatedAt: any | null
+    updatedAt: any | null;
+    favicon: string | null;
+    id: number;
 }
 
 export type ShopListType = {
@@ -17,8 +19,11 @@ export type ShopLocal = {
 }
 
 export type InitialStore = {
-    allCategory:CategoryGroupType,
-    allShopConfig:ShopConfig[],
-    shopInfo: Shops,
-    ShopLocal:ShopLocal
+    shopCategory?:CategoryGroupType,
+    shopConfig?:ShopConfig[],
+    shopInfo?: Shops,
+    shopLocale?:ShopLocal,
+    shopBrands?:ShopBrand[],
+    shopBanner?:ShopBanner[],
+    shopAGroupP?:ShopAttributeGroup[]
 }

@@ -1,14 +1,17 @@
 "use client";
-import React, { useRef } from "react";
+import { useRef,useEffect } from "react";
 import { useStore } from "./index";
 import {InitialStore} from "../types/shop";
 
-export function StoreInitializer({ initialStore, children }: {initialStore:InitialStore,children:React.ReactNode}) {
-    const initializedBefore = useRef(false);
-    if (!initializedBefore.current) {
-        useStore.getState().hydrateStore(initialStore);
-        initializedBefore.current = true;
-    }
-
-    return children;
+function StoreInitializer({ initialStore,children }: {initialStore:InitialStore,children:React.ReactNode}) {
+    const initialized = useRef(false);
+    useEffect(() => {
+        if (!initialized.current) {
+            useStore.setState(initialStore);
+            initialized.current = true;
+        }
+    }, [initialStore]);
+    
+    return <>{children}</>;
 }
+export default StoreInitializer;

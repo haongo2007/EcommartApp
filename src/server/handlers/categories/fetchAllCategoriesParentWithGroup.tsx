@@ -6,7 +6,7 @@ import {responseCategoryGroup} from "../../../helpers/responseCategory";
 export const fetchAllCategoriesParentWithGroup = async (
     store_id?: number,
     store_name?: string,
-    prisma?: PrismaClient<Prisma.PrismaClientOptions,never,Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined>
+    prisma?: PrismaClient<Prisma.PrismaClientOptions,never | undefined>
     ) => {
     const where: {
         parent: number;

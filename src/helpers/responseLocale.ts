@@ -3,6 +3,6 @@ import { ShopLocal } from "../types/shop";
 
 export const responseLocale = (data: ShopLocal) =>({
   ...data,
-  currency: data.currencies ? data.currencies[0].code : null,
-  language: data.languages ? data.languages[0].code : null,
+  currency: data.currencies.length ? data.currencies[0].code : [],
+  language: data.languages.length ? data.languages[0].code : [],
 });

@@ -357,7 +357,7 @@ model ShopLanguage {
 
   name String?
 
-  code String?
+  code String
 
   flag String?
 
@@ -378,7 +378,7 @@ model ShopCurrency {
 
   name String?
 
-  code String?
+  code String
 
   symbol String?
 
