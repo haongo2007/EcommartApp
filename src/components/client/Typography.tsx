@@ -1,5 +1,6 @@
 "use client"
-import {Box, styled} from "@mui/material";
+import Box from "@mui/material/Box";
+import {styled} from "@mui/material/styles";
 import clsx from "clsx";
 import React from "react";
 
@@ -15,6 +16,7 @@ interface DefaultType {
     textAlign?: string,
     lineHeight?: string,
     fontSize?: string,
+    flex?: string,
     sx?: object,
     mx?: number,
     ml?: number,

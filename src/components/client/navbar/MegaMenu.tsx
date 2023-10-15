@@ -1,9 +1,12 @@
 import { KeyboardArrowDown } from "@mui/icons-material";
-import { Box, Grid, List, ListItem, styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { H6 } from "../Typography";
+import { List, ListItem } from "@mui/material";
 import BazaarCard from "../BazaarCard";
 import NavLink from "../nav-link/NavLink";
 import { FlexRowCenter } from "../flex-box"; // style components
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 const Wrapper = styled(Box)(({ theme }) => ({
   cursor: "pointer",

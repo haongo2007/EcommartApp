@@ -5,7 +5,7 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from "next/link";
 import Box from '@mui/material/Box';
 import { ShopCategories } from '@prisma/client';
-import appIcons from 'components/icons';
+import appIcons from 'components/client/icons';
 import { styled } from '@mui/material';
 import OtherHousesOutlinedIcon from '@mui/icons-material/OtherHousesOutlined';
 

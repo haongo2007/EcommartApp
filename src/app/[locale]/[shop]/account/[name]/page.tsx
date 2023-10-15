@@ -1,4 +1,4 @@
-import AccountEdit from "components/account/AccountEdit";
+import AccountEdit from "components/client/account/AccountEdit";
 import { getCurrentUser } from "lib/getCurrentUser";
 import { Metadata } from "next";
 import { PageDefaultProps,AccountPageDetailProps } from "types/types";

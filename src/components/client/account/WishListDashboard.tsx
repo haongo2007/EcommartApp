@@ -1,9 +1,9 @@
 "use client"
 import { Favorite } from "@mui/icons-material";
 import { Button, Grid, Pagination } from "@mui/material";
-import AccountHeader from "components/account/AccountHeader";
-import { FlexBox } from "components/flex-box";
-import ProductCard1 from "components/product-cards/ProductCard1";
+import AccountHeader from "components/client/account/AccountHeader";
+import { FlexBox } from "components/client/flex-box";
+import ProductCard1 from "components/client/product-cards/ProductCard1";
 import { useState } from "react";
 
 // ==============================================================

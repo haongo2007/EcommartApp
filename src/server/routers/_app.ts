@@ -1,4 +1,3 @@
-import { router } from "../trpc";
 // import { adminRouter } from "./subRouters/admin.router";
 // import { orderRouter } from "./subRouters/order.router";
 // import { paymentRouter } from "./subRouters/payment.router";
@@ -7,6 +6,7 @@ import { router } from "../trpc";
 import { categoryRouter } from "./subRouters/category.router";
 import { customerRouter } from "./subRouters/customer.router";
 import { cartsRouter } from "./subRouters/carts.router";
+import { router } from "server/trpc";
 
 export const appRouter = router({
   // user: userRouter,

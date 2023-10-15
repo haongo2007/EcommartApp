@@ -2,7 +2,7 @@ import { Box, styled } from "@mui/material";
 import { H5 } from "../Typography";
 import Scrollbar from "../Scrollbar";
 import { FlexRowCenter } from "../flex-box";
-import appIcons from "components/icons";
+import appIcons from "components/client/icons";
 import Link from "next/link";
 // styled compoentents
 const StyledScrollbar = styled(Scrollbar)(() => ({

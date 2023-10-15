@@ -21,7 +21,6 @@ export const createCategoryStore = (set, get) => ({
     const { data,id,domain } = params;
     const indexState = shopCategory[domain].findIndex((i:ShopCategories) => i.id === id);
     if (indexState < 0) return;
-    
     data.map((item) => {
       if (item.parent === id){
         if(!shopCategory[domain][indexState].hasOwnProperty('children')){

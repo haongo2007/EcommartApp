@@ -1,6 +1,7 @@
 import { User } from "next-auth";
 import { z } from "zod";
 import { cartItemSchema } from "../helpers/validations/cartItemSchema";
+import { ShopCurrency, ShopLanguage } from "@prisma/client";
 
 export type AccountSession = { birthday: any; } | null | User;
 
@@ -10,21 +11,19 @@ export type AppInfomation = {
     logo: string,
     phone: string,
     email: string,
-    language?: string,
-    languages?: object,
     domain?: string,
 }
 export type PageDefaultProps = {
     children?: React.ReactNode,
     params: {
-        lng:string,
+        locale:string,
         shop:string,
     }
 }
 
 export type AccountPageDetailProps = {
     params: {
-        lng:string,
+        locale:string,
         shop:string,
         name:string,
     }
@@ -32,7 +31,7 @@ export type AccountPageDetailProps = {
 
 export type PageDetailProps = {
     params: {
-        lng:string,
+        locale:string,
         shop:string,
         slug:string
     }

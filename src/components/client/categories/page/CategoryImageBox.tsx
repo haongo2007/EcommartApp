@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
-import LazyImage from "components/LazyImage";
-import { FlexRowCenter } from "components/flex-box";
-import appIcons from "components/icons";
+import LazyImage from "components/client/LazyImage";
+import { FlexRowCenter } from "components/client/flex-box";
+import appIcons from "components/client/icons";
 
 // ==============================================================
 const CategoryImageBox = ({ title, image, icon }) => {

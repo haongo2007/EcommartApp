@@ -1,7 +1,7 @@
-import { router } from "../../trpc";
 import {z} from "zod";
 import { accountProcedure } from "../../procedures";
 import { customerRoutesSchema } from "../../../helpers/validations/customerRoutesSchema";
+import { router } from "server/trpc";
 
 export const customerRouter = router({
     updateCustomer: accountProcedure

@@ -1,14 +1,20 @@
-import AddressDashboard from "components/account/AddressDashboard";
-import { Metadata } from "next";
+import AddressDashboard from "components/client/account/AddressDashboard";
+import getMessages from "i18n/getMessages";
+import { createTranslator } from "next-intl";
 import { PageDefaultProps } from "types/types";
-
-export const metadata: Metadata = {
-    title: 'Address',
-}
   
-export default function Address({ params }: PageDefaultProps){
-  const {lng,shop} = params;
+export async function generateMetadata({params: {locale}}: PageDefaultProps) {
+  const messages = await getMessages(locale);
+  const t = createTranslator({locale, messages});
+  return {
+      title: t('Meta.title.account.address'),
+      description: t('Ecommflex.description'),
+  };
+}
+
+export default function AddressAccount({ params }: PageDefaultProps){
+  const {locale,shop} = params;
   return (
-    <AddressDashboard locale={lng} domain={shop}/>
+    <AddressDashboard locale={locale} domain={shop}/>
   );
 };

@@ -8,10 +8,10 @@ import {
     Rating,
     TextField,
   } from "@mui/material";
-  import Accordion from "components/accordion/Accordion";
-  import { FlexBetween, FlexBox } from "components/flex-box";
-  import { H5, H6, Paragraph, Span } from "components/Typography";
-  import AccordionHeader from "components/accordion/AccordionHeader";
+  import Accordion from "components/client/accordion/Accordion";
+  import { FlexBetween, FlexBox } from "components/client/flex-box";
+  import { H5, H6, Paragraph, Span } from "components/client/Typography";
+  import AccordionHeader from "components/client/accordion/AccordionHeader";
   
   const ProductFilterCard = () => {
     return (

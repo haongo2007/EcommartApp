@@ -1,12 +1,12 @@
 "use client"
 import { Call, Place } from "@mui/icons-material";
 import { Avatar, Box, Button, Card, Rating } from "@mui/material";
-import { FlexBetween, FlexBox } from "components/flex-box";
-import FacebookFilled from "components/icons/FacebookFilled";
-import InstagramFilled from "components/icons/InstagramFilled";
-import TwitterFilled from "components/icons/TwitterFilled";
-import YoutubeFilled from "components/icons/YoutubeFilled";
-import { H3, Small, Span } from "components/Typography"; // =======================================================
+import { FlexBetween, FlexBox } from "components/client/flex-box";
+import FacebookFilled from "components/client/icons/FacebookFilled";
+import InstagramFilled from "components/client/icons/InstagramFilled";
+import TwitterFilled from "components/client/icons/TwitterFilled";
+import YoutubeFilled from "components/client/icons/YoutubeFilled";
+import { H3, Small, Span } from "components/client/Typography"; // =======================================================
 import { ShopTypeClient } from "types/shop";
 
 // =======================================================

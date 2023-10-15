@@ -16,23 +16,35 @@ export const arrowButtonStyle = {
   color: "#2B3445",
 };
 
-export const APP_INFOMATION = {
-  logo: '/assets/images/logo2.svg',
-  phone: "0972918120",
-  email: 'haongodev@gmail.com',
+export const APP_LOCALES = {
   language: 'en',
   languages:[
     {
       'id':1,
+      'name':'Việt Nam',
       'code':'vi',
-      'name':'Việt Nam'
+      'flag': null,
+      'status': 1,
+      'sort': 1,
+      'store_id': null,
     },
     {
       'id':2,
+      'name':'English',
       'code':'en',
-      'name':'English'
+      'flag': null,
+      'status': 1,
+      'sort': 2,
+      'store_id': null,
     }
   ],
+};
+
+export const APP_INFOMATION = {
+  logo: '/assets/images/logo2.svg',
+  phone: "(+84) 972918120",
+  email: 'haongodev@gmail.com',
+  domain: ""
 };
 
 export const SHOP_PER_PAGE = 12;

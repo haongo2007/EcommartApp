@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { Box, styled, Button } from "@mui/material";
-import { H1, H4, Paragraph, Span } from "components/Typography"; // custom styled components
+import { H1, H4, Paragraph, Span } from "components/client/Typography"; // custom styled components
 
 const CardWrapper = styled(Box)(({ theme, img, mode }) => ({
   minHeight: 500,

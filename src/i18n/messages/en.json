@@ -1,9 +1,31 @@
 {  
-    "Home":{    
-        "title": "All Shops"
+    "Meta":{
+        "title":{
+            "home":"Home",
+            "store":"Store",
+            "category":"Category",
+            "account":{
+                "index":"Account",
+                "address":"Address",
+                "payment":"Payment Method",
+                "support_tickets":"Support Tickets",
+                "wish_list":"Wish List",
+                "orders":"Orders"
+            },
+            "cart":{
+                "index":"Cart",
+                "checkout":"Checkout"
+            }
+        }
     },
     "Ecommflex":{
         "title":"An e-commerce web application | Ecommflex",
         "description":"React Next.js ecommerce template. Build SEO friendly Online store, delivery app and Multivendor store"
+    },
+    "Contain":{    
+        "title": "All Shops"
+    },
+    "Navigation":{
+        "categories" : "Categories"
     }
 }

@@ -1,6 +1,7 @@
-import { alpha, Grid, styled } from "@mui/material";
-import BazaarImage from "components/BazaarImage";
-import { H1, Paragraph, Span } from "components/Typography";
+import Grid from "@mui/material/Grid";
+import { styled,alpha } from "@mui/material/styles";
+import BazaarImage from "components/client/BazaarImage";
+import { H1, Paragraph, Span } from "components/client/Typography";
 import Link from "next/link";
 import React from "react";
 

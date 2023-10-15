@@ -1,9 +1,9 @@
 import { Box, Button, TextField, Rating } from "@mui/material";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { FlexBox } from "components/flex-box";
+import { FlexBox } from "components/client/flex-box";
 import ProductComment from "./ProductComment";
-import { H2, H5 } from "components/Typography"; // ===================================================
+import { H2, H5 } from "components/client/Typography"; // ===================================================
 
 // ===================================================
 const ProductReview = () => {

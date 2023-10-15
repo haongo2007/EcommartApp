@@ -1,5 +1,6 @@
-import { alpha, Box, styled } from "@mui/material";
-import { H3, Paragraph } from "components/Typography";
+import Box from "@mui/material/Box";
+import { styled,alpha } from "@mui/material/styles";
+import { H3, Paragraph } from "components/client/Typography";
 import React from "react"; // styled component
 
 const StyledBox = styled(Box)(({ theme }) => ({

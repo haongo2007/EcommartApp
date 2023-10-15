@@ -6,7 +6,6 @@ import { getAllOrders } from "../../handlers/admin/getAllOrders";
 import { fetchPaginatedProducts } from "../../handlers/products/fetchPaginatedProducts";
 import { getPreSignedUrl } from "../../handlers/s3/getPreSignedUrl";
 // import { adminProcedure } from "../../procedures";
-import { router } from "../../trpc";
 
 export enum Sort {
   Desc = "Desc",

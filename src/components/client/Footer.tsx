@@ -1,15 +1,16 @@
 "use client"
 import Link from "next/link";
-import { Box, Container, Grid, IconButton, styled } from "@mui/material";
-import AppStore from "components/AppStore";
-import Image from "components/BazaarImage";
-import { FlexBox } from "components/flex-box";
-import { Paragraph } from "components/Typography";
-import Google from "components/icons/Google";
-import Twitter from "components/icons/Twitter";
-import Youtube from "components/icons/Youtube";
-import Facebook from "components/icons/Facebook";
-import Instagram from "components/icons/Instagram"; // styled component
+import { Box, Container, Grid, IconButton } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import AppStore from "components/client/AppStore";
+import Image from "components/client/BazaarImage";
+import { FlexBox } from "components/client/flex-box";
+import { Paragraph } from "components/client/Typography";
+import Google from "components/client/icons/Google";
+import Twitter from "components/client/icons/Twitter";
+import Youtube from "components/client/icons/Youtube";
+import Facebook from "components/client/icons/Facebook";
+import Instagram from "components/client/icons/Instagram"; // styled component
 import useCheckCatePage from "hooks/useCheckCatePage";
 
 const StyledLink = styled("a")(({ theme }) => ({

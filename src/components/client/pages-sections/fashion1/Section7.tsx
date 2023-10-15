@@ -1,8 +1,10 @@
-import { Container, styled } from "@mui/material";
-import appIcons from "components/icons";
-import { H3, Span } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box";
+"use client"
+import { styled } from "@mui/material/styles";
+import appIcons from "components/client/icons";
+import { H3, Span } from "components/client/Typography";
+import { FlexBetween, FlexBox } from "components/client/flex-box";
 import { useStore } from "stores";
+import Container from "@mui/material/Container";
 // styled component
 const StyledFlexBox = styled(FlexBetween)(({ theme }) => ({
   flexWrap: "wrap",

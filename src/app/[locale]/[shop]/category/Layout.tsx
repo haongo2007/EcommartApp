@@ -1,4 +1,4 @@
-import MobileNavigationBar from "components/categories/mobile/MobileNavigationBar";
+import MobileNavigationBar from "components/client/categories/mobile/MobileNavigationBar";
 import Box from "@mui/material/Box";
 
 type LayoutProps = {

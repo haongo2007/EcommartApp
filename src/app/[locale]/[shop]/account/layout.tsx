@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import AccountSideBar from "components/account/AccountSideBar";
+import AccountSideBar from "components/client/account/AccountSideBar";
 /**
  *  Used in:
  *  1. wish-list page
@@ -13,9 +13,9 @@ import AccountSideBar from "components/account/AccountSideBar";
 // ======================================================
 type LayoutProps = {
   children: React.ReactNode,
-  params: { lng: string,shop: string }
+  params: { locale: string,shop: string }
 }
-export default function CustomerDashboardLayout({ children, params : { lng,shop }}: LayoutProps) {
+export default function AccountLayout({ children, params : { locale,shop }}: LayoutProps) {
   return (
     <Container
       sx={{
@@ -32,7 +32,7 @@ export default function CustomerDashboardLayout({ children, params : { lng,shop 
               },
           }}
         >
-          <AccountSideBar locale={lng} domain={shop}/>
+          <AccountSideBar locale={locale} domain={shop}/>
         </Grid>
         <Grid item lg={9} xs={12}>
           {children}

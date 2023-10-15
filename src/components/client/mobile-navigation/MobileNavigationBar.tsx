@@ -1,12 +1,12 @@
 import { Badge } from "@mui/material";
-import Home from "components/icons/Home";
-import User2 from "components/icons/User2";
-import CategoryOutlined from "components/icons/CategoryOutline";
-import ShoppingBagOutlined from "components/icons/ShoppingBagOutlined";
+import Home from "components/client/icons/Home";
+import User2 from "components/client/icons/User2";
+import CategoryOutlined from "components/client/icons/CategoryOutline";
+import ShoppingBagOutlined from "components/client/icons/ShoppingBagOutlined";
 import useWindowSize from "hooks/useWindowSize";
 import { iconStyle, StyledNavLink, Wrapper } from "./styles";
-import { useStore } from "../../stores";
 import { useAccountContext } from "providers/AccountProvider";
+import { useStore } from "stores";
 
 const MobileNavigationBar = ({domain,locale}:{domain:string,locale:string}) => {
     const { account } = useAccountContext();

@@ -2,11 +2,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { Box, Button } from "@mui/material";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
-import HoverBox from "components/HoverBox";
-import { H4 } from "components/Typography";
-import LazyImage from "components/LazyImage";
-import BazaarRating from "components/BazaarRating";
-import { FlexBetween, FlexBox } from "components/flex-box";
+import HoverBox from "components/client/HoverBox";
+import { H4 } from "components/client/Typography";
+import LazyImage from "components/client/LazyImage";
+import BazaarRating from "components/client/BazaarRating";
+import { FlexBetween, FlexBox } from "components/client/flex-box";
 import useCurrency from "hooks/useCurrency";
 import { useStore } from "stores";
 

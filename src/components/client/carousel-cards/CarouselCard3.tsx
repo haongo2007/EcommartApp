@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { styled } from "@mui/material";
-import { FlexBox } from "components/flex-box";
-import BazaarCard from "components/BazaarCard";
-import BazaarImage from "components/BazaarImage";
-import { H2, Paragraph, Small } from "components/Typography";
+import { FlexBox } from "components/client/flex-box";
+import BazaarCard from "components/client/BazaarCard";
+import BazaarImage from "components/client/BazaarImage";
+import { H2, Paragraph, Small } from "components/client/Typography";
 // styled components
 const ContentWrapper = styled(BazaarCard)(({ theme }) => ({
   height: "100%",

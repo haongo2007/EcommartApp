@@ -11,9 +11,9 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import TableRow from "components/TableRow";
-import { H3, H5, Small } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box";
+import TableRow from "components/client/TableRow";
+import { H3, H5, Small } from "components/client/Typography";
+import { FlexBetween, FlexBox } from "components/client/flex-box";
 import AccountHeader from "./AccountHeader";
 import {signOut} from "next-auth/react"
 import { useAccountContext } from "providers/AccountProvider";

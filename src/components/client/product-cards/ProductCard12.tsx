@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Box } from "@mui/material";
 import { FavoriteBorder } from "@mui/icons-material";
-import HoverBox from "components/HoverBox";
-import { H4 } from "components/Typography";
-import BazaarImage from "components/BazaarImage";
-import BazaarRating from "components/BazaarRating";
-import { FlexBetween, FlexBox } from "components/flex-box";
+import HoverBox from "components/client/HoverBox";
+import { H4 } from "components/client/Typography";
+import BazaarImage from "components/client/BazaarImage";
+import BazaarRating from "components/client/BazaarRating";
+import { FlexBetween, FlexBox } from "components/client/flex-box";
 import useCurrency from "hooks/useCurrency";
 import { useStore } from "stores";
 

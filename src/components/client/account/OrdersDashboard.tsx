@@ -1,11 +1,11 @@
 "use client"
 import { Pagination } from "@mui/material";
 import { ShoppingBag } from "@mui/icons-material";
-import TableRow from "components/TableRow";
-import { H5 } from "components/Typography";
-import { FlexBox } from "components/flex-box";
-import AccountHeader from "components/account/AccountHeader";
-import OrderRow from "components/pages-sections/orders/OrderRow";
+import TableRow from "components/client/TableRow";
+import { H5 } from "components/client/Typography";
+import { FlexBox } from "components/client/flex-box";
+import AccountHeader from "components/client/account/AccountHeader";
+import OrderRow from "components/client/pages-sections/orders/OrderRow";
 
 // ====================================================
 const OrdersDashboard = ({locale,domain}:{locale:string,domain:string}) => {

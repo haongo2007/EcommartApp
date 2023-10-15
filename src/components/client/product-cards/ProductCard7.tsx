@@ -1,10 +1,11 @@
 "use client"
 import Link from "next/link";
 import { Add, Close, Remove } from "@mui/icons-material";
-import { Button, Card, IconButton, styled } from "@mui/material";
-import Image from "components/BazaarImage";
-import { Span } from "components/Typography";
-import { FlexBox } from "components/flex-box";
+import { Button, Card, IconButton } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Image from "components/client/BazaarImage";
+import { Span } from "components/client/Typography";
+import { FlexBox } from "components/client/flex-box";
 import { useStore } from "stores";
 import useCurrency from "hooks/useCurrency";
 import { useSnackbar } from "notistack";
@@ -29,7 +30,7 @@ const Wrapper = styled(Card)(({ theme }) => ({
       minWidth: "100%",
     },
   },
-})); // =========================================================
+}));
 
 // =========================================================
 const ProductCard7 = ({product,updateCart}) => {
@@ -37,10 +38,10 @@ const ProductCard7 = ({product,updateCart}) => {
   const { account } = useAccountContext();
   const { shopLocale } = useStore((state) => state);
   const { shopInfo } = useStore((state) => state);
-  const currentLang = useStore((state) => state.shopLocale.language);
   const { setCart,shopCarts } = useStore();
+  const currentLang = shopLocale.language;
   const { enqueueSnackbar } = useSnackbar();
-  const title = description.filter((item) => item.lang === currentLang)[0].name;
+  const title = description.filter((item) => item.lang === currentLang)[0]?.name;
   const [syncCartTimer, setSyncCartTimer] = useState(0);
   const handleCartAmountChange = (amount) => () => {
     const ProductItem : CartItemProps =  {

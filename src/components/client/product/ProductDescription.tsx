@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Box, styled, Tab, Tabs } from "@mui/material";
 import ProductReview from "./ProductReview";
 import { useStore } from "stores";
-import { H3 } from "components/Typography";
+import { H3 } from "components/client/Typography";
 
  // styled component
  const StyledTabs = styled(Tabs)(({ theme }) => ({

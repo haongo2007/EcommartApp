@@ -1,22 +1,27 @@
 "use client"
 import { CallOutlined, MailOutline } from "@mui/icons-material";
-import { Box, Container, styled } from "@mui/material";
+import { Box, Container } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { LAYOUT_CONSTANT } from "../../constants";
 import {AppInfomation} from "../../types/types";
-import {APP_INFOMATION} from "../../constants";
 import { FlexBox } from "./flex-box";
 import { Span } from "./Typography";
 import NavLink from "./nav-link/NavLink";
-import BazaarMenu from "./BazaarMenu";
+import LanguageMenu from "./menus/LanguageMenu";
+import CurrencyMenu from "./menus/CurrencyMenu";
+import { ShopLocal } from "types/shop";
 
-interface StyledTopbarProps {
+type StyledTopbarProps = {
     theme?: object;
     bgColor?: string;
 }
 
-interface TopbarProps {
+type TopbarProps = {
+    infomation: AppInfomation,
+    locales: ShopLocal,
     bgColor?:string,
-    infomation?:AppInfomation,
+    currency: boolean,
+    language: boolean
 }
 
 const TopbarWrapper = styled(Box, {
@@ -34,12 +39,6 @@ const TopbarWrapper = styled(Box, {
             marginLeft: "10px",
         },
         "@media only screen and (max-width: 600px)": {
-            // "& .logo": {
-            //     display: "block",
-            // },
-            // "& > *:not(.logo)": {
-            //     display: "none",
-            // },
             "& > *": {
                 display: "none",
             },
@@ -78,7 +77,7 @@ const TopbarWrapper = styled(Box, {
 })); // ===========================================
 
 // ===========================================
-const TopBar = ({ bgColor,infomation } : TopbarProps) => {
+const TopBar = ({ bgColor,locales, infomation, language = true ,currency = true } : TopbarProps) => {
     return (
         <TopbarWrapper bgcolor={bgColor}>
             <Container
@@ -90,25 +89,14 @@ const TopBar = ({ bgColor,infomation } : TopbarProps) => {
                 }}
             >
                 <FlexBox className="topbarLeft" alignItems="center">
-                    {/* <div className="logo">
-                        <Link href="/" passHref>
-                            <Image
-                                display="block"
-                                height="28px"
-                                src={infomation ? infomation.logo : APP_INFOMATION.logo}
-                                alt="logo"
-                            />
-                        </Link>
-                    </div> */}
-
                     <FlexBox alignItems="center">
                         <CallOutlined fontSize="small" />
-                        <Span className="title">{infomation ? infomation.phone : APP_INFOMATION.phone}</Span>
+                        <Span className="title">{infomation.phone}</Span>
                     </FlexBox>
 
                     <FlexBox alignItems="center" ml={2.5}>
                         <MailOutline fontSize="small" />
-                        <Span className="title">{infomation ? infomation.email : APP_INFOMATION.email}</Span>
+                        <Span className="title">{infomation.email}</Span>
                     </FlexBox>
                 </FlexBox>
 
@@ -121,8 +109,8 @@ const TopBar = ({ bgColor,infomation } : TopbarProps) => {
                         Need Help?
                     </NavLink>
 
-                    <BazaarMenu type={'currency'}/>
-                    <BazaarMenu type={'language'}/>
+                    { language && (<LanguageMenu locale={locales.language} languages={locales.languages}/>)}
+                    { currency && (<CurrencyMenu locale={locales.currency} currencies={locales.currencies} />)}
                 </FlexBox>
             </Container>
         </TopbarWrapper>

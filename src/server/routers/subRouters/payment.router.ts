@@ -2,15 +2,15 @@ import Stripe from "stripe";
 import { getCartProductsInputSchema } from "../../../helpers/validations/productRoutesSchema";
 import { stripe } from "../../../lib/servers/stripe";
 import { checkoutProducts } from "../../handlers/orders/checkoutProducts";
-import { userProcedure } from "../../procedures";
+import { accountProcedure } from "server/procedures";
 import { z } from "zod";
-import { router } from "../../trpc";
 import { LIMIT_ORDERS_PER_USER } from "../../../constants";
 import { TRPCError } from "@trpc/server";
 import { UserType } from "@prisma/client";
+import { router } from "server/trpc";
 
 export const paymentRouter = router({
-  intent: userProcedure
+  intent: accountProcedure
     .input(getCartProductsInputSchema)
     .mutation(async ({ ctx, input }) => {
       /**
@@ -81,7 +81,7 @@ export const paymentRouter = router({
       };
     }),
 
-  checkStatus: userProcedure
+  checkStatus: accountProcedure
     .input(
       z.object({
         paymentIntent: z.string(),

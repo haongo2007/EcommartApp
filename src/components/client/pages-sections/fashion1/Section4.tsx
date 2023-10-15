@@ -1,12 +1,14 @@
+"use client"
 import Link from "next/link";
 import { useState } from "react";
-import { Box, Grid, IconButton } from "@mui/material";
+import { Grid, IconButton } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import Carousel from "components/carousel/Carousel";
-import ProductCard11 from "components/product-cards/ProductCard11";
-import CategorySectionCreator from "components/CategorySectionCreator";
+import Carousel from "components/client/carousel/Carousel";
+import ProductCard11 from "components/client/product-cards/ProductCard11";
+import CategorySectionCreator from "components/client/CategorySectionCreator";
 import useSettings from "hooks/useSettings";
 import {chunk} from "lodash-es";
+import Box from "@mui/material/Box";
 
 // ==========================================================
 const Section4 = ({ dealOfTheDay }) => {

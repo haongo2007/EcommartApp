@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
-import HoverBox from "components/HoverBox";
-import LazyImage from "components/LazyImage";
-import { H4, Small } from "components/Typography";
-import BazaarRating from "components/BazaarRating";
-import { FlexRowCenter } from "components/flex-box";
+import HoverBox from "components/client/HoverBox";
+import LazyImage from "components/client/LazyImage";
+import { H4, Small } from "components/client/Typography";
+import BazaarRating from "components/client/BazaarRating";
+import { FlexRowCenter } from "components/client/flex-box";
 import { currency } from "lib"; // ======================================================
 
 // ======================================================

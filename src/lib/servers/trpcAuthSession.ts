@@ -16,7 +16,9 @@ export const getServerAuthSession = async (ctx: {
     if(authOptions.pages && urlCallBack){
         authOptions.pages.signIn = urlCallBack;
     }
-    authOptions.adapter = AuthAdapter(db,store_id);
+    if(store_id){
+      authOptions.adapter = AuthAdapter(db,parseInt(store_id));
+    }
     return await getServerSession(ctx.req,ctx.res,authOptions);
   };
   

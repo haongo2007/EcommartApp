@@ -2,10 +2,10 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { Box, Button, Chip, styled, useTheme } from "@mui/material";
 import { Add, Remove } from "@mui/icons-material";
-import BazaarRating from "components/BazaarRating";
-import { FlexBox } from "components/flex-box";
-import LazyImage from "components/LazyImage";
-import { H3, Span } from "components/Typography";
+import BazaarRating from "components/client/BazaarRating";
+import { FlexBox } from "components/client/flex-box";
+import LazyImage from "components/client/LazyImage";
+import { H3, Span } from "components/client/Typography";
 import { useCartContext } from "contexts/CartContext";
 import { useSnackbar } from "notistack";
 import { calculateDiscount, currency } from "lib"; // styled components

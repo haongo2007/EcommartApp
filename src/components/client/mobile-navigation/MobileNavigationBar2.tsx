@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Badge, Box } from "@mui/material";
-import Home from "components/icons/Home";
-import User2 from "components/icons/User2";
-import CategoryOutlined from "components/icons/CategoryOutline";
-import ShoppingBagOutlined from "components/icons/ShoppingBagOutlined";
+import Home from "components/client/icons/Home";
+import User2 from "components/client/icons/User2";
+import CategoryOutlined from "components/client/icons/CategoryOutline";
+import ShoppingBagOutlined from "components/client/icons/ShoppingBagOutlined";
 import useWindowSize from "hooks/useWindowSize";
-import { LAYOUT_CONSTANT } from "../../constants"; // styled components
+import { LAYOUT_CONSTANT } from "../../../constants"; // styled components
 import {
   iconStyle,
   StyledBox,

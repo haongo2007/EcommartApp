@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { Delete, Edit, Place } from "@mui/icons-material";
 import { Button, IconButton, Pagination, Typography } from "@mui/material";
-import TableRow from "components/TableRow";
-import { FlexBox } from "components/flex-box";
-import AccountHeader from "components/account/AccountHeader";
+import TableRow from "components/client/TableRow";
+import { FlexBox } from "components/client/flex-box";
+import AccountHeader from "components/client/account/AccountHeader";
 
 // =======================================================
 const AddressDashboard = ({locale,domain}:{locale:string,domain:string}) => {

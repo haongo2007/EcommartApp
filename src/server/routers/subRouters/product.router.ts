@@ -8,7 +8,8 @@ import {
 import { fetchProductById } from "../../handlers/products/getProduct";
 import { getCartProducts } from "../../handlers/products/getCartProducts";
 import { getProductsBySearch } from "../../handlers/products/getProductsBySearch";
-import { procedure, router } from "../../trpc";
+import { router } from "server/trpc";
+import { accountProcedure } from "server/procedures";
 
 export const productRouter = router({
   get: procedure

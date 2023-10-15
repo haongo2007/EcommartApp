@@ -76,14 +76,21 @@
 //     '/((?!api|_next|.*\\..*).*)'
 //   ],
 // };
-
 import createIntlMiddleware from 'next-intl/middleware';
 import {NextRequest,NextResponse} from 'next/server';
 
+const matchAuthUri = [
+    "account",
+    "checkout",
+    "orders",
+];
 export default async function middleware(request: NextRequest) {
-  const baseUrl = request.nextUrl.origin;
-  let path = request.nextUrl.pathname;
-
+  const baseUrl = process.env.NODE_ENV === "development" ? 'http://localhost:3000' : request.headers.get('host');
+  const { pathname } = request.nextUrl;
+  const headers = {
+    cookie: request.headers.get("cookie") || "",
+  };
+  const currentLocale = request.cookies.get('NEXT_LOCALE')?.value;
   // Step 1: Use the incoming request
   const defaultLocale = request.headers.get('x-default-locale') || 'en';
  
@@ -93,21 +100,21 @@ export default async function middleware(request: NextRequest) {
     defaultLocale
   });
   const response = handleI18nRouting(request);
- 
   // Step 3: Alter the response
   response.headers.set('x-default-locale', defaultLocale);
-  // băm path kiểm tra phần tử thứ 2 có phải là tên một store không
-  const regexCheckStore = /\/[^/]+\/([a-zA-Z0-9]+)/;
-  const matchStore = path.match(regexCheckStore);
-  if (matchStore !== null && matchStore.length > 1) {
-    const result = matchStore[1];
-    // kiểm tra xem store này có tồn tại hay không
-    const shopCheck = await fetch(`${baseUrl}/api/shop-check/${result}`);
-    const store_id = shopCheck.headers.get('store_id');
-    if(shopCheck.status !== 200 && !store_id){
-      return NextResponse.redirect(new URL(`/${defaultLocale}/not-found`, request.url), request);
-    }else{
-      response.cookies.set('store_id', String(store_id));
+  let regexCheckAuth = /\/[^/]+\/([a-zA-Z0-9]+)/;
+  if(currentLocale !== defaultLocale){ 
+    // nếu 0 = thì authUri sẽ nằm vị trí thứ 3 trong pathname
+    regexCheckAuth = /(?<=\/[^/]+\/[^/]+\/)([^/]+)/;
+  }
+  // băm path kiểm tra phần tử thứ 2 hoặc 3 có nằm trong auth hay không
+  const matchAuth = pathname.match(regexCheckAuth);
+  if (matchAuth !== null && matchAuthUri.includes(matchAuth[1])) {
+    const accountCheck = await fetch(`${baseUrl}/api/auth-check`, {
+      headers,
+    });
+    if(accountCheck.status !== 200){
+      return NextResponse.redirect(new URL(`/not-found`, request.url), request);
     }
   }
   return response;

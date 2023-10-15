@@ -1,14 +1,20 @@
-import OrdersDashboard from "components/account/OrdersDashboard";
-import { Metadata } from "next";
+import OrdersDashboard from "components/client/account/OrdersDashboard";
+import getMessages from "i18n/getMessages";
+import { createTranslator } from "next-intl";
 import { PageDefaultProps } from "types/types";
-
-export const metadata: Metadata = {
-    title: 'Orders',
-}
   
-export default function Orders({ params }: PageDefaultProps){
-  const {lng,shop} = params;
+export async function generateMetadata({params: {locale}}: PageDefaultProps) {
+  const messages = await getMessages(locale);
+  const t = createTranslator({locale, messages});
+  return {
+      title: t('Meta.title.account.orders'),
+      description: t('Ecommflex.description'),
+  };
+}
+
+export default function OrdersAccount({ params }: PageDefaultProps){
+  const {locale,shop} = params;
   return (
-    <OrdersDashboard locale={lng} domain={shop}/>
+    <OrdersDashboard locale={locale} domain={shop}/>
   );
 };

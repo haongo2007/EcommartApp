@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useCallback, useState } from "react";
-import { Box, Button, Chip, Divider, styled } from "@mui/material";
+import { Box, Button, Chip, Divider } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import {
   Add,
   Favorite,
@@ -10,11 +11,11 @@ import {
 } from "@mui/icons-material";
 import { useSnackbar } from "notistack";
 import ShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import LazyImage from "components/LazyImage";
-import { H3, Span } from "components/Typography";
-import BazaarRating from "components/BazaarRating";
-import { FlexBetween, FlexBox } from "components/flex-box";
-import ProductViewDialog from "components/products/ProductViewDialog";
+import LazyImage from "components/client/LazyImage";
+import { H3, Span } from "components/client/Typography";
+import BazaarRating from "components/client/BazaarRating";
+import { FlexBetween, FlexBox } from "components/client/flex-box";
+import ProductViewDialog from "components/client/products/ProductViewDialog";
 import { useCartContext } from "contexts/CartContext";
 import { calculateDiscount, currency } from "lib"; // styled components
 

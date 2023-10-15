@@ -1,5 +1,6 @@
 "use client"
-import { Box, Button, Container, MenuItem, styled } from "@mui/material";
+import { Box, Button, Container, MenuItem } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import ArrowRight from "@mui/icons-material/ArrowRight";
 import {
   ArrowLeft,
@@ -17,6 +18,20 @@ import MegaMenu from "./MegaMenu";
 import MegaMenu2 from "./MegaMenu2";
 import useSettings from "hooks/useSettings";
 import useCheckCatePage from "hooks/useCheckCatePage";
+import {useTranslations} from 'next-intl';
+import { CategoryGroupType } from "types/category";
+import { ShopCategories } from "@prisma/client";
+
+type NavProps = { 
+  navListOpen?:boolean, 
+  hideCategories?:boolean,
+  hideHorizontalCategories?:boolean, 
+  elevation?:number, 
+  border?:number, 
+  shop?:string, 
+  locale:string,
+  categories: CategoryGroupType | ShopCategories[]
+}
 
 // const common css style
 const navLinkStyle = {
@@ -84,21 +99,22 @@ const ChildNavsWrapper = styled(Box)(() => ({
   transform: "translate(-50%, 0%)",
 }));
 // ==========================================================
-const Navbar = ({ navListOpen, hideCategories,hideHorizontalCategories, elevation, border, domain, locale }: { navListOpen?:boolean, hideCategories?:boolean,hideHorizontalCategories?:boolean, elevation?:number, border?:number, domain:string, locale:string}) => {
+const Navbar = ({ navListOpen, hideCategories,hideHorizontalCategories, elevation, border, shop, locale, categories }: NavProps) => {
   if(useCheckCatePage()){
     return (<></>);
   }
+  const t = useTranslations('Navigation');
   const { settingState } = useSettings();
   const MenuMain = [
     {
       title: "Home",
-      href: `/${locale}/${domain}`,
+      href: `/${locale}/${shop}`,
       key: 'home',
       count: 1,
     },
     {
       title: "Shop",
-      href: `/${locale}/${domain}/store`,
+      href: `/${locale}/${shop}/store`,
       key: 'shop',
       count: 2,
     },
@@ -124,7 +140,7 @@ const Navbar = ({ navListOpen, hideCategories,hideHorizontalCategories, elevatio
 
         if (nav.href) {
           return (
-            <StyledNavLink href={nav.href} key={nav.title}>
+            <StyledNavLink href={nav.href} key={nav.title} className={""}>
               {nav.title}
             </StyledNavLink>
           );
@@ -211,13 +227,12 @@ const Navbar = ({ navListOpen, hideCategories,hideHorizontalCategories, elevatio
       }
     });
   };
-
   return (
     <NavBarWrapper hoverEffect={false} elevation={elevation} border={border}>
       {!hideCategories ? (
         <InnerContainer>
           {/* Category megamenu */}
-          <CategoryMenu open={navListOpen}>
+          <CategoryMenu open={navListOpen} categories={categories} locale={locale}>
             <CategoryMenuButton variant="text">
               <Category fontSize="small" />
               <Paragraph
@@ -227,7 +242,7 @@ const Navbar = ({ navListOpen, hideCategories,hideHorizontalCategories, elevatio
                 ml={1.25}
                 color="grey.600"
               >
-                Categories
+                { t('categories')}
               </Paragraph>
 
               {settingState.direction === "ltr" ? (

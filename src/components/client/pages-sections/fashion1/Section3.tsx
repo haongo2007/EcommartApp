@@ -1,9 +1,10 @@
+"use client"
 import { useEffect, useState } from "react";
-import Carousel from "components/carousel/Carousel";
-import ProductCard3 from "components/product-cards/ProductCard3";
-import CategorySectionCreator from "components/CategorySectionCreator";
+import Carousel from "components/client/carousel/Carousel";
+import ProductCard3 from "components/client/product-cards/ProductCard3";
+import CategorySectionCreator from "components/client/CategorySectionCreator";
 import useWindowSize from "hooks/useWindowSize";
-import { arrowButtonStyle } from "../../../constants";
+import { arrowButtonStyle } from "../../../../constants";
 
 // ==========================================================
 const Section3 = ({ newArrivals }) => {

@@ -4,9 +4,9 @@ import { usePathname } from "next/navigation";
 import { Card, styled, Typography } from "@mui/material";
 import { CreditCard, FavoriteBorder, Person, Place } from "@mui/icons-material";
 import ShoppingBagOutlined from "@mui/icons-material/ShoppingBagOutlined";
-import { FlexBox } from "components/flex-box";
-import CustomerService from "components/icons/CustomerService";
-import NavLink from "components/nav-link/NavLink";
+import { FlexBox } from "components/client/flex-box";
+import CustomerService from "components/client/icons/CustomerService";
+import NavLink from "components/client/nav-link/NavLink";
 
 const MainContainer = styled(Card)(({ theme }) => ({
   paddingBottom: "1.5rem",

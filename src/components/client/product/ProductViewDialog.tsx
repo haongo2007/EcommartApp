@@ -9,14 +9,14 @@ import {
   IconButton,
   styled,
 } from "@mui/material";
-import { FlexBox } from "components/flex-box";
-import BazaarImage from "components/BazaarImage";
-import BazaarRating from "components/BazaarRating";
-import Carousel from "components/carousel/Carousel";
-import { H1, H2, H3, H4, H6, Paragraph } from "components/Typography";
+import { FlexBox } from "components/client/flex-box";
+import BazaarImage from "components/client/BazaarImage";
+import BazaarRating from "components/client/BazaarRating";
+import Carousel from "components/client/carousel/Carousel";
+import { H1, H2, H3, H4, H6, Paragraph } from "components/client/Typography";
 import useCurrency from "hooks/useCurrency";
-import { arrowButtonStyle } from "../../constants";
-import { useStore } from "../../stores";
+import { arrowButtonStyle } from "../../../constants";
+import { useStore } from "stores";
 
 const ContentWrapper = styled(Box)(({ theme }) => ({
   "& .carousel:hover": {

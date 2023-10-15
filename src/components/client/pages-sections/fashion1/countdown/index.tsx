@@ -1,4 +1,4 @@
-import { FlexBox } from "components/flex-box";
+import { FlexBox } from "components/client/flex-box";
 import React, { useCallback, useEffect, useState } from "react";
 import CountBox from "./CountBox"; // component props interface
 

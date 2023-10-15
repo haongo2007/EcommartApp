@@ -1,5 +1,5 @@
+import { procedure, router } from "server/trpc";
 import { fetchChildCategory } from "../../handlers/categories/fetchChildCategory";
-import { procedure, router } from "../../trpc";
 import {z} from "zod";
 
 export const categoryRouter = router({

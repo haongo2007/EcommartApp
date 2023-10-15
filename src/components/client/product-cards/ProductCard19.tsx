@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Box, Rating } from "@mui/material";
-import { FlexBox } from "components/flex-box";
-import BazaarImage from "components/BazaarImage";
-import NavLink from "components/nav-link/NavLink";
-import { Paragraph } from "components/Typography";
+import { FlexBox } from "components/client/flex-box";
+import BazaarImage from "components/client/BazaarImage";
+import NavLink from "components/client/nav-link/NavLink";
+import { Paragraph } from "components/client/Typography";
 import { currency } from "lib"; // ===========================================
 
 // ===========================================

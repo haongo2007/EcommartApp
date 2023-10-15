@@ -1,5 +1,7 @@
-import { Box, List, ListItem, styled } from "@mui/material";
+import { List, ListItem } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import BazaarCard from "../..//BazaarCard";
+import Box from "@mui/material/Box";
 const Wrapper = styled(Box)(({ theme }) => ({
   cursor: "pointer",
   transition: "color 150ms ease-in-out",

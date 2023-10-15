@@ -1,6 +1,6 @@
-import { styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { ChevronRight } from "@mui/icons-material";
-import { FlexBox } from "components/flex-box"; // styled components
+import { FlexBox } from "components/client/flex-box"; // styled components
 
 const StyledFlexBox = styled(({ children, open, ...rest }) => (
   <FlexBox {...rest}>{children}</FlexBox>

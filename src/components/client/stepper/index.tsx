@@ -1,7 +1,7 @@
 "use client"
 import { Fragment, useState } from "react";
 import { Box, Chip } from "@mui/material";
-import { FlexRowCenter } from "components/flex-box";
+import { FlexRowCenter } from "components/client/flex-box";
 import { useRouter } from "next/navigation";
 
 // ========================================================

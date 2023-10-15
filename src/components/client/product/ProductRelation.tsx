@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
-import ProductCard1 from "components/product-cards/ProductCard1";
-import Carousel from "components/carousel/Carousel";
-import { arrowButtonStyle } from "../../constants";
+import ProductCard1 from "components/client/product-cards/ProductCard1";
+import Carousel from "components/client/carousel/Carousel";
+import { arrowButtonStyle } from "../../../constants";
 import { use } from "react";
 import { getProductRelation } from "server/handlers/products/getProduct";
-import { H3 } from "components/Typography";
+import { H3 } from "components/client/Typography";
 import { ProductTypeClient } from "types/product";
 
 // ===================================================

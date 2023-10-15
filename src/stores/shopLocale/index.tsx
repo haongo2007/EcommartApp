@@ -3,7 +3,7 @@ interface LocaleState {
     language?: string;
     currency?: string;
   };
-  setLocale: (type: 'language' | 'currency', code: string) => void;
+  setCurrency: (code: string) => void;
 }
 
 export const createShopLocaleStore = (
@@ -11,13 +11,9 @@ export const createShopLocaleStore = (
   get: () => LocaleState
 ) => ({
   shopLocale: {} as Partial<LocaleState['shopLocale']>,
-  setLocale: (type: 'language' | 'currency', code: string) => {
+  setCurrency: (code: string) => {
     const { shopLocale } = get();
-    if (type === 'language') {
-      shopLocale.language = code;
-    } else {
-      shopLocale.currency = code;
-    }
+    shopLocale.currency = code;
     set({ ...get(), shopLocale }); // Update the entire LocaleState
   },
 }) as LocaleState;

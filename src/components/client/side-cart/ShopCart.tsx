@@ -1,12 +1,4 @@
 import Link from "next/link";
-import {
-  Avatar,
-  Box,
-  Button,
-  Divider,
-  IconButton,
-  useTheme,
-} from "@mui/material";
 import { Add, Close, Remove } from "@mui/icons-material";
 import LazyImage from "../LazyImage";
 import { FlexBox } from "../flex-box";
@@ -16,6 +8,12 @@ import {useSnackbar} from "notistack";
 import { useStore } from "stores";
 import useCurrency from "hooks/useCurrency";
 import { CartItemProps } from "types/types";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import Avatar from "@mui/material/Avatar";
+import useTheme from "@mui/material/styles/useTheme";
 
 // =========================================================
 const ShopCart = ({ toggleSidenav}) => {

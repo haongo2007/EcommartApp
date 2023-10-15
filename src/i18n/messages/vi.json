@@ -1,9 +1,31 @@
 {  
-    "Home":{    
-        "title": "Tất cả cửa hàng"
+    "Meta":{
+        "title":{
+            "home":"Trang Chủ",
+            "store":"Cửa Hàng",
+            "category":"Danh Mục",
+            "account":{
+                "index":"Tài Khoản",
+                "address":"Địa Chỉ",
+                "payment":"Phương Thức Thanh Toán",
+                "support_tickets":"Phiếu Hổ Trợ",
+                "wish_list":"Yêu Thích",
+                "orders":"Đơn Hàng"
+            },
+            "cart":{
+                "index":"Giỏ Hàng",
+                "checkout":"Thủ tục thanh toán"
+            }
+        }
     },
     "Ecommflex":{
         "title":"Một ứng dụng web thương mại điện tử | Ecommflex",
         "description":"Mẫu thương mại điện tử React Next.js. Xây dựng cửa hàng trực tuyến, ứng dụng giao hàng và cửa hàng Multivendor thân thiện với SEO"
+    },
+    "Contain":{    
+        "title": "Tất cả cửa hàng"
+    },
+    "Navigation":{
+        "categories" : "Danh Mục"
     }
 }

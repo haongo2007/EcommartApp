@@ -1,39 +1,29 @@
 import { Inter } from "@next/font/google";
-import React from "react";
-import { notFound } from "next/navigation";
+import React, { use } from "react";
 import { TRPCProvider } from "providers/trpcProvider";
 import MuiTheme from "theme/MuiTheme";
 import SnackbarProvider from "providers/SnackbarProvider";
 import {ReactNode} from 'react';
 import {createTranslator, NextIntlClientProvider} from 'next-intl';
-import TopbarSCP from "components/server/TopbarSCP";
+import getMessages from "i18n/getMessages";
+import { APP_INFOMATION, APP_LOCALES } from "../../../constants";
+import TopBar from "components/client/TopBar";
 import Header from "components/client/Header";
-import NavbarSCP from "components/server/NavbarSCP";
-
+import { fetchAllCategoriesParentWithGroup } from "server/handlers/categories/fetchAllCategoriesParentWithGroup";
+import StoreInitializer from "stores/store-initializer";
+import Navbar from "components/client/navbar/Navbar";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-type Props = {
+type LocaleProps = {
     children: ReactNode;
     params: {locale: string};
 };
-
-async function getMessages(locale: string) {
-    try {
-        return (await import(`../../../i18n/messages/${locale}.json`)).default;
-    } catch (error) {
-        notFound();
-    }
-}
 
 export async function generateStaticParams() {
     return ['en', 'vi'].map((locale) => ({locale}));
 }
 
-export async function generateMetadata({params: {locale}}: Props) {
+export async function generateMetadata({params: {locale}}: LocaleProps) {
     const messages = await getMessages(locale);
-  
-    // You can use the core (non-React) APIs when you have to use next-intl
-    // outside of components. Potentially this will be simplified in the future
-    // (see https://next-intl-docs.vercel.app/docs/next-13/server-components).
     const t = createTranslator({locale, messages});
   
     return {
@@ -42,25 +32,30 @@ export async function generateMetadata({params: {locale}}: Props) {
     };
 }
 
-export default async function LocaleLayout({children, params: {locale}}: Props) {
-    const messages = await getMessages(locale);
+export default function LocaleLayout({children, params: {locale}}: LocaleProps) {
+    const messages = use(getMessages(locale));
+    const shopCategory = use(fetchAllCategoriesParentWithGroup());
+    const shopLocale = APP_LOCALES;
+    shopLocale.language = locale;
+    const initStore = { shopCategory,shopLocale };
     return (
     <html lang={locale} className={inter.variable}>
       <body>
         <TRPCProvider>
             <MuiTheme>
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                    <SnackbarProvider>
-                        {/* TOPBAR */}
-                        <TopbarSCP locale={locale}/>
-                        {/* HEADER */}
-                        <Header/>
-                        <div className="section-after-sticky">
-                            <NavbarSCP locale={locale} />
-                            {children}
-                        </div>
-                    </SnackbarProvider>
-                </NextIntlClientProvider>
+                <SnackbarProvider>
+                    <NextIntlClientProvider locale={locale} messages={messages}>
+                        <StoreInitializer initialStore={initStore}>
+                            {/* HEADER */}
+                            <TopBar infomation={APP_INFOMATION} locales={shopLocale} language={ true} currency={false}/>
+                            <Header infomation={APP_INFOMATION} locale={locale} dynamic={false}/>
+                            <div className="section-after-sticky">
+                                <Navbar locale={locale} categories={shopCategory} hideHorizontalCategories={true}/>
+                                {children}
+                            </div>
+                        </StoreInitializer>
+                    </NextIntlClientProvider>
+                </SnackbarProvider>
             </MuiTheme>
         </TRPCProvider>
       </body>

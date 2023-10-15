@@ -1,9 +1,10 @@
 "use client"
-import { Box, styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import CategoryMenuCard from "./CategoryMenuCard";
+import Box from "@mui/material/Box";
 
-const Wrapper = styled(Box)(({ open, theme: { direction } }) => ({
+const Wrapper = styled(Box)(({ open, theme: { direction } }:{open:boolean,theme:any}) => ({
   cursor: "pointer",
   position: "relative",
   height: "40px",
@@ -16,7 +17,7 @@ const Wrapper = styled(Box)(({ open, theme: { direction } }) => ({
 })); // ===========================================================
 
 // ===========================================================
-const CategoryMenu = ({ open: isOpen = false, children }) => {
+const CategoryMenu = ({ open: isOpen = false, children, categories,locale }) => {
   const [open, setOpen] = useState(isOpen);
   const popoverRef = useRef(open);
   popoverRef.current = open;
@@ -40,7 +41,7 @@ const CategoryMenu = ({ open: isOpen = false, children }) => {
           className: `${children.props.className}`,
         })}
 
-        <CategoryMenuCard open={open} position={'absolute'}/>
+        <CategoryMenuCard open={open} position={'absolute'} categories={categories} locale={locale} />
       </Wrapper>
   );
 };

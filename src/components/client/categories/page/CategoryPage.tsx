@@ -2,11 +2,11 @@
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { Box, Divider, Grid, Typography } from "@mui/material";
-import Accordion from "components/accordion/Accordion";
-import AccordionHeader from "components/accordion/AccordionHeader";
-import { MobileNavigationBar } from "components/mobile-navigation";
+import Accordion from "components/client/accordion/Accordion";
+import AccordionHeader from "components/client/accordion/AccordionHeader";
+import { MobileNavigationBar } from "components/client/mobile-navigation";
 import CategoryImageBox from "./CategoryImageBox";
-import appIcons from "components/icons";
+import appIcons from "components/client/icons";
 import { ShopCategories } from "@prisma/client";
 
 export default function MobileCategoryNav({domain,locale,allCategories}:{domain:string,locale:string,allCategories:ShopCategories[] | []}){

@@ -1,8 +1,7 @@
 import { inferRouterOutputs } from "@trpc/server";
-import { z } from "zod";
 import { updateCartProductsInputSchema } from "../../../helpers/validations/productRoutesSchema";
-import { accountProcedure } from "../../procedures";
-import { router } from "../../trpc";
+import { router } from "server/trpc";
+import { accountProcedure } from "server/procedures";
 
 
 export const cartsRouter = router({

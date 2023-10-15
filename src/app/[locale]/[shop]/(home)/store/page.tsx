@@ -1,21 +1,29 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import ProductFilterCard from "components/product/ProductFilterCard";
-import ShopIntroCard from "components/shop/ShopIntroCard";
+import ProductFilterCard from "components/client/product/ProductFilterCard";
+import ShopIntroCard from "components/client/shop/ShopIntroCard";
 import { PRODUCTS_PER_PAGE } from "../../../../../constants";
-import {Metadata} from "next";
+import {createTranslator} from 'next-intl';
+import getMessages from "i18n/getMessages";
 import {use} from "react";
 import { fetchPaginatedProducts } from "server/handlers/products/fetchPaginatedProducts";
 import { getShop } from "server/handlers/shop/getShop";
 import { PageDefaultProps } from "types/types";
 import { Sort } from "server/routers/subRouters/admin.router";
-import ProductCardList from "components/product/ProductCardList";
+import ProductCardList from "components/client/product/ProductCardList";
 
-export const metadata: Metadata = {
-  title: 'Store',
+export async function generateMetadata({params: {locale}}: PageDefaultProps) {
+  const messages = await getMessages(locale);
+  const t = createTranslator({locale, messages});
+  return {
+      title: t('Meta.title.store'),
+      description: t('Ecommflex.description'),
+  };
 }
 
-export default function Home({params: { lng,shop } }:PageDefaultProps) {
+export const revalidate = 86400;
+
+export default function Home({params: { locale,shop } }:PageDefaultProps) {
   const shopInclude = {
     description: true,
     address: {
@@ -57,7 +65,7 @@ export default function Home({params: { lng,shop } }:PageDefaultProps) {
         {/* SHOP INTRODUCTION AREA */}
       <ShopIntroCard
         data={store}
-        locale={lng}
+        locale={locale}
       />
 
       <Grid container spacing={3}>

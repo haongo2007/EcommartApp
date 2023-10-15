@@ -1,8 +1,11 @@
+"use client"
 import Image from "next/image";
-import { Box, Container, styled } from "@mui/material";
-import Carousel from "components/carousel/Carousel";
-import CarouselCard2 from "components/carousel-cards/CarouselCard2";
-import { arrowButtonStyle } from "../../../constants";
+import { styled } from "@mui/material/styles";
+import Carousel from "components/client/carousel/Carousel";
+import CarouselCard2 from "components/client/carousel-cards/CarouselCard2";
+import { arrowButtonStyle } from "../../../../constants";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 const ContentWrapper = styled(Box)(({ theme }) => ({
   borderRadius: "8px",

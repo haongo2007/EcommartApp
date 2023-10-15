@@ -1,8 +1,9 @@
 "use client"
 import { cloneElement, useEffect, useState } from "react";
 import clsx from "clsx";
-import { Box, Drawer, styled } from "@mui/material";
-import Scrollbar from "components/Scrollbar"; // styled component
+import { Box, Drawer } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Scrollbar from "components/client/Scrollbar"; // styled component
 
 const Wrapper = styled(Box)(() => ({
   "& .handle": {

@@ -1,4 +1,5 @@
-import { Card, styled } from "@mui/material";
+import { Card } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { SearchOutlined } from "@mui/icons-material";
 export const SearchOutlinedIcon = styled(SearchOutlined)(({ theme }) => ({
   color: theme.palette.grey[600],

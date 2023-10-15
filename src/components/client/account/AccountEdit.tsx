@@ -7,8 +7,8 @@ import {Avatar, Box, Button, CircularProgress, Grid, TextField} from "@mui/mater
 import {DatePicker} from "@mui/x-date-pickers";
 import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
 import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
-import Card1 from "components/card/Card1";
-import {FlexBox} from "components/flex-box";
+import Card1 from "components/client/card/Card1";
+import {FlexBox} from "components/client/flex-box";
 import AccountHeader from "./AccountHeader";
 import { useAccountContext } from "providers/AccountProvider";
 import { trpc } from "providers/trpcProvider";
@@ -38,7 +38,7 @@ export default function AccountEdit({locale,domain}:{locale:string,domain:string
     });
     const saveAvatar = (e) => {
         console.log(e);
-        // https://github.com/monroeclinton/gibber/blob/main/src/components/post/create/index.tsx
+        // https://github.com/monroeclinton/gibber/blob/main/src/components/client/post/create/index.tsx
     }
     const reloadSession = () => {
         const event = new Event("visibilitychange");

@@ -3,12 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { useSnackbar } from "notistack";
 import { currency } from "lib";
-import { Box, Button, IconButton, Rating, styled } from "@mui/material";
+import { Box, Button, IconButton, Rating } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { Favorite, FavoriteBorder, RemoveRedEye } from "@mui/icons-material";
-import { FlexRowCenter } from "components/flex-box";
-import { H4, Paragraph, Small } from "components/Typography";
+import { FlexRowCenter } from "components/client/flex-box";
+import { H4, Paragraph, Small } from "components/client/Typography";
 import { useCartContext } from "contexts/CartContext";
-import ProductViewDialog from "components/products/ProductViewDialog";
+import ProductViewDialog from "components/client/products/ProductViewDialog";
 // custom styled components
 const Card = styled(Box)(({ theme }) => ({
   borderRadius: "3px",

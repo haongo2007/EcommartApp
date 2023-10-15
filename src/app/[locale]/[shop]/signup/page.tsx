@@ -1,6 +1,6 @@
-import FlexRowCenter from "components/flex-box/FlexRowCenter";
+import FlexRowCenter from "components/client/flex-box/FlexRowCenter";
 import { Metadata } from "next";
-import Signup from "components/sessions/Signup";
+import Signup from "components/client/sessions/Signup";
 import { PageDefaultProps } from "types/types";
 
 export const metadata: Metadata = {

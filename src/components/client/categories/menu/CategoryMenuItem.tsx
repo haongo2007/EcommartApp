@@ -1,11 +1,13 @@
 import Link from "next/link";
-import {Box, CircularProgress, MenuItem, styled} from "@mui/material";
+import {CircularProgress, MenuItem} from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import appIcons from "../../icons";
 import { Shops } from "@prisma/client";
 import useSettings from "hooks/useSettings";
 import { useStore } from "stores";
 import { trpc } from "providers/trpcProvider";
+import Box from "@mui/material/Box";
 
 const Wrapper = styled(Box)(({ theme}:{theme:any}) => ({
   "& .category-dropdown-link": {
@@ -51,9 +53,10 @@ const CategoryMenuItem = (props:CategoryMenuProps) => {
   const { id, child_list, has_mount, href, has_child, title, caret, icon, children, shop } = props;
   const { settingState } = useSettings();
   const { setCategory } = useStore();
-  let domain = useStore((state) => state.shopInfo.domain);
-  if(domain === undefined){
-    domain = shop.domain;
+  const {shopInfo} = useStore();
+  let domain = shop?.domain;
+  if(shopInfo !== undefined && Object.keys(shopInfo).length > 0){
+    domain = shopInfo.domain;
   }
   const locale = useStore((state) => state.shopLocale.language);
   const { refetch,isInitialLoading } = trpc.category.getChilds.useQuery(child_list,{

@@ -1,7 +1,8 @@
 "use client"
 import Link from "next/link";
 import { useCallback, useState } from "react";
-import { Badge, Box, Button, Dialog, Drawer, styled } from "@mui/material";
+import { Badge, Box, Button, Dialog, Drawer } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import { useTheme } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
@@ -20,7 +21,7 @@ import SearchBox from "./search-box/SearchBox";
 import Category from "./icons/Category";
 import ShoppingBagOutlined from "./icons/ShoppingBagOutlined";
 import Login from "./sessions/Login";
-import {LAYOUT_CONSTANT,APP_INFOMATION} from "../../constants";
+import {LAYOUT_CONSTANT} from "../../constants";
 import {useEffect} from "react";
 import { AppInfomation } from "types/types";
 import { useStore } from "../../stores";
@@ -29,6 +30,14 @@ import { useAccountContext } from "providers/AccountProvider";
 import useCheckCatePage from "hooks/useCheckCatePage";
 import { publish } from "helpers/event";
 import Sticky from "./sticky";
+
+type HeaderProps = {
+    infomation: AppInfomation,
+    dynamic: boolean,
+    locale: string,
+    className?:string | undefined,
+    searchBoxType?:string
+}
 
 export const HeaderWrapper = styled(Box)(({ theme }) => ({
     zIndex: 3,
@@ -39,10 +48,10 @@ export const HeaderWrapper = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("sm")]: {
         height: LAYOUT_CONSTANT.mobileHeaderHeight,
     },
-})); // ==============================================================
+}));
 
 // ==============================================================
-const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:AppInfomation | undefined, className?:string | undefined,searchBoxType?:string}) => {
+const Header = ({infomation,locale,dynamic = true,className,searchBoxType = "type1"}:HeaderProps) => {
     const theme = useTheme();
     const [isFixed, setIsFixed] = useState(false);
     const toggleIsFixed = useCallback((fixed:boolean) => {
@@ -54,9 +63,9 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
     const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
     const downMd = useMediaQuery(theme.breakpoints.down(1150));
     const { account } = useAccountContext();
-    const { shopCarts } = useStore();
+    const { shopCarts,shopCategory } = useStore();
     let cartLength = 0;
-    if(infomation !== undefined){
+    if(dynamic){
         cartLength = shopCarts[infomation.domain]?.reduce((total, curr) => (total += curr.qty),0);
     }else{
         for (const key in shopCarts) {
@@ -64,14 +73,12 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
         }
     }
     const router = useRouter();
-    const logoShop = infomation ? infomation.logo : APP_INFOMATION.logo;
-    const curLang = infomation ? infomation.language+'/' : '';
-    const curDomain = curLang + (infomation ? infomation.domain : '/');
+    const curDomain = '/'+locale +'/'+ infomation.domain;
     const toggleDialog = () => {
         if (!account){
             setDialogOpen(!dialogOpen);
         }else{
-            router.push('/'+curDomain+'/account');
+            router.push(curDomain+'/account');
         }
     };
     useEffect(() => {
@@ -106,12 +113,12 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
                             justifyContent: 'center'
                         }}
                     >
-                        <Link href={ '/'}>
-                            <Image height={70} src={logoShop} alt="logo" />
+                        <Link href={curDomain}>
+                            <Image height={70} src={infomation.logo} alt="logo" loading="lazy"/>
                         </Link>
                         
                         { !useCheckCatePage() && isFixed && !downMd && (
-                            <CategoryMenu>
+                            <CategoryMenu categories={shopCategory} locale={locale}>
                                 <FlexBox color="grey.600" alignItems="center" ml={2}>
                                     <Button color="inherit">
                                         <Category fontSize="small" color="inherit" />
@@ -141,7 +148,7 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
                         }}
                     >
                         {downMd && <MobileMenu />}
-                        { infomation !== undefined &&
+                        { dynamic &&
                             <Box
                                 bgcolor="grey.200"
                                 component={IconButton}
@@ -170,10 +177,10 @@ const Header = ({infomation, className, searchBoxType = "type1" }:{infomation?:A
                         fullWidth={isMobile}
                         onClose={toggleDialog}
                     >
-                        { infomation !== undefined && <Login locale={curLang} domain={infomation.domain}/> }
+                        { dynamic && <Login locale={locale} domain={infomation.domain}/> }
                     </Dialog>
                     <Drawer open={sidenavOpen} anchor="right" onClose={toggleSidenav} sx={{zIndex:1201}}>
-                        { infomation !== undefined ? (<ShopCart toggleSidenav={() => {}} />) : (<HomeCart toggleSidenav={() => {}} />) }
+                        { dynamic ? (<ShopCart toggleSidenav={() => {}} />) : (<HomeCart toggleSidenav={() => {}} />) }
                     </Drawer>
                 </Container>
             </HeaderWrapper>

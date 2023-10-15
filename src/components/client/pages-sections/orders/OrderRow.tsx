@@ -2,8 +2,8 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { East } from "@mui/icons-material";
 import { Box, Chip, IconButton, Typography } from "@mui/material";
-import TableRow from "components/TableRow";
-import { H5 } from "components/Typography";
+import TableRow from "components/client/TableRow";
+import { H5 } from "components/client/Typography";
 
 // =================================================
 const OrderRow = ({ order }) => {

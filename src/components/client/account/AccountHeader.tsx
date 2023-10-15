@@ -1,10 +1,8 @@
 "use client"
-import Menu from "@mui/icons-material/Menu";
-import { Box, styled } from "@mui/material";
-import { FlexBox } from "components/flex-box";
-import Sidenav from "components/Sidenav";
-import { H2 } from "components/Typography";
-import CustomerDashboardNavigation from "components/account/AccountSideBar";
+import { Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { FlexBox } from "components/client/flex-box";
+import { H2 } from "components/client/Typography";
 import useWindowSize from "hooks/useWindowSize";
 import React from "react";
 const StyledBox = styled(Box)(({ theme }) => ({

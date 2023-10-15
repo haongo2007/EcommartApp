@@ -8,10 +8,10 @@ import {
   Pagination,
   Typography,
 } from "@mui/material";
-import TableRow from "components/TableRow";
-import { H5 } from "components/Typography";
-import { FlexBox } from "components/flex-box";
-import AccountHeader from "components/account/AccountHeader";
+import TableRow from "components/client/TableRow";
+import { H5 } from "components/client/Typography";
+import { FlexBox } from "components/client/flex-box";
+import AccountHeader from "components/client/account/AccountHeader";
 
 const PaymentDashboard = ({locale,domain}:{locale:string,domain:string}) => {
   // SECTION TITLE HEADER LINK

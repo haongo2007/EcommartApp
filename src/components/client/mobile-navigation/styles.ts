@@ -1,6 +1,8 @@
-import { Box, Drawer, styled } from "@mui/material";
-import NavLink from "components/nav-link/NavLink";
-import { LAYOUT_CONSTANT } from "../../constants"; // styled components
+import { styled } from "@mui/material/styles";
+import NavLink from "components/client/nav-link/NavLink";
+import { LAYOUT_CONSTANT } from "../../../constants"; // styled components
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 
 const Wrapper = styled(Box)(({ theme }) => ({
   left: 0,

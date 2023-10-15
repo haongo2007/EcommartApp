@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { Children, cloneElement, useEffect, useRef, useState } from "react"; // styled component props type
 
 // styled component

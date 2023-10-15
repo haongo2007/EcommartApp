@@ -1,7 +1,7 @@
 import Link from "next/link";
-import HoverBox from "components/HoverBox";
-import { H4 } from "components/Typography";
-import LazyImage from "components/LazyImage";
+import HoverBox from "components/client/HoverBox";
+import { H4 } from "components/client/Typography";
+import LazyImage from "components/client/LazyImage";
 import { currency } from "lib"; // ==========================================================
 
 // ==========================================================

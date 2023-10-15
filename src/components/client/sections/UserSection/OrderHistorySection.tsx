@@ -3,7 +3,7 @@
 import { Fragment } from "react";
 import { toast } from "react-hot-toast";
 import Loader from "../../loaders/Loader";
-import NotFoundText from "../../../components/NotFoundText";
+import NotFoundText from "../../../components/client/NotFoundText";
 import { ITEMS_PER_PAGE } from "../../../constants";
 import { trpc } from "../../../providers/trpcProvider";
 import OrderCard from "../../cards/OrderCard";

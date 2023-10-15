@@ -10,11 +10,11 @@ import {
 } from "@mui/material";
 import { East } from "@mui/icons-material";
 import { format } from "date-fns";
-import TableRow from "components/TableRow";
-import { Span } from "components/Typography";
-import { FlexBox } from "components/flex-box";
-import CustomerService from "components/icons/CustomerService";
-import AccountHeader from "components/account/AccountHeader";
+import TableRow from "components/client/TableRow";
+import { Span } from "components/client/Typography";
+import { FlexBox } from "components/client/flex-box";
+import CustomerService from "components/client/icons/CustomerService";
+import AccountHeader from "components/client/account/AccountHeader";
 // styled components
 const StyledChip = styled(Chip)(({ theme, green }) => ({
   height: 26,

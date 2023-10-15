@@ -1,9 +1,10 @@
+"use client"
 import { Button, Container, TextField } from "@mui/material";
-import { H2, H5 } from "components/Typography";
-import Telegram from "components/icons/Telegram";
-import { FlexRowCenter } from "components/flex-box";
+import { H2, H5 } from "components/client/Typography";
+import Telegram from "components/client/icons/Telegram";
+import { FlexRowCenter } from "components/client/flex-box";
 
-const Section8 = () => {
+const Section8 = (props) => {
   return (
     <Container
       sx={{

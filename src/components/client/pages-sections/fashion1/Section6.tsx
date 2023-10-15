@@ -1,7 +1,8 @@
+"use client"
 import { Grid } from "@mui/material";
-import CategorySectionCreator from "components/CategorySectionCreator";
-import ProductCard12 from "components/product-cards/ProductCard12";
-import ProductCard3 from "components/product-cards/ProductCard3";
+import CategorySectionCreator from "components/client/CategorySectionCreator";
+import ProductCard12 from "components/client/product-cards/ProductCard12";
+import ProductCard3 from "components/client/product-cards/ProductCard3";
 
 // =============================================================
 const Section6 = ({ most_buyed }) => {

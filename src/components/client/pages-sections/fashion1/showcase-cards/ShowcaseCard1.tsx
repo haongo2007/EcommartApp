@@ -1,9 +1,10 @@
-import { Box, styled } from "@mui/material";
-import BazaarImage from "components/BazaarImage";
-import NavLink2 from "components/nav-link/NavLink2";
-import { H1, Paragraph, Span } from "components/Typography";
+import Box from "@mui/material/Box";
+import { styled } from "@mui/material/styles";
+import BazaarImage from "components/client/BazaarImage";
+import NavLink2 from "components/client/nav-link/NavLink2";
+import { H1, Paragraph, Span } from "components/client/Typography";
 import Link from "next/link";
-import React from "react"; // styled components
+import React from "react"; // styled components/client/client
 
 const StyledBox = styled(Box)(({ theme }) => ({
   height: "100%",

@@ -665,7 +665,7 @@ model ShopCustomer {
 
   company String?
 
-  store_id Int
+  store_id Int?
 
   facebook_auth String?
 
@@ -683,7 +683,7 @@ model ShopCustomer {
 
   updatedAt DateTime? @updatedAt
 
-  shop Shops @relation(fields: [store_id], references: [id])
+  shop Shops? @relation(fields: [store_id], references: [id])
 
   address ShopCustomerAddress[]
 

@@ -1,5 +1,5 @@
 "use client"
-import appIcons from "components/icons";
+import appIcons from "components/client/icons";
 import { ShopCategories } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import * as React from 'react';
@@ -18,9 +18,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { LAYOUT_CONSTANT } from "../../../constants";
+import { LAYOUT_CONSTANT } from "../../../../constants";
 import { subscribe } from "helpers/event";
-import SaleNavbar from "components/navbar/SaleNavbar";
+import SaleNavbar from "components/client/navbar/SaleNavbar";
 import { usePathname } from 'next/navigation'
 
 interface AppBarProps extends MuiAppBarProps {

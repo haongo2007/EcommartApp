@@ -14,7 +14,7 @@ type ShopListTypeProps = {
 };
 
 const ShopListSection = ({total,data,locale}:ShopListTypeProps) => {
-    const t = useTranslations('Home');
+    const t = useTranslations('Contain');
 
     return (
         <>

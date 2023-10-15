@@ -3,10 +3,12 @@ import FacebookProvider from "next-auth/providers/facebook";
 import GoogleProvider from "next-auth/providers/google";
 import { getEnvSafely } from "env/config";
 import { NextAuthOptions } from "next-auth";
+import { AuthAdapter } from "./authAdapter";
+import prisma from "./prismadb";
 
 export const authOptions : NextAuthOptions = {
   secret: getEnvSafely('NEXTAUTH_SECRET'),
-  adapter: undefined,
+  adapter: AuthAdapter(prisma),
   providers: [
     GitHubProvider({
       clientId: getEnvSafely('GITHUB_CLIENT_ID'),
@@ -18,7 +20,7 @@ export const authOptions : NextAuthOptions = {
     }),
     GoogleProvider({
         clientId: getEnvSafely('GOOGLE_CLIENT_ID'),
-        clientSecret: getEnvSafely('GOOGLE_CLIENT_SECRET')
+        clientSecret: getEnvSafely('GOOGLE_CLIENT_SECRET'),
     })
   ],
   pages: {
@@ -37,7 +39,7 @@ export const authOptions : NextAuthOptions = {
             session.user.birthday = user.birthday;
         }
         return session
-    }
+    },
   },
 };
 

@@ -4,7 +4,7 @@ export const responseCustomer = (customer: ShopCustomerClient | null | undefined
   if (customer) {
     return {
       ...customer,
-      birthday: customer.birthday.toUTCString(),
+      birthday: customer?.birthday?.toUTCString(),
     };
   } else {
     return null;

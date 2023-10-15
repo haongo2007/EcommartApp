@@ -1,11 +1,13 @@
-import { Box, styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import CategoryMenuItem from "./CategoryMenuItem";
 import MegaMenu1 from "../mega-menu/MegaMenu1";
 import MegaMenu2 from "../mega-menu/MegaMenu2";
 import {flatMap, mapValues} from "lodash-es";
+import { CategoryGroupType } from "types/category";
 import { useStore } from "stores";
+import Box from "@mui/material/Box";
 
-const Wrapper = styled(Box)(({ theme, position, open }) => ({
+const Wrapper = styled(Box)(({ theme, position, open }:{theme:any, position: "absolute" | "fixed" | "relative", open:boolean}) => ({
   left: 0,
   zIndex: 98,
   right: "auto",
@@ -25,13 +27,13 @@ const megaMenu = [
   MegaMenu2,
 ];
 
-export const CateMega = ({data,shop}) => {
-    const locale = useStore((state) => state.shopLocale.language);
+export const CateMega = ({data,shop,locale}:{data:CategoryGroupType,shop:string|null,locale:string}) => {
+    if (typeof window !== "undefined"){
+      locale = useStore((state) => state.shopLocale.language);
+    }
     if (shop === undefined || Object.keys(data).length === 0) return ;
-    if(shop === ''){
+    if(shop === null){
       data = flatMap(mapValues(data));
-    }else{
-
     }
     return data.map((item) => {
         let MegaMenu = megaMenu[item.deep];
@@ -48,29 +50,22 @@ export const CateMega = ({data,shop}) => {
                 title={item.description.filter((desc) => desc.lang === locale)[0].title}
                 caret={!!item.has_child}
             >
-                { item.children && (<MegaMenu data={item.children} shop={shop} />) }
+                { item.children && (<MegaMenu data={item.children} shop={shop}/>) }
             </CategoryMenuItem>
         )
     })
 }
-// ===============================================================
-const CategoryMenuCard = (props) => {
+
+export default function CategoryMenuCard(props: { open: boolean; position: "absolute" | "fixed" | "relative"; categories: CategoryGroupType; locale:string }){
+  const { open, position,categories,locale} = props;
   const { shopCategory } = useStore();
-  console.log(useStore());
-  let categories;
-  const currentShop = '';
-    if (currentShop !== ''){
-      if (shopCategory.hasOwnProperty(currentShop)){
-          categories = shopCategory[currentShop];
-      }
-    }else{
-      categories = shopCategory
-    }
-  const { open, position } = props;
+  let data = categories;
+  if (typeof window !== "undefined"){
+    data = shopCategory;
+  }
   return (
-      <Wrapper open={open} position={position}>
-          <CateMega data={categories} shop={currentShop}/>
+      <Wrapper open={open} position={position} theme={undefined}>
+          <CateMega data={data} shop={null} locale={locale}/>
       </Wrapper>
   );
 };
-export default CategoryMenuCard;

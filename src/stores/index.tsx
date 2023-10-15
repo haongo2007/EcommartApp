@@ -22,7 +22,6 @@ type initProps = {
     shopCarts: ShopCustomerCart,
     shopAGroupP: ShopAttributeGroup
 }
-
 // export const useStore = create((...args) => ({
 //     ...createCategoryStore(...args),
 //     ...createConfigStore(...args),

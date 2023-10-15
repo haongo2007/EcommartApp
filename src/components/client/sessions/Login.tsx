@@ -1,6 +1,7 @@
 "use client"
 import { useCallback, useState } from "react";
-import { Button, Card, Box, styled } from "@mui/material";
+import { Button, Card, Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import Link from "next/link";
 import * as yup from "yup";
 import { useFormik } from "formik";

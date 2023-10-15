@@ -88,7 +88,6 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     }),
     [cartItems, setCartItems]
   );
-  console.log(children);
   useEffect(() => {
     const timeOutId = setTimeout( async() => {
       if (account !== undefined && account !== null){ // logged

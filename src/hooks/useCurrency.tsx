@@ -1,7 +1,7 @@
 import { Shops } from "@prisma/client";
-import { Decimal } from "@prisma/client/runtime";
 import { ShopLocal } from "types/shop";
 import { useStore } from "../stores";
+import { Decimal } from "@prisma/client/runtime/library";
 
 const useCurrency = (price: number | Decimal,promo?: number | object | null, shopLocale?: ShopLocal,shopInfo?: Shops) => {
     if(promo){
@@ -24,7 +24,7 @@ const useCurrency = (price: number | Decimal,promo?: number | object | null, sho
     }
     const formatCurrency = new Intl.NumberFormat(undefined, {
         style: "currency",
-        currency: shopLocale.currency,
+        currency: shopLocale.currency || 'USD',
         maximumFractionDigits: 2,
         minimumFractionDigits: 2,
     });

@@ -10,11 +10,11 @@ import {
   Rating,
   styled,
 } from "@mui/material";
-import Image from "components/BazaarImage";
-import { H5, Span } from "components/Typography";
-import { FlexBetween, FlexBox } from "components/flex-box";
-import { useCartContext } from "contexts/CartContext";
+import Image from "components/client/BazaarImage";
+import { H5, Span } from "components/client/Typography";
+import { FlexBetween, FlexBox } from "components/client/flex-box";
 import { calculateDiscount, currency } from "lib"; // styled components
+import { useCartContext } from "providers/CartProvider";
 
 const Wrapper = styled(Card)(() => ({
   width: "100%",
@@ -155,17 +155,5 @@ const ProductCard9 = (props) => {
       </Grid>
     </Wrapper>
   );
-};
-
-ProductCard9.defaultProps = {
-  title: `Apple iPhone 5 Unlocked 16GB 8MP Used Cell-Phone-16gbIOS Used Refurbished 100%Factory Used`,
-  imgUrl: "/assets/images/products/macbook.png",
-  off: 50,
-  rating: 0,
-  price: 450, // subcategories: [
-  //   { title: "Bike", url: "/#" },
-  //   { title: "Ducati", url: "/#" },
-  //   { title: "Motors", url: "/#" },
-  // ],
 };
 export default ProductCard9;

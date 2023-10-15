@@ -1,13 +1,14 @@
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Stepper from "components/stepper";
+import Stepper from "components/client/stepper";
 
 type LayoutProps = {
   children: React.ReactNode,
-  params: { lng: string,shop: string }
+  params: { locale: string,shop: string }
 }
-export default function CheckoutNavLayout({ children, params : { lng,shop }}: LayoutProps) {
+
+export default function CartLayout({ children, params : { locale,shop }}: LayoutProps) {
   return (
     <Container sx={{ my: 4 }}>
         <Box
@@ -19,7 +20,7 @@ export default function CheckoutNavLayout({ children, params : { lng,shop }}: La
         >
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                  <Stepper locale={lng} domain={shop}/>
+                  <Stepper locale={locale} domain={shop}/>
               </Grid>
             </Grid>
         </Box>

@@ -1,7 +1,7 @@
 import { Avatar, Box } from "@mui/material";
-import { FlexBox } from "components/flex-box";
-import BazaarRating from "components/BazaarRating";
-import { H5, H6, Paragraph, Span } from "components/Typography";
+import { FlexBox } from "components/client/flex-box";
+import BazaarRating from "components/client/BazaarRating";
+import { H5, H6, Paragraph, Span } from "components/client/Typography";
 import { getDateDifference } from "helpers/date";
 
 const ProductComment = (props) => {

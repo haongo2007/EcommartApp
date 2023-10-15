@@ -5,11 +5,11 @@ import PreviewIcon from "@mui/icons-material/RemoveRedEye";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
 import ShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useSnackbar } from "notistack";
-import LazyImage from "components/LazyImage";
-import { H3, Span } from "components/Typography";
-import BazaarRating from "components/BazaarRating";
-import { FlexBetween, FlexRowCenter } from "components/flex-box";
-import ProductViewDialog from "components/products/ProductViewDialog";
+import LazyImage from "components/client/LazyImage";
+import { H3, Span } from "components/client/Typography";
+import BazaarRating from "components/client/BazaarRating";
+import { FlexBetween, FlexRowCenter } from "components/client/flex-box";
+import ProductViewDialog from "components/client/products/ProductViewDialog";
 import { useCartContext } from "contexts/CartContext";
 import useCurrency from "hooks/useCurrency";
 // styled components

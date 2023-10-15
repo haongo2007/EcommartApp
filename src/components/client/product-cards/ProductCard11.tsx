@@ -1,6 +1,7 @@
-import { Box, styled } from "@mui/material";
-import LazyImage from "components/LazyImage";
-import { Paragraph } from "components/Typography"; // styled component
+import { Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import LazyImage from "components/client/LazyImage";
+import { Paragraph } from "components/client/Typography"; // styled component
 
 const StyledParagraph = styled(Paragraph)(({ theme }) => ({
   top: "10px",

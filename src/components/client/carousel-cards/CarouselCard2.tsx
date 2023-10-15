@@ -1,7 +1,8 @@
 import { Favorite } from "@mui/icons-material";
-import { Box, Button, Grid, styled } from "@mui/material";
-import BazaarImage from "components/BazaarImage";
-import { H2, H3, H4, Paragraph } from "components/Typography";
+import { Box, Button, Grid } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import BazaarImage from "components/client/BazaarImage";
+import { H2, H3, H4, Paragraph } from "components/client/Typography";
 import Countdown from "../pages-sections/fashion1/countdown"; // styled component
 
 const ContentWrapper = styled(Box)(({ theme }) => ({

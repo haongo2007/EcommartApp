@@ -1,15 +1,16 @@
+"use client"
 import { Container, Grid } from "@mui/material";
-import Spacer from "components/Spacer";
-import FeedbackThumbsUpIcon from "components/icons/FeedbackThumbsUp";
-import CreditCardVerifiedIcon from "components/icons/CreditCardVerified";
+import Spacer from "components/client/Spacer";
+import FeedbackThumbsUpIcon from "components/client/icons/FeedbackThumbsUp";
+import CreditCardVerifiedIcon from "components/client/icons/CreditCardVerified";
 import ShowcaseCard1 from "./showcase-cards/ShowcaseCard1";
 import ShowcaseCard2 from "./showcase-cards/ShowcaseCard2";
 import ShowcaseCard3 from "./showcase-cards/ShowcaseCard3";
 import ShowcaseCard4 from "./showcase-cards/ShowcaseCard4";
 import ShowcaseCard5 from "./showcase-cards/ShowcaseCard5";
-import {useStore} from "../../../stores";
-const Section1 = () => {
-  const {shopBanner} = useStore();
+
+const Section1 = (props) => {
+  const {shopBanner} = props;
   return (
     <Container
       sx={{

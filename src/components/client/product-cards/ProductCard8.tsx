@@ -1,9 +1,9 @@
 import Link from "next/link";
-import HoverBox from "components/HoverBox";
-import LazyImage from "components/LazyImage";
-import { FlexBox } from "components/flex-box";
-import BazaarCard from "components/BazaarCard";
-import { H6, Span } from "components/Typography";
+import HoverBox from "components/client/HoverBox";
+import LazyImage from "components/client/LazyImage";
+import { FlexBox } from "components/client/flex-box";
+import BazaarCard from "components/client/BazaarCard";
+import { H6, Span } from "components/client/Typography";
 import { calculateDiscount, currency } from "lib"; // =======================================================
 
 // =======================================================

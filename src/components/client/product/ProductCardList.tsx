@@ -1,9 +1,9 @@
 "use client"
 import { Fragment } from "react";
 import { Grid, Pagination } from "@mui/material";
-import { FlexBetween } from "components/flex-box";
-import ProductCard1 from "components/product-cards/ProductCard1";
-import { Span } from "components/Typography";
+import { FlexBetween } from "components/client/flex-box";
+import ProductCard1 from "components/client/product-cards/ProductCard1";
+import { Span } from "components/client/Typography";
 
 // ========================================================
 const ProductCardList = ({ products }) => {

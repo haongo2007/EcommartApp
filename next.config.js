@@ -7,7 +7,7 @@ const withNextIntl = require('next-intl/plugin')(
 const nextConfig = withNextIntl({
   reactStrictMode: false,
   experimental: {
-    appDir: true,
+    serverActions: true,
   },
   eslint: {
     ignoreDuringBuilds: true,

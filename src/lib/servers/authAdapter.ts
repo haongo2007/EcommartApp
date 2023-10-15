@@ -1,8 +1,7 @@
 import type { Prisma } from "@prisma/client"
 import type { Adapter, AdapterAccount } from "next-auth/adapters";
 
-export function AuthAdapter(p,store_id): Adapter {
-
+export function AuthAdapter(p:any,store_id?:number): Adapter {
     return {
         async createUser(data) {
             const full_name = data.name?.split(' ') || [];
@@ -15,7 +14,7 @@ export function AuthAdapter(p,store_id): Adapter {
                 last_name,
                 email,
                 avatar,
-                store_id: parseInt(store_id)
+                store_id:store_id
             }
             return p.ShopCustomer.create({data:dataInsert})
         },

@@ -1,16 +1,4 @@
 import Link from "next/link";
-import {
-  Avatar,
-  Box,
-  Button,
-  Divider,
-  IconButton,
-  useTheme,  
-  ListItemButton, 
-  List,
-  ListItemText,
-  ListItemAvatar,
-} from "@mui/material";
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import { Add, Close, Remove } from "@mui/icons-material";
 import LazyImage from "../LazyImage";
@@ -22,7 +10,16 @@ import { useStore } from "stores";
 import useCurrency from "hooks/useCurrency";
 import { CartItemProps } from "types/types";
 import { Fragment } from "react";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import Avatar from "@mui/material/Avatar";
 import { useRouter } from 'next/navigation'
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
   // =========================================================
 
   const HomeCart = ({ toggleSidenav}) => {

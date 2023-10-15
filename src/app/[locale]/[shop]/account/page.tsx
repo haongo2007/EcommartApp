@@ -1,14 +1,20 @@
-import AccountDashboard from "components/account/AccountDashboard";
-import { Metadata } from "next";
+import AccountDashboard from "components/client/account/AccountDashboard";
+import getMessages from "i18n/getMessages";
+import { createTranslator } from "next-intl";
 import { PageDefaultProps } from "types/types";
-
-export const metadata: Metadata = {
-    title: 'Account',
+ 
+export async function generateMetadata({params: {locale}}: PageDefaultProps) {
+  const messages = await getMessages(locale);
+  const t = createTranslator({locale, messages});
+  return {
+      title: t('Meta.title.account.index'),
+      description: t('Ecommflex.description'),
+  };
 }
-  
+
 export default function Account({ params }: PageDefaultProps){
-  const {lng,shop} = params;
+  const {locale,shop} = params;
   return (
-    <AccountDashboard locale={lng} domain={shop}/>
+    <AccountDashboard locale={locale} domain={shop}/>
   );
 };

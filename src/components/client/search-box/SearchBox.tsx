@@ -1,12 +1,13 @@
-"use client"
 import Link from "next/link";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { Box, MenuItem, TextField, styled } from "@mui/material";
+import { Box, MenuItem, TextField } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { KeyboardArrowDownOutlined } from "@mui/icons-material";
 import TouchRipple from "@mui/material/ButtonBase";
+import { SearchOutlinedIcon, SearchResultCard } from "./styled";
 import BazaarMenu from "../BazaarMenu";
 import { FlexBox } from "../flex-box";
-import { SearchOutlinedIcon, SearchResultCard } from "./styled";
+
 const DropDownHandler = styled(FlexBox)(({ theme }) => ({
   whiteSpace: "pre",
   borderTopRightRadius: 300,
@@ -22,14 +23,6 @@ const SearchBox = () => {
   const [_, startTransition] = useTransition();
   const [category, setCategory] = useState("All Categories");
   const [resultList, setResultList] = useState([]);
-  const locale = 'vi';
-  const currentShop = 'bepetshop';
-  let categories;
-  if (currentShop !== ''){
-    categories = []
-  }else{
-    categories = [];
-  }
 
   const handleCategoryChange = (cat) => () => setCategory(cat);
 
@@ -69,8 +62,8 @@ const SearchBox = () => {
       }
     >
       {categories.map((item) => (
-        <MenuItem key={item.id} onClick={handleCategoryChange(item)}>
-          { item.description.filter((desc) => desc.lang === locale)[0].title }
+        <MenuItem key={item} onClick={handleCategoryChange(item)}>
+          {item}
         </MenuItem>
       ))}
     </BazaarMenu>
@@ -119,6 +112,16 @@ const SearchBox = () => {
   );
 };
 
+const categories = [
+  "All Categories",
+  "Car",
+  "Clothes",
+  "Electronics",
+  "Laptop",
+  "Desktop",
+  "Camera",
+  "Toys",
+];
 const dummySearchResult = [
   "Macbook Air 13",
   "Asus K555LA",
